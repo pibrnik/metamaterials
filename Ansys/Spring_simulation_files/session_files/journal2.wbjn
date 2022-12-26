@@ -1,0 +1,14 @@
+# encoding: utf-8
+# 2022 R2
+SetScriptVersion(Version="22.2.192")
+system1 = GetSystem(Name="SYS")
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit()
+geometry1.Exit()
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("1 l Dokumenti/1 l Fakulteta/5 l 5. semester/3 l Dinamika togih teles/1 l Seminar/metamaterials/Ansys/Models/Spring_5_07_2.STEP"))
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1.Edit()
+Save(Overwrite=True)

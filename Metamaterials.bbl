@@ -1,0 +1,131 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{vanbelle}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=f9186fe2700fb6c2832c5c5f310e0d4d}{%
+           family={Belle},
+           familyi={B\bibinitperiod},
+           given={Lucas\bibnamedelima Van},
+           giveni={L\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Le Mans Universite}%
+      }
+      \strng{namehash}{f9186fe2700fb6c2832c5c5f310e0d4d}
+      \strng{fullhash}{f9186fe2700fb6c2832c5c5f310e0d4d}
+      \strng{bibnamehash}{f9186fe2700fb6c2832c5c5f310e0d4d}
+      \strng{authorbibnamehash}{f9186fe2700fb6c2832c5c5f310e0d4d}
+      \strng{authornamehash}{f9186fe2700fb6c2832c5c5f310e0d4d}
+      \strng{authorfullhash}{f9186fe2700fb6c2832c5c5f310e0d4d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Vibro-acoustic performance of locally resonant metamaterials with damping}
+      \field{type}{phdthesis}
+      \field{year}{2019}
+    \endentry
+    \entry{ville}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=75e9addac7a4c31fd660691bbf547876}{%
+           family={Jämsä},
+           familyi={J\bibinitperiod},
+           given={Ville},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Oulu, TEKNILLINEN TIEDEKUNTA}%
+      }
+      \strng{namehash}{75e9addac7a4c31fd660691bbf547876}
+      \strng{fullhash}{75e9addac7a4c31fd660691bbf547876}
+      \strng{bibnamehash}{75e9addac7a4c31fd660691bbf547876}
+      \strng{authorbibnamehash}{75e9addac7a4c31fd660691bbf547876}
+      \strng{authornamehash}{75e9addac7a4c31fd660691bbf547876}
+      \strng{authorfullhash}{75e9addac7a4c31fd660691bbf547876}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Implementation of a 2D beam element to JuliaFEM}
+      \field{type}{Diplomsko delo}
+      \field{year}{2018}
+    \endentry
+    \entry{kosir}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=e40f18ce7d831652fb98f58da7c36840}{%
+           family={Košir},
+           familyi={K\bibinitperiod},
+           given={Tilen},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Univerza v Ljubljani, Fakulteta za strojništvo}%
+      }
+      \strng{namehash}{e40f18ce7d831652fb98f58da7c36840}
+      \strng{fullhash}{e40f18ce7d831652fb98f58da7c36840}
+      \strng{bibnamehash}{e40f18ce7d831652fb98f58da7c36840}
+      \strng{authorbibnamehash}{e40f18ce7d831652fb98f58da7c36840}
+      \strng{authornamehash}{e40f18ce7d831652fb98f58da7c36840}
+      \strng{authorfullhash}{e40f18ce7d831652fb98f58da7c36840}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Uporaba vibroakustičnih metamaterialov v strukturno dinamiki za nižanje ravni hrupa}
+      \field{type}{mathesis}
+      \field{year}{2020}
+    \endentry
+    \entry{abhipod}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b1b650cf2c5ae62aea38567473ba228f}{%
+           family={Poddar},
+           familyi={P\bibinitperiod},
+           given={Abhijit},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b1b650cf2c5ae62aea38567473ba228f}
+      \strng{fullhash}{b1b650cf2c5ae62aea38567473ba228f}
+      \strng{bibnamehash}{b1b650cf2c5ae62aea38567473ba228f}
+      \strng{authorbibnamehash}{b1b650cf2c5ae62aea38567473ba228f}
+      \strng{authornamehash}{b1b650cf2c5ae62aea38567473ba228f}
+      \strng{authorfullhash}{b1b650cf2c5ae62aea38567473ba228f}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Brillouin zones}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.abhipod.com/researchpage/UGCMRP_05_06_ForWeb/elearningnode14.html
+      \endverb
+      \verb{url}
+      \verb http://www.abhipod.com/researchpage/UGCMRP_05_06_ForWeb/elearningnode14.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
