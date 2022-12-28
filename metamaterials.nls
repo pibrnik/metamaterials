@@ -1,0 +1,30 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{$\mathbf{C}$}]\begingroup globalna dušilna matrika\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{d}$}]\begingroup bazni translacijski vektor bazne celice\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{D}(\omega)$}]\begingroup dinamska matrika sistema\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{f}$}]\begingroup vektor generaliziranih vozliščnih sil\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{I}$}]\begingroup identična matrika\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{K}$}]\begingroup globalna togostna matrika\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{k}$}]\begingroup valovni vektor\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{M}$}]\begingroup globalna masna matrika\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{q}$}]\begingroup vektor generaliziranih vozliščnih pomikov\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{r}$}]\begingroup krajevni vektor\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{t}$}]\begingroup bazni translacijski vektor recipročne bazne celice\nomeqref {0}\nompageref{1}
+  \item [{$A$}]\begingroup površina prereza\nomeqref {0}\nompageref{1}
+  \item [{$E$}]\begingroup elastični modul\nomeqref {0}\nompageref{1}
+  \item [{$I$}]\begingroup vztrajnostni moment prereza\nomeqref {0}\nompageref{1}
+  \item [{$i$}]\begingroup imaginarna komponenta\nomeqref {0}\nompageref{1}
+  \item [{$L$}]\begingroup dolžina bazne celice\nomeqref {0}\nompageref{1}
+  \item [{$l$}]\begingroup dolžina končnega elementa\nomeqref {0}\nompageref{1}
+  \item [{$n$}]\begingroup število baznih celic med točkama\nomeqref {0}\nompageref{1}
+  \item [{$t$}]\begingroup čas\nomeqref {0}\nompageref{1}
+\nomgroup{G}
+  \item [{$\mathbf{\Lambda}_L$}]\begingroup leva reducirna matrika\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{\Lambda}_R$}]\begingroup desna reducirna matrika\nomeqref {0}\nompageref{1}
+  \item [{$\mathbf{\mu}$}]\begingroup vektor širjenja valovanja\nomeqref {0}\nompageref{1}
+  \item [{$\omega$}]\begingroup krožna kotna frekvenca\nomeqref {0}\nompageref{1}
+  \item [{$\rho$}]\begingroup gostota\nomeqref {0}\nompageref{1}
+
+\end{thenomenclature}

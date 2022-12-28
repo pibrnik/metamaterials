@@ -8,14 +8,22 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[twoside]{fancyhdr}
-
+\usepackage{etoolbox}
+\usepackage{nomencl}
+\usepackage{longtable}
+%\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+\makenomenclature
 \RequirePackage[backend=biber,style=numeric]{biblatex}
 
 \addbibresource{sources.bib}
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
 
-%Okrajšave
+%Preimenovanje poglavij
+\titleformat{\chapter}[display]
+{\bfseries}{}{0pt}{\Huge\thechapter\quad}
+
+% =========================== Okrajšave ==============================
 
 \DeclareAcronym{PZF}{
   short=PZF,
@@ -35,17 +43,51 @@
   long= osnovna celica,
 }
 
+% =========================== Simboli ==============================
+\nomenclature[A]{$\mathbf{M}$}{globalna masna matrika}
+\nomenclature[A]{$\mathbf{C}$}{globalna dušilna matrika}
+\nomenclature[A]{$\mathbf{K}$}{globalna togostna matrika}
+\nomenclature[A]{$\mathbf{q}$}{vektor generaliziranih vozliščnih pomikov}
+\nomenclature[A]{$\mathbf{f}$}{vektor generaliziranih vozliščnih sil}
+\nomenclature[G]{$\omega$}{krožna kotna frekvenca}
+\nomenclature[A]{$t$}{čas}
+\nomenclature[A]{$i$}{imaginarna komponenta}
+\nomenclature[G]{$\rho$}{gostota}
+\nomenclature[A]{$A$}{površina prereza}
+\nomenclature[A]{$l$}{dolžina končnega elementa}
+\nomenclature[A]{$E$}{elastični modul}
+\nomenclature[A]{$I$}{vztrajnostni moment prereza}
+\nomenclature[A]{$\mathbf{r}$}{krajevni vektor}
+\nomenclature[A]{$\mathbf{k}$}{valovni vektor}
+\nomenclature[A]{$L$}{dolžina bazne celice}
+\nomenclature[A]{$n$}{število baznih celic med točkama}
+\nomenclature[G]{$\mathbf{\mu}$}{vektor širjenja valovanja}
+\nomenclature[A]{$\mathbf{t}$}{bazni translacijski vektor recipročne bazne celice}
+\nomenclature[A]{$\mathbf{D}(\omega)$}{dinamska matrika sistema}
+\nomenclature[G]{$\mathbf{\Lambda}_R$}{desna reducirna matrika}
+\nomenclature[G]{$\mathbf{\Lambda}_L$}{leva reducirna matrika}
+\nomenclature[A]{$\mathbf{I}$}{identična matrika}
+\nomenclature[A]{$\mathbf{d}$}{bazni translacijski vektor bazne celice}
+
+\renewcommand{\nomname}{Seznam simbolov}
+\renewcommand\nomgroup[1]{%
+  \item[\bfseries
+  \ifstrequal{#1}{A}{Arabski simboli}{%
+  \ifstrequal{#1}{G}{Grški simboli}{}}%
+]}
+
+
 \begin{document}
-
 % ---- Oblikovanje strani
-\pagestyle{fancy}
+\pagenumbering{roman}
+
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-
 \fancyhf{}
-\fancyhead[RO,LE]{\leftmark}
-\fancyfoot[RO, LE]{\thepage}
-% ---- Konec oblikavanja strani
+\fancyhead[RO,RE]{\leftmark}
+\fancyfoot[CO, CE]{\thepage}
 
+\pagestyle{fancy}
+% ---- Konec oblikavanja strani
 
 \begin{titlepage}
     \begin{center}
@@ -73,11 +115,107 @@
     
 \end{titlepage}
 
+%Vsebinsko kazalo
+\thispagestyle{plain}
+\vspace*{0mm}
+\noindent\Large\textbf{Kazalo}\normalsize
+\vskip\medskipamount
+\leaders\vrule width \textwidth\vskip0.4pt
+\vskip\bigskipamount
+\makeatletter
+\renewcommand{\tableofcontents}{\@starttoc{toc}}
+\makeatother
 \tableofcontents
+\newpage
 
-\printacronyms[name=Seznam okrajšav]
+
+
+%Kazalo slik
+\thispagestyle{plain}
+\vspace*{0mm}
+\noindent\Large\textbf{Kazalo slik}\normalsize
+\vskip\medskipamount
+\leaders\vrule width \textwidth\vskip0.4pt
+\vskip\bigskipamount
+\addcontentsline{toc}{section}{Kazalo slik}
+\makeatletter
+\renewcommand{\listoffigures}{\@starttoc{lof}}
+\makeatother
+\listoffigures
+
+
+\newpage
+\thispagestyle{plain}
+\vspace*{0mm}
+\noindent\Large\textbf{Seznam uporabljenih simbolov}\normalsize
+\vskip\medskipamount
+\leaders\vrule width \textwidth\vskip0.4pt
+\vskip\bigskipamount
+
+\addcontentsline{toc}{section}{Seznam uporabljenih simbolov}
+\begin{longtable}[l]{@{}p{.15\textwidth}@{}p{.15\textwidth}@{}p{.7\textwidth}@{}}
+\hline
+Oznaka & Enota & Pomen\\
+\hline
+\endfirsthead
+\hline
+\endhead
+&&\\
+$\mathbf{C}$ & N s m$^{-1}$ & globalna dušilna matrika\\
+$\mathbf{d}$ & m & bazni translacijski vektor osnovne celice \\
+$\mathbf{D}(\omega)$ & N & dinamska matrika sistema \\
+$\mathbf{f}$ & N & vektor generaliziranih vozliščnih sil \\
+$\mathbf{I}$ & / & identična matrika\\
+$\mathbf{K}$ & N m$^{-1}$ & globalna togostna matrika \\
+$\mathbf{k}$ & m$^{-1}$ & valovni vektor \\
+$\mathbf{M}$ & kg & globalna masna matrika\\
+$\mathbf{q}$ & m & vektor generaliziranih vozliščnih pomikov \\
+$\mathbf{r}$ & m & krajevni vektor \\
+$\mathbf{t}$ & m & bazni translacijski vektor recipročne osnovne celice \\
+$A$ & m$^2$ & površina prereza \\
+$E$ & GPa & elastični modul \\
+$I$ & m$^4$ & vztrajnostni moment prereza \\
+$i$ & / & imaginarna komponenta \\
+$L$ & m & dolžina osnovne celice \\
+$l$ & m & dolžina končnega elementa \\
+$n$ & / & število baznih celice med točkama \\
+$t$ & s & čas \\
+&&\\
+$\mathbf{\Lambda}_L$ & / & leva reducirna matrika\\
+$\mathbf{\Lambda}_R$ & / & desna reducirna matrika\\
+$\mu$ & m$^{-1}$ & vektor širjenja valovanja\\
+$\omega$ & rad s$^{-1}$ & krožna kotna frekvenca\\
+$\rho$ & kg m$^{-3}$ & gostota\\
+\end{longtable}
+
+\newpage
+\thispagestyle{plain}
+\vspace*{0mm}
+\noindent\Large\textbf{Seznam uporabljenih okrajšav}\normalsize
+\vskip\medskipamount
+\leaders\vrule width \textwidth\vskip0.4pt
+\vskip\bigskipamount
+
+\addcontentsline{toc}{section}{Seznam uporabljenih okrajšav}
+
+\begin{longtable}[l]{@{}p{.2\textwidth}@{}p{.8\textwidth}@{}}
+\hline
+Okrajšava & Pomen\\
+\hline
+\endfirsthead
+\hline
+\endhead
+&\\
+EVP & problem lastnih vrednosti (ang. \emph{Eigen Value Problem})\\
+MM & metamaterial\\
+OC & osnovna celica\\
+PZF & pasovno zavrnitveni filter\\
+\end{longtable}
+
+
 
 \chapter{Uvod}
+\pagenumbering{arabic}
 \section{Cilji naloge}
 
 Cilj naloge je izdelati numerični model in delujoč metamaterial, ki bo dušil vibracije
@@ -354,6 +492,90 @@ vzmeti naredili preozke ali pretanke bi prehitro prišlo do njihove porušitve.
   \includegraphics[scale=0.8]{Images/drawing.png}
   \caption{Dimenzije \ac{OC} \ac{MM}}
 \end{figure}
+Znotraj programskega paketa za CAD modeliranje Solidworks so za \ac{OC} parametrizirane naslednje veličine:
+\begin{itemize}
+  \item Širina, višina in dolžina \ac{OC};
+  \item širina in debelina vzmeti.
+\end{itemize}
 
-\printbibliography[title={Viri}]
+\section{Izdelava numeričnega modela}
+Dandanes imamo za numerične simulacije na voljo različne programske pakete, ki nam predvsem močno pomagajo pri analizi komopliciranih 2D ali 3D struktur. Ponavadi bi osnovne preračune naredili
+v omenjenih paketih in bi potem s pridobljenimi podatki znotraj ločenega programa izračunali še disperzijske krivulje.
+V našem primeru imamo relativno preprosto strukturo, zato je mogoče za vse narediti enoten program in se povsem ogniti uporabi programov drugih proizvajalcev.
+\\
+V tem poglavju bo obrazložen postopek izdelave numeričnega modela v programskem jeziku Python.
+
+\subsection{Izračun lastnih frekvenc}
+Program za analizo \ac{MM} je spisan v obliki razreda, ki mu podamo naslednje vhodne podatke:
+\begin{itemize}
+  \item Elastični modul;
+  \item širina, višina in dolžina \ac{OC};
+  \item gostota;
+  \item nadomestna togost vzmeti;
+  \item masa resonatorja;
+  \item število končnih elementov.
+\end{itemize}
+Nadomestno togost vzmeti pridobimo s pomočjo strukturne analize \ac{OC} v programskem paketu Ansys \cite{ansys}, maso resonatroja pa iz CAD modela iz programskega paketa Solidworks \cite{solidworks}. Program v naslednjih korakih tvori globalno masno in togostno matriko
+sistema, pri čemer upošteva spremenljiv prerez, ki vpliva na površino prereza in vztrajnostni moment prereza. Nato globalni matriki recudira v reducirano globalno masno in reducirano globalno
+togostno matriko. Vse te matrike so funkcije vektorja širjenja valovanja $\mu$. Ko rešimo \ac{EVP} dobimo seznam lastnih frekvenc in lastnih oblik, katerega dolžina je enaka številu končnih elementov. Seznam prav tako pripada točno določenemu vektorju širjenja valovanja.
+
+\subsection{Izračun disperzijskih krivulj}
+V naslednjem koraku po inverznem pristopu izračunamo disperzijske krivulje za pripadajoči \ac{MM}. Program to naredi tako, da za končno število vektorjev širjenja valovanja $\mu$ s postopkom iz poglavja 3.2.1 izračuna
+lastne frekvence in jih nariše na graf $\omega(\mu)$. Zaradi preglednosti v programu lahko izberemo koliko lastnih frekvenc prikažemo na grafu in omejimo njegovo območje frekvenc, da lažje določimo \ac{PZF}.
+Program nato izračuna razliko med najmanjšo vrednostjo druge lastne frekvence in največjo vrednostjo prve lastne frekvence in izriše območje \ac{PZF}. Disperzijka krivulja je razvidna iz slike (3.3).
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.6]{Images/dispersion.png}
+  \caption{Disperzijske krivulje za \ac{MM}}
+\end{figure}
+Iz diagrama je razvidno, da naj bi \ac{PZF} bil med 800 in 950 Hz. Po analizah v programskem paketu Ansys \cite{ansys}, se v tem območju nahaja tudi prva lastna frekvenca
+\ac{OC}, kjer resonator intenzivno niha navzgor in navzdol.
+
+\subsection{Simulacija odziva \ac{MM}}
+Da si je lažje predstavljati različno obnašanje strukture pri različnih vektorjih širjenja valovanja, program vsebuje tudi tudi metodo za vizualizacijo relativnega gibanja osnovne strukture
+in resonatorja. Oblike lahko izrišemo s pomočjo vektorja lastnih oblik, ki ga dobimo poleg vektorja lastnih frekvenc kot rezultat rešive \ac{EVP}. Preden pa obliko lahko izrišemo, moramo dodati manjkajoča
+vozlišča, saj smo matriko pred tem reducirali. Prav tako v tej stopnji v simulacijo dodamo več osnovnih celic, da dobimo obliko nosilca. V ta namen uporabimo Bloch-Floquetov teorem, ki povezuje skrajne točke \ac{OC}.
+Vektor pomikov je kompleksen --- realne komponente predstavljajo razmerje pomikov, imaginarne komponente pa fazni zamik, ki ga moramo prav tako upoštevati. Na slikah (3.4) - (3.10) so predstavljene zamrznjene slike iz simulacije pri 
+različnih vektorjih širjenja valovanja. 
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mu0.png}
+  \caption{Simulacija za $\mu = 0$}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mupi_6.png}
+  \caption{Simulacija za $\mu = \frac{\pi}{6}$}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mupi_3.png}
+  \caption{Simulacija za $\mu = \frac{\pi}{3}$}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mupi_2.png}
+  \caption{Simulacija za $\mu = \frac{\pi}{2}$}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mu2pi_3.png}
+  \caption{Simulacija za $\mu = \frac{2\pi}{3}$}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mu5pi_6.png}
+  \caption{Simulacija za $\mu = \frac{5\pi}{6}$}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mupi.png}
+  \caption{Simulacija za $\mu = \pi$}
+\end{figure}
+\noindent Na slikah manjša pike predstavljajo vozlišča končnih elementov osnovne strukture, večje pike pa resonatorje.
+
+
+
+\printbibliography[title={Literatura}]
+\addcontentsline{toc}{chapter}{Literatura}
 \end{document}

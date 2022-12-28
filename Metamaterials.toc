@@ -1,18 +1,26 @@
 \acswitchoff 
 \babel@toc {slovene}{}\relax 
-\contentsline {chapter}{\numberline {1}Uvod}{3}{}%
-\contentsline {section}{\numberline {1.1}Cilji naloge}{3}{}%
-\contentsline {chapter}{\numberline {2}Teoretično ozadje}{4}{}%
-\contentsline {section}{\numberline {2.1}Uvod v metamateriale}{4}{}%
-\contentsline {section}{\numberline {2.2}Osnove lastnih nihanj sistemov z več prostostnimi stopnjami}{5}{}%
-\contentsline {section}{\numberline {2.3}Metoda končnih elementov}{6}{}%
-\contentsline {section}{\numberline {2.4}Osnove neskončnih periodičnih struktur}{6}{}%
-\contentsline {subsection}{\numberline {2.4.1}Bloch-Floquetov teorem}{6}{}%
-\contentsline {subsection}{\numberline {2.4.2}Izračun disperzijskih krivulj}{7}{}%
-\contentsline {subsubsection}{\numberline {2.4.2.1}Brillouinove cone}{8}{}%
-\contentsline {subsubsection}{\numberline {2.4.2.2}Modeliranje osnovne celice}{8}{}%
-\contentsline {section}{\numberline {2.5}Izračun periodičnih struktur}{10}{}%
-\contentsline {subsection}{\numberline {2.5.1}Inverzni pristop}{10}{}%
-\contentsline {subsection}{\numberline {2.5.2}Direktni pristop}{10}{}%
-\contentsline {chapter}{\numberline {3}Zasnova in preračun metamateriala}{12}{}%
-\contentsline {section}{\numberline {3.1}Zasnova oblike metamateriala}{12}{}%
+\contentsline {section}{Kazalo slik}{ii}{}%
+\contentsline {section}{Seznam uporabljenih simbolov}{iii}{}%
+\contentsline {section}{Seznam uporabljenih okrajšav}{iv}{}%
+\contentsline {chapter}{\numberline {1}Uvod}{1}{}%
+\contentsline {section}{\numberline {1.1}Cilji naloge}{1}{}%
+\contentsline {chapter}{\numberline {2}Teoretično ozadje}{2}{}%
+\contentsline {section}{\numberline {2.1}Uvod v metamateriale}{2}{}%
+\contentsline {section}{\numberline {2.2}Osnove lastnih nihanj sistemov z več prostostnimi stopnjami}{3}{}%
+\contentsline {section}{\numberline {2.3}Metoda končnih elementov}{4}{}%
+\contentsline {section}{\numberline {2.4}Osnove neskončnih periodičnih struktur}{4}{}%
+\contentsline {subsection}{\numberline {2.4.1}Bloch-Floquetov teorem}{4}{}%
+\contentsline {subsection}{\numberline {2.4.2}Izračun disperzijskih krivulj}{5}{}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}Brillouinove cone}{6}{}%
+\contentsline {subsubsection}{\numberline {2.4.2.2}Modeliranje osnovne celice}{6}{}%
+\contentsline {section}{\numberline {2.5}Izračun periodičnih struktur}{8}{}%
+\contentsline {subsection}{\numberline {2.5.1}Inverzni pristop}{8}{}%
+\contentsline {subsection}{\numberline {2.5.2}Direktni pristop}{8}{}%
+\contentsline {chapter}{\numberline {3}Zasnova in preračun metamateriala}{10}{}%
+\contentsline {section}{\numberline {3.1}Zasnova oblike metamateriala}{10}{}%
+\contentsline {section}{\numberline {3.2}Izdelava numeričnega modela}{13}{}%
+\contentsline {subsection}{\numberline {3.2.1}Izračun lastnih frekvenc}{13}{}%
+\contentsline {subsection}{\numberline {3.2.2}Izračun disperzijskih krivulj}{14}{}%
+\contentsline {subsection}{\numberline {3.2.3}Simulacija odziva \ac {MM}}{15}{}%
+\contentsline {chapter}{Literatura}{17}{}%

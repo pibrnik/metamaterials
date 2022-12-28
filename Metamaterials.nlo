@@ -1,0 +1,24 @@
+\nomenclatureentry{A$\mathbf{M}$@[{$\mathbf{M}$}]\begingroup globalna masna matrika\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$\mathbf{C}$@[{$\mathbf{C}$}]\begingroup globalna dušilna matrika\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$\mathbf{K}$@[{$\mathbf{K}$}]\begingroup globalna togostna matrika\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$\mathbf{q}$@[{$\mathbf{q}$}]\begingroup vektor generaliziranih vozliščnih pomikov\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$\mathbf{f}$@[{$\mathbf{f}$}]\begingroup vektor generaliziranih vozliščnih sil\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{G$\omega$@[{$\omega$}]\begingroup krožna kotna frekvenca\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$t$@[{$t$}]\begingroup čas\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$i$@[{$i$}]\begingroup imaginarna komponenta\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{G$\rho$@[{$\rho$}]\begingroup gostota\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$A$@[{$A$}]\begingroup površina prereza\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$l$@[{$l$}]\begingroup dolžina končnega elementa\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$E$@[{$E$}]\begingroup elastični modul\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$I$@[{$I$}]\begingroup vztrajnostni moment prereza\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$\mathbf{r}$@[{$\mathbf{r}$}]\begingroup krajevni vektor\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$\mathbf{k}$@[{$\mathbf{k}$}]\begingroup valovni vektor\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$L$@[{$L$}]\begingroup dolžina bazne celice\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$n$@[{$n$}]\begingroup število baznih celic med točkama\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{G$\mathbf{\mu}$@[{$\mathbf{\mu}$}]\begingroup vektor širjenja valovanja\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$\mathbf{t}$@[{$\mathbf{t}$}]\begingroup bazni translacijski vektor recipročne bazne celice\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$\mathbf{D}(\omega)$@[{$\mathbf{D}(\omega)$}]\begingroup dinamska matrika sistema\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{G$\mathbf{\Lambda}_R$@[{$\mathbf{\Lambda}_R$}]\begingroup desna reducirna matrika\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{G$\mathbf{\Lambda}_L$@[{$\mathbf{\Lambda}_L$}]\begingroup leva reducirna matrika\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$\mathbf{I}$@[{$\mathbf{I}$}]\begingroup identična matrika\nomeqref {0}|nompageref}{i}
+\nomenclatureentry{A$\mathbf{d}$@[{$\mathbf{d}$}]\begingroup bazni translacijski vektor bazne celice\nomeqref {0}|nompageref}{i}

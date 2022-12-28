@@ -19,6 +19,35 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{ansys}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c4c3f8d0d4ac26494ebfbf053206e390}{%
+           family={Ansys},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4c3f8d0d4ac26494ebfbf053206e390}
+      \strng{fullhash}{c4c3f8d0d4ac26494ebfbf053206e390}
+      \strng{bibnamehash}{c4c3f8d0d4ac26494ebfbf053206e390}
+      \strng{authorbibnamehash}{c4c3f8d0d4ac26494ebfbf053206e390}
+      \strng{authornamehash}{c4c3f8d0d4ac26494ebfbf053206e390}
+      \strng{authorfullhash}{c4c3f8d0d4ac26494ebfbf053206e390}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ansys programski paket}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ansys.com
+      \endverb
+      \verb{url}
+      \verb https://www.ansys.com
+      \endverb
+    \endentry
     \entry{vanbelle}{thesis}{}
       \name{author}{1}{}{%
         {{hash=f9186fe2700fb6c2832c5c5f310e0d4d}{%
@@ -123,6 +152,35 @@
       \endverb
       \verb{url}
       \verb http://www.abhipod.com/researchpage/UGCMRP_05_06_ForWeb/elearningnode14.html
+      \endverb
+    \endentry
+    \entry{solidworks}{online}{}
+      \name{author}{1}{}{%
+        {{hash=5dcbc8d322035b0c6a6ecee8a3348fc8}{%
+           family={Solidworks},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5dcbc8d322035b0c6a6ecee8a3348fc8}
+      \strng{fullhash}{5dcbc8d322035b0c6a6ecee8a3348fc8}
+      \strng{bibnamehash}{5dcbc8d322035b0c6a6ecee8a3348fc8}
+      \strng{authorbibnamehash}{5dcbc8d322035b0c6a6ecee8a3348fc8}
+      \strng{authornamehash}{5dcbc8d322035b0c6a6ecee8a3348fc8}
+      \strng{authorfullhash}{5dcbc8d322035b0c6a6ecee8a3348fc8}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Solidworks programski paket}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.solidworks.com
+      \endverb
+      \verb{url}
+      \verb https://www.solidworks.com
       \endverb
     \endentry
   \enddatalist
