@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.24)  30 DEC 2022 14:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.24)  30 DEC 2022 14:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1291,6 +1291,12 @@ Poglavje 4.
 [20
 
 ]
+<Images/mostiscenje_small.jpg, id=140, 836.12375pt x 627.34375pt>
+File: Images/mostiscenje_small.jpg Graphic file (type jpg)
+<use Images/mostiscenje_small.jpg>
+Package pdftex.def Info: Images/mostiscenje_small.jpg  used on input line 698.
+(pdftex.def)             Requested size: 334.44357pt x 250.93304pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1298,14 +1304,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[21]
+[21 <./Images/mostiscenje_small.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22]
 Poglavje 5.
 
-Overfull \hbox (2.63582pt too wide) in paragraph at lines 701--701
+Overfull \hbox (2.63582pt too wide) in paragraph at lines 706--706
 \OT1/cmr/m/it/12 The In-ter-na-ti-o-nal Jo-ur-nal of Ad-van-ced Ma-nu-fac-tu-ring Te-ch-no-logy \OT1/cmr/m/n/12 114.5
  []
 
-[22
+[23
 
 ]
 
@@ -1315,23 +1329,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[23] (Metamaterials.aux)
+[24] (Metamaterials.aux)
 Package logreq Info: Writing requests to 'Metamaterials.run.xml'.
 \openout1 = `Metamaterials.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18582 strings out of 476406
- 383360 string characters out of 2789566
+ 18590 strings out of 476406
+ 383576 string characters out of 2789566
  1866787 words of memory out of 3000000
- 38732 multiletter control sequences out of 15000+600000
- 521484 words of font info for 63 fonts, out of 8000000 for 9000
+ 38738 multiletter control sequences out of 15000+600000
+ 521485 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,13n,106p,948b,2784s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Metamaterials.pdf (30 pages, 767706 bytes).
+Output written on Metamaterials.pdf (31 pages, 844293 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
+ 215 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 

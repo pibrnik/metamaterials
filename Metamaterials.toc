@@ -34,5 +34,5 @@
 \contentsline {subsection}{\numberline {3.2.3}Simulacija odziva \ac {MM}}{18}{}%
 \contentsline {chapter}{\numberline {4}Eksperimentalni del}{20}{}%
 \contentsline {section}{\numberline {4.1}Proces 3D tiska}{20}{}%
-\contentsline {section}{\numberline {4.2}Meritve}{21}{}%
-\contentsline {chapter}{\numberline {5}Literatura}{22}{}%
+\contentsline {section}{\numberline {4.2}Meritve}{22}{}%
+\contentsline {chapter}{\numberline {5}Literatura}{23}{}%
