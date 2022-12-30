@@ -123,6 +123,35 @@
       \field{type}{mathesis}
       \field{year}{2020}
     \endentry
+    \entry{leapfrog}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fa9a601af7606290aef7337e9361df74}{%
+           family={Leapfrog},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{fa9a601af7606290aef7337e9361df74}
+      \strng{fullhash}{fa9a601af7606290aef7337e9361df74}
+      \strng{bibnamehash}{fa9a601af7606290aef7337e9361df74}
+      \strng{authorbibnamehash}{fa9a601af7606290aef7337e9361df74}
+      \strng{authornamehash}{fa9a601af7606290aef7337e9361df74}
+      \strng{authorfullhash}{fa9a601af7606290aef7337e9361df74}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{3D Printing Concepts and 3D Printer Parts}
+      \field{urlday}{30}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lpfrg.com/guides/3d-printing-concepts-and-3d-printer-parts/
+      \endverb
+      \verb{url}
+      \verb https://www.lpfrg.com/guides/3d-printing-concepts-and-3d-printer-parts/
+      \endverb
+    \endentry
     \entry{abhipod}{online}{}
       \name{author}{1}{}{%
         {{hash=b1b650cf2c5ae62aea38567473ba228f}{%
@@ -154,6 +183,109 @@
       \verb http://www.abhipod.com/researchpage/UGCMRP_05_06_ForWeb/elearningnode14.html
       \endverb
     \endentry
+    \entry{redwood20173d}{book}{}
+      \name{author}{3}{}{%
+        {{hash=f5c2993b141b7512a62c42702cfddfe7}{%
+           family={Redwood},
+           familyi={R\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4e07060b2a72dd4c24c93db6eef08865}{%
+           family={Schöffer},
+           familyi={S\bibinitperiod},
+           given={Filemon},
+           giveni={F\bibinitperiod}}}%
+        {{hash=26ef6e624c28033515b26fe444b8d6fa}{%
+           family={Garret},
+           familyi={G\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {3D Hubs}%
+      }
+      \strng{namehash}{0e4d92ffc3b2692aee9f032a55d46fed}
+      \strng{fullhash}{0e4d92ffc3b2692aee9f032a55d46fed}
+      \strng{bibnamehash}{0e4d92ffc3b2692aee9f032a55d46fed}
+      \strng{authorbibnamehash}{0e4d92ffc3b2692aee9f032a55d46fed}
+      \strng{authornamehash}{0e4d92ffc3b2692aee9f032a55d46fed}
+      \strng{authorfullhash}{0e4d92ffc3b2692aee9f032a55d46fed}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The 3D printing handbook: technologies, design and applications}
+      \field{year}{2017}
+    \endentry
+    \entry{fff_article}{article}{}
+      \name{author}{9}{}{%
+        {{hash=a8651c35f1fe4b5b6a0c34f94ccff3e7}{%
+           family={Shaqour},
+           familyi={S\bibinitperiod},
+           given={Bahaa},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c7606627b21e5e52b28fe963884773e4}{%
+           family={Abuabiah},
+           familyi={A\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=77aecb2f8d6fff07313c2ddb2e9e9391}{%
+           family={Abdel-Fattah},
+           familyi={A\bibinithyphendelim F\bibinitperiod},
+           given={Salameh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0d55d4ef41f852c48514c5d6c024b607}{%
+           family={Juaidi},
+           familyi={J\bibinitperiod},
+           given={Adel},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3eb6bd34fe5c333e2843bb0ba27eadd0}{%
+           family={Abdallah},
+           familyi={A\bibinitperiod},
+           given={Ramez},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e8c080e7816c9d3e022306fbaf34c102}{%
+           family={Abuzaina},
+           familyi={A\bibinitperiod},
+           given={Waleed},
+           giveni={W\bibinitperiod}}}%
+        {{hash=a986d3f8be683fe6dae15f704cac0450}{%
+           family={Qarout},
+           familyi={Q\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3c8376d683616600e80415e555f1b6ea}{%
+           family={Verleije},
+           familyi={V\bibinitperiod},
+           given={Bart},
+           giveni={B\bibinitperiod}}}%
+        {{hash=575fe88d507c9a37942e1dbd304d7ea4}{%
+           family={Cos},
+           familyi={C\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{10ac34655dc108a6d1dea25060bd5c96}
+      \strng{fullhash}{a2850b20722b12295f127211b02ce5eb}
+      \strng{bibnamehash}{10ac34655dc108a6d1dea25060bd5c96}
+      \strng{authorbibnamehash}{10ac34655dc108a6d1dea25060bd5c96}
+      \strng{authornamehash}{10ac34655dc108a6d1dea25060bd5c96}
+      \strng{authorfullhash}{a2850b20722b12295f127211b02ce5eb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Advanced Manufacturing Technology}
+      \field{number}{5}
+      \field{title}{Gaining a better understanding of the extrusion process in fused filament fabrication 3D printing: A review}
+      \field{volume}{114}
+      \field{year}{2021}
+      \field{pages}{1279\bibrangedash 1291}
+      \range{pages}{13}
+    \endentry
     \entry{solidworks}{online}{}
       \name{author}{1}{}{%
         {{hash=5dcbc8d322035b0c6a6ecee8a3348fc8}{%
@@ -181,6 +313,35 @@
       \endverb
       \verb{url}
       \verb https://www.solidworks.com
+      \endverb
+    \endentry
+    \entry{cura}{online}{}
+      \name{author}{1}{}{%
+        {{hash=89a1ad46801d4586db6030193910acff}{%
+           family={UltiMaker},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{89a1ad46801d4586db6030193910acff}
+      \strng{fullhash}{89a1ad46801d4586db6030193910acff}
+      \strng{bibnamehash}{89a1ad46801d4586db6030193910acff}
+      \strng{authorbibnamehash}{89a1ad46801d4586db6030193910acff}
+      \strng{authornamehash}{89a1ad46801d4586db6030193910acff}
+      \strng{authorfullhash}{89a1ad46801d4586db6030193910acff}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{UltiMaker Cura 5.2.1}
+      \field{urlday}{30}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ultimaker.com/software/ultimaker-cura
+      \endverb
+      \verb{url}
+      \verb https://ultimaker.com/software/ultimaker-cura
       \endverb
     \endentry
   \enddatalist

@@ -11,6 +11,7 @@
 \usepackage{etoolbox}
 \usepackage{nomencl}
 \usepackage{longtable}
+\usepackage{tocloft}
 %\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 \makenomenclature
 \RequirePackage[backend=biber,style=numeric]{biblatex}
@@ -18,6 +19,9 @@
 \addbibresource{sources.bib}
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
+
+%Višina celice v tabeli
+\renewcommand{\arraystretch}{1.1}
 
 %Preimenovanje poglavij
 \titleformat{\chapter}[display]
@@ -41,6 +45,11 @@
 \DeclareAcronym{OC}{
   short=OC,
   long= osnovna celica,
+}
+
+\DeclareAcronym{FFF}{
+  short=FFF,
+  long= Fused Filament Fabrication,
 }
 
 % =========================== Simboli ==============================
@@ -86,7 +95,6 @@
 \fancyhead[RO,RE]{\leftmark}
 \fancyfoot[CO, CE]{\thepage}
 
-\pagestyle{fancy}
 % ---- Konec oblikavanja strani
 
 \begin{titlepage}
@@ -116,7 +124,7 @@
 \end{titlepage}
 
 %Vsebinsko kazalo
-\thispagestyle{plain}
+\pagestyle{plain}
 \vspace*{0mm}
 \noindent\Large\textbf{Kazalo}\normalsize
 \vskip\medskipamount
@@ -131,7 +139,6 @@
 
 
 %Kazalo slik
-\thispagestyle{plain}
 \vspace*{0mm}
 \noindent\Large\textbf{Kazalo slik}\normalsize
 \vskip\medskipamount
@@ -141,11 +148,36 @@
 \makeatletter
 \renewcommand{\listoffigures}{\@starttoc{lof}}
 \makeatother
+\renewcommand\cftfigpresnum{Slika~}
+\renewcommand\cftfigaftersnum{:}
+\newlength{\mylen} % a "scratch" length
+\settowidth{\mylen}{\bfseries\cftfigpresnum\cftfigaftersnum} % extra space
+\addtolength{\cftfignumwidth}{\mylen} % add the extra space
+\setlength{\cftfigindent}{0pt}
 \listoffigures
 
+\newpage
+%Kazalo tabel
+\vspace*{0mm}
+\noindent\Large\textbf{Kazalo preglednic}\normalsize
+\vskip\medskipamount
+\leaders\vrule width \textwidth\vskip0.4pt
+\vskip\bigskipamount
+\addcontentsline{toc}{section}{Kazalo preglednic}
+% Seznam tabel
+\makeatletter
+\renewcommand{\listoftables}{\@starttoc{lot}}
+\makeatother
+
+\renewcommand\cfttabpresnum{Preglednica~}
+\renewcommand\cfttabaftersnum{:}
+\settowidth{\mylen}{\bfseries\cfttabpresnum\cfttabaftersnum} % extra space
+\addtolength{\cfttabnumwidth}{\mylen} % add the extra space
+\setlength{\cfttabindent}{0pt}
+
+\listoftables
 
 \newpage
-\thispagestyle{plain}
 \vspace*{0mm}
 \noindent\Large\textbf{Seznam uporabljenih simbolov}\normalsize
 \vskip\medskipamount
@@ -207,12 +239,13 @@ Okrajšava & Pomen\\
 \endhead
 &\\
 EVP & problem lastnih vrednosti (ang. \emph{Eigen Value Problem})\\
+FFF & Fused Filament Fabrication \\
 MM & metamaterial\\
 OC & osnovna celica\\
 PZF & pasovno zavrnitveni filter\\
 \end{longtable}
 
-
+\pagestyle{fancy}
 
 \chapter{Uvod}
 \pagenumbering{arabic}
@@ -467,6 +500,60 @@ spremembo faze. \cite{vanbelle, kosir} Kadar je $\mu$ odvisen od večih dimenzij
 \\
 V našem primeru direktnega pristopa ne bomo uporabili, vendar bomo preračun izvedli le z inverznim pristopom.
 
+\section{FFF tehnologija 3D tiska}
+\ac{FFF} je tehnologija, pri kateri izdelek dobimo s taljenjem termoplasta, ki ga nato skozi šobo po plasteh ekstrudiramo na podlago. Tehnika je bila razvita leta 1989 in se dandanes
+največ uporablja na področjih inženiringa, znanosti, hitrega prototipiranja, medicine in industrije. \cite{fff_article}
+\\
+Velika prednost \ac{FFF} metode je njena vsestranskost in cenovna dostopnost. V zadnjih letih so se na trgu pojavili \ac{FFF} 3D tiskalniki, ki so dostopni tudi 
+navadnim potrošnikom. 
+
+\subsection{Delovanje \ac{FFF} 3D tiskalnika}
+\ac{FFF} 3D tiskalniki obstajajo v najrazličnejših velikostih in izvedbah, vendar si vsi delijo skupne dele, ki opravljajo proces 3D tiskanja. Tiskalnik ima običajno 3 osi (x, y in z), pri čemer x- in y-os skrbita za premikanje glave po
+območju tiskanja, z-os pa skrbi za pomikanje plošče, kamor se nanašajo plasti. V ta namen se uporabljajo koračni motorji, ki preko jermenov ali navojnih palic premikajo sestavne dele tiskalnika. Plošča na katero se nanašajo plasti je običajno segreta iz spodnje strani na določeeno temperaturo, s čemer zagotavljamo
+adhezijo ekstrudirane plasti na ploščo. \\
+Najpomembnejši del tiskalnika predstavlja glava. Kot je razvidno na sliki (2.4), glavo sestavlja 5 sestavnih delov. Skozi dovodno cev dovajamo filament v trdni obliki, ki ga koračni motor s preciznim in nadzorovanim gibanjem poriva skozi podajač. Na koncu glave se nahaja šoba z grelnim elementom \textit{ang. hot-end}, ki filament tali s prednastavljeno temperaturo
+in ga ekstrudira skozi šobo. Nad šobo z grelnim elementom se nahajajo hladilna rebra, ki preprečujejo taljenje elementa višje po dovodni cevi. S tem preprečimo ohlajanje in ekspanzijo materiala višje v cevi, kar bi zmanjšalo ali povsem ustavilo tok filamenta.
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{Images/extruder.png}
+  \caption{Glava FFF 3D tiskalnika in njeni sestavni deli \cite{leapfrog}}
+\end{figure}
+\noindent Za zagotavljanje najboljše kvalitete končnega izdelka, je pomemben konstanten in kontinuiran tok taljenega materiala. Za to skrbi koračni motor, ki filament potiska preko
+podajača (zobnik). Ta mora imeti pravilno nastavljeno silo pritiska, da filament ne zdrsuje ali se lomi med podajanjem. \cite{fff_article}
+
+\subsection{Karakterisike 3D tiskalnika}
+\subsubsection{Parametri 3D tiska}
+Pred začetkom 3D tiska je potrebna priprava datotke z zapisom informacij o izdelavi modela. Gre za G-kodo, ki vključuje podatke o premikanju motorjev, hitrosti podajanja filamenta, temperature plošče, temperature šobe in ogromno ostalih opcijskih parametrov.
+Izbira pravilnih parametrov 3D tiska močno vpliva na uspešnost tiska in kvaliteto končnega izdelka. \\
+Ločljivost končnega izdelka določimo z izbiro premera šobe in višino ekstrudirane plasti. Kljub temu, da lahko na dimenzijsko natančnost končnega izdelka vplivamo z veliko ostalimi parametri, sta debelina plasti in premer šobe ponavadi prva parametra, s katerima nadzorujemo
+omenjeno lastnost. Z zmanjšanjem premera šobe in tanjšanjem debeline plasti, izboljšamo kvaliteto površin in detajlov. \cite{redwood20173d}
+\\
+Zelo pomembna je predvsem pravilna izbira temperature šobe in plošče. Ti temperaturi se močno razlikujeta od filamenta do filementa in sta ponavadi v območjih podani od proizvajalna filamenta. Končna določitev temperature je nato vedno rezultat 
+izvedenih testnih izdelkov. Temperatura šobe je odvisna od temperature steklenja $T_g$ polimernega materiala, ki ga uporabljamo kot filament. Pri tej temperaturi pride do razpada šibkih Van der Waalsovih vezi, ki med seboj držijo povezane polimerne verige. Takrat filament začne izkazovati
+manjšo viskoznost skupaj z ostalimi spremenjenimi visko-elastičnimi lastnostmi.
+
+\subsubsection{Adhezija}
+Med premikanjem plošče in glave je pomembno, da iztiskan material ostanee na prvotnem mestu, drugače dobimo zamike med plastmi. To dosežemo s pravilno adhezijo prve plasti na ploščo. Dobro adhezijo lahko dosežemo na več načinov, ki pa so vsi povezani z lastnostmi podlage.
+Prvi parameter, ki vpliva na adhezijo prve plasti je temperatura plošče. S pravilno segreto podlago, zagotovimo dobro povezavo molekul, ki zagotovijo močno adhezijo. Pomagamo tudi s predpripravo plošče --- v ta namen obstajajo
+različna sredstva in spreji, vendar zadostuje tudi lak za lase, kadar imamo stekleno ploščo, ali pa trdo ''UHU`` lepilo za druge podlage. \\
+Tako kot adhezija prve plasti je pomembna tudi adhezija medsebojnih plasti. To dosežemo s pritiskom nove plasti na prejšnjo, pri čemer pomaga tudi delno ponovno taljenje predhodne plasti. Zaradi pritiska zgornje plasti se nalaganje dogaja v ovalni obliki, če bi opazovali presek. Stiki med dvema ovaloma predstavljajo mesta koncentracije napetosti, kjer najhitreje prihaja do loma. \cite{redwood20173d} Zaradi tega v smeri nalaganja plasti pričakujemo 
+nizke mehanske lastnosti končnega izdelka.
+
+\subsubsection{Podpore}
+Čeprav je metoda \ac{FFF} 3D tiska zelo vsestranska ima svoje omejitve. Velik problem predstavljajo geometrije, kjer je naklon stene manjši od 45$^{\circ}$ glede na podlago. Nad to mejo se plasti ne sprimeta več dobro med seboj. Temu se lahko izognemo z uporabo podpornih stuktur. Te strukrue imajo majhno gostoto tiska in posebno geometrijo, ki porabi malo filamenta a zagotavlja veliko podporno površino in lahko odstranjevanje. 
+S tem dodamo podlago, na katero se naslednja plast lahko odloži. Podporne strukture po končanem tisku nato odstranimo. Zaradi stika s podpornim materialom je kvaliteta površine slabša, zato
+odstranjevanju podpornih struktur ponavadi sledi naknadna obelava izdelka.\cite{redwood20173d}
+
+\subsubsection{Stopnja zapolnjenosti (ang. \emph{Infill})}
+Z metodo \ac{FFF} ponavadi ne tiskamo popolnoma polnih izdelkov. Da se izognemo dolgim časom tiska in večji porabi materiala ponavadi izdelek zapolnimo le deloma. \cite{redwood20173d}
+Med pripravo modela določimo debelino sten izdelka, ki so natisnjene polno in pa delež in geometrijo notranje zapolnitve. Geometrija je lahko heksagonalna, kvadratna, trikotna, itd. Z zmanjšanjem stopnje
+zapolnitve močno skrajšamo čas tiska a hkrati tudi vplivamo na nižje mehanske lastnosti končnega izdelka.
+
+\subsection{Dimenzijska natačnost}
+3D natisnjeni izdelki so vedno izpostavljeni dimenzijskim napakam. Med procesom tiska pri posameznih nanesenih plasteh prihaja najprej do raztezanja in nato krčenja materiala zaradi temperaturnih
+razlik. Pri tem se ustvarjajo notranje napetosti, ki vodijo do krčenja in krivljenja materiala. \cite{redwood20173d} Stopnja krčenja je neposredno odvisna od uporabljenega materiala. PLA filamenti so veliko bolj izpostavljeni krčenju kot PETG filamenti, slednji pa 
+so veliko bolj dovzetni za krivljenje kot pa PLA filamenti. V kolikor je pomembno ujemanje med izdelki je potrebno prilagajanje dimenzij pred tiskom. 
+
 \chapter{Zasnova in preračun metamateriala}
 V tem poglavju je najprej predstavljena zasnovana \ac{OC} \ac{MM}. Sledi predstavitev izdelave programa za numerično simulacijo odziva \ac{MM} in izris disperzijskih krivulj po direktni
 metodi.
@@ -576,6 +663,41 @@ različnih vektorjih širjenja valovanja.
 
 
 
-\printbibliography[title={Literatura}]
-\addcontentsline{toc}{chapter}{Literatura}
+\chapter{Eksperimentalni del}
+V tem poglavju bomo predstavili postopek določanja materialnih lastnosti filamenta in 3D tiska \ac{MM}. Temu bo sledila predstavitev eksperimenta in primerjava rezultatov z numeričnimi 
+napovedmi iz poglavja 3.
+
+\section{Proces 3D tiska}
+Po končani konstrukciji \ac{OC} \ac{MM}, smo iz programskega paketa Solidworks \cite{solidworks} v formatu STL. STL zapis model razdeli na trikotnike, s katerimi popiše površine izdelka. Naslednji korak je bil priprava G-kode za 3D tiskalnik. V ta namen obstaja več namenskih programskih paketov, ki model za dane parametri razreže na plasti (ang. \emph{slicing}) in tvori
+G-kodo. Mi smo uporbili prosto dostopni program UltiMaker Cura \cite{cura}. \\
+Za izdelavo \ac{MM} smo uporabili PETG filament. V primerjavi z bolj razširjeno uporaljenim PLA filamentom ima PETG boljšo fleksibilnost, kar potrebujemo za vzmetni del \ac{OC}.
+
+\begin{table}[H]
+  \caption{Osnovni parametri za tisk}
+  \begin{center}
+  \begin{tabular}{ | l | c | r | }
+    \hline
+    Temperatura šobe & 240 $^{\circ}$ \\ \hline
+    Temperatura podloge & 82 $^{\circ}$ \\ \hline
+    Delež zapolnitve & 100 \% \\ \hline
+    Hitrost tiska & 50 mm s$^{-1}$ \\ \hline
+    Debelina plasti & 0.15 mm \\ \hline
+    Hitrost mostiščenja & 10 mm s$^{-1}$ \\
+    \hline  
+  \end{tabular}
+  \end{center}
+\end{table}
+
+\noindent Posebej pozorni smo bili na vzmeti \ac{OC} \ac{MM}, saj so ključnega pomena za pravilno območje \ac{PZF}. Vzmeti so izjemno majhnih dimenzij (0.6 mm x 0.6 mm) in se nahajajo na zgornjem
+in spodnjem delu \ac{OC}. Na spodnjem delu vzmeti ležijo neposredno na plošči, kar ne predstavlja nobenega problema, medtem ko na zgornjem delu nimajo nobenega podpornega materiala. Praviloma bi v takem
+primeru uporabili podporne strukture, vendar je razdalja majhna, prav tako pa bi bilo po tisku podpore nemogoče odstraniti zaradi nedostopnosti. V takem primeru se poslužimo posebne tehnike ''mostiščenja`` (ang. \emph{bridging}), kjer lahko
+material nanašamo med dvema stenama brez podpor. Da je to izvedljivo je potrebno na tem mestu prilagoditi parametre tiskanja --- močno upočasniti hitrost tiska in povečati hlajenje na maksimalno raven, da se material v trenutku strdi. S tem močno izboljšamo
+uspešnost tiska brez podpor.  \\
+Tisk ene enote nosilca, ki je zaradi velikosti plošče tiskalnika omejena na 25 cm, je trajala 7 ur.
+
+\section{Meritve}
+
+
+\printbibliography[heading=bibnumbered]
+%\addcontentsline{toc}{chapter}{Literatura}
 \end{document}

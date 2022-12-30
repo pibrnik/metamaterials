@@ -1,14 +1,14 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'Metamaterials.blg'
-[161] biber-MSWIN64:340> INFO - === 
-[207] Biber.pm:418> INFO - Reading 'Metamaterials.bcf'
-[371] Biber.pm:978> INFO - Found 6 citekeys in bib section 0
-[394] Biber.pm:4401> INFO - Processing section 0
-[411] Biber.pm:4592> INFO - Looking for bibtex file 'sources.bib' for section 0
-[472] bibtex.pm:1713> INFO - LaTeX decoding ...
-[483] bibtex.pm:1518> INFO - Found BibTeX data source 'sources.bib'
-[563] UCollate.pm:68> INFO - Overriding locale 'sl-SI' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[564] UCollate.pm:68> INFO - Overriding locale 'sl-SI' defaults 'variable = shifted' with 'variable = non-ignorable'
-[564] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'sl-SI'
-[578] bbl.pm:654> INFO - Writing 'Metamaterials.bbl' with encoding 'UTF-8'
-[581] bbl.pm:757> INFO - Output to Metamaterials.bbl
+[155] biber-MSWIN64:340> INFO - === 
+[201] Biber.pm:418> INFO - Reading 'Metamaterials.bcf'
+[367] Biber.pm:978> INFO - Found 10 citekeys in bib section 0
+[397] Biber.pm:4401> INFO - Processing section 0
+[414] Biber.pm:4592> INFO - Looking for bibtex file 'sources.bib' for section 0
+[476] bibtex.pm:1713> INFO - LaTeX decoding ...
+[494] bibtex.pm:1518> INFO - Found BibTeX data source 'sources.bib'
+[616] UCollate.pm:68> INFO - Overriding locale 'sl-SI' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[617] UCollate.pm:68> INFO - Overriding locale 'sl-SI' defaults 'variable = shifted' with 'variable = non-ignorable'
+[617] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'sl-SI'
+[636] bbl.pm:654> INFO - Writing 'Metamaterials.bbl' with encoding 'UTF-8'
+[642] bbl.pm:757> INFO - Output to Metamaterials.bbl

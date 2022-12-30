@@ -5,14 +5,17 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Prikaz 1D periodične strukture in njene bazne celice}}{5}{}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Bazne celice, njena recipročna celica v prostoru in Brillouinova cona (BZ)}}{6}{}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Transformacija Brillouinove cone iz valovnega (k) v valovni ($\mu $) prostor}}{6}{}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Glava FFF 3D tiskalnika in njeni sestavni deli \blx@tocontentsinit {0}\cite {leapfrog}}}{10}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Končni koncept \ac {OC} \ac {MM}}}{11}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Dimenzije \ac {OC} \ac {MM}}}{12}{}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Disperzijske krivulje za \ac {MM}}}{14}{}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Simulacija za $\mu = 0$}}{15}{}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Simulacija za $\mu = \frac {\pi }{6}$}}{15}{}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Simulacija za $\mu = \frac {\pi }{3}$}}{15}{}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Simulacija za $\mu = \frac {\pi }{2}$}}{16}{}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Simulacija za $\mu = \frac {2\pi }{3}$}}{16}{}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Simulacija za $\mu = \frac {5\pi }{6}$}}{16}{}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Simulacija za $\mu = \pi $}}{16}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Končni koncept \ac {OC} \ac {MM}}}{14}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Dimenzije \ac {OC} \ac {MM}}}{15}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Disperzijske krivulje za \ac {MM}}}{17}{}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Simulacija za $\mu = 0$}}{18}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Simulacija za $\mu = \frac {\pi }{6}$}}{18}{}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Simulacija za $\mu = \frac {\pi }{3}$}}{18}{}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Simulacija za $\mu = \frac {\pi }{2}$}}{19}{}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Simulacija za $\mu = \frac {2\pi }{3}$}}{19}{}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Simulacija za $\mu = \frac {5\pi }{6}$}}{19}{}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Simulacija za $\mu = \pi $}}{19}{}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

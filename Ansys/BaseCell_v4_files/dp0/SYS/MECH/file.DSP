@@ -23,13 +23,11 @@
      number of processes used                =               4
      number of threads per process used      =               1
      number of cores used                    =               4
-     time (cpu & wall) for structure input   =        0.000000        0.005000
-     time (cpu & wall) for ordering          =        0.000000        0.084000
+     time (cpu & wall) for structure input   =        0.000000        0.011000
+     time (cpu & wall) for ordering          =        0.000000        0.117000
      time (cpu & wall) for other matrix prep =        0.000000        0.000000
      time (cpu & wall) for value input       =        0.000000        0.000000
-     time (cpu & wall) for matrix distrib.   =        0.000000        0.020000
-     time (cpu & wall) for numeric factor    =        0.015625        0.044000
-     computational rate (gflops) for factor  =       49.648693       17.630928
+     time (cpu & wall) for matrix distrib.   =        0.000000        0.024000
 
      no input or output performed
 

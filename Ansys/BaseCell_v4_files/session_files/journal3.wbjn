@@ -1,0 +1,35 @@
+# encoding: utf-8
+# 2022 R2
+SetScriptVersion(Version="22.2.192")
+favorites1 = EngData.LoadFavoriteItems()
+library1 = EngData.OpenLibrary(
+    Name="ANSYS GRANTA Materials Data for Simulation (Sample)",
+    Source="Granta_Design_Typical_Materials.xml")
+system1 = GetSystem(Name="SYS")
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.ImportMaterial(
+    Name="Plastic, PET (amorphous)",
+    Source="Granta_Design_Typical_Materials.xml")
+material1 = engineeringData1.GetMaterial(Name="Plastic, PET (amorphous)")
+matlProp1 = material1.GetProperty(Name="Elasticity")
+matlProp1.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["2988000000 [Pa]"]])
+matlProp1.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["2980000000 [Pa]"]])
+matlProp2 = material1.GetProperty(Name="Density")
+matlProp2.SetData(
+    Variables=["Density"],
+    Values=[["1290 [kg m^-3]"]])
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+system2 = GetSystem(Name="SYS 1")
+modelComponent2 = system2.GetComponent(Name="Model")
+modelComponent2.Refresh()
+model2 = system2.GetContainer(ComponentName="Model")
+model2.Edit()
+Save(Overwrite=True)
+model1.Exit()

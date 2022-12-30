@@ -1,8 +1,9 @@
 \acswitchoff 
 \babel@toc {slovene}{}\relax 
-\contentsline {section}{Kazalo slik}{ii}{}%
-\contentsline {section}{Seznam uporabljenih simbolov}{iii}{}%
-\contentsline {section}{Seznam uporabljenih okrajšav}{iv}{}%
+\contentsline {section}{Kazalo slik}{iii}{}%
+\contentsline {section}{Kazalo preglednic}{iv}{}%
+\contentsline {section}{Seznam uporabljenih simbolov}{v}{}%
+\contentsline {section}{Seznam uporabljenih okrajšav}{vi}{}%
 \contentsline {chapter}{\numberline {1}Uvod}{1}{}%
 \contentsline {section}{\numberline {1.1}Cilji naloge}{1}{}%
 \contentsline {chapter}{\numberline {2}Teoretično ozadje}{2}{}%
@@ -17,10 +18,21 @@
 \contentsline {section}{\numberline {2.5}Izračun periodičnih struktur}{8}{}%
 \contentsline {subsection}{\numberline {2.5.1}Inverzni pristop}{8}{}%
 \contentsline {subsection}{\numberline {2.5.2}Direktni pristop}{8}{}%
-\contentsline {chapter}{\numberline {3}Zasnova in preračun metamateriala}{10}{}%
-\contentsline {section}{\numberline {3.1}Zasnova oblike metamateriala}{10}{}%
-\contentsline {section}{\numberline {3.2}Izdelava numeričnega modela}{13}{}%
-\contentsline {subsection}{\numberline {3.2.1}Izračun lastnih frekvenc}{13}{}%
-\contentsline {subsection}{\numberline {3.2.2}Izračun disperzijskih krivulj}{14}{}%
-\contentsline {subsection}{\numberline {3.2.3}Simulacija odziva \ac {MM}}{15}{}%
-\contentsline {chapter}{Literatura}{17}{}%
+\contentsline {section}{\numberline {2.6}FFF tehnologija 3D tiska}{9}{}%
+\contentsline {subsection}{\numberline {2.6.1}Delovanje \ac {FFF} 3D tiskalnika}{9}{}%
+\contentsline {subsection}{\numberline {2.6.2}Karakterisike 3D tiskalnika}{11}{}%
+\contentsline {subsubsection}{\numberline {2.6.2.1}Parametri 3D tiska}{11}{}%
+\contentsline {subsubsection}{\numberline {2.6.2.2}Adhezija}{11}{}%
+\contentsline {subsubsection}{\numberline {2.6.2.3}Podpore}{12}{}%
+\contentsline {subsubsection}{\numberline {2.6.2.4}Stopnja zapolnjenosti (ang. \emph {Infill})}{12}{}%
+\contentsline {subsection}{\numberline {2.6.3}Dimenzijska natačnost}{12}{}%
+\contentsline {chapter}{\numberline {3}Zasnova in preračun metamateriala}{13}{}%
+\contentsline {section}{\numberline {3.1}Zasnova oblike metamateriala}{13}{}%
+\contentsline {section}{\numberline {3.2}Izdelava numeričnega modela}{16}{}%
+\contentsline {subsection}{\numberline {3.2.1}Izračun lastnih frekvenc}{16}{}%
+\contentsline {subsection}{\numberline {3.2.2}Izračun disperzijskih krivulj}{17}{}%
+\contentsline {subsection}{\numberline {3.2.3}Simulacija odziva \ac {MM}}{18}{}%
+\contentsline {chapter}{\numberline {4}Eksperimentalni del}{20}{}%
+\contentsline {section}{\numberline {4.1}Proces 3D tiska}{20}{}%
+\contentsline {section}{\numberline {4.2}Meritve}{21}{}%
+\contentsline {chapter}{\numberline {5}Literatura}{22}{}%

@@ -13,7 +13,7 @@
 /COM,
 ! ****** End   Custom Load Command Snippet ******
 *DIM,_wb_ProjectScratch_dir,string,248
-_wb_ProjectScratch_dir(1) = 'C:\Users\Marko\Documents\1 l Dokumenti\1 l Fakulteta\5 l 5. semester\3 l Dinamika togih teles\1 l Seminar\metamaterials\Ansys\_ProjectScratch\Scr4CCE\'
+_wb_ProjectScratch_dir(1) = 'C:\Users\Marko\Documents\1 l Dokumenti\1 l Fakulteta\5 l 5. semester\3 l Dinamika togih teles\1 l Seminar\metamaterials\Ansys\_ProjectScratch\Scr2190\'
 *DIM,_wb_SolverFiles_dir,string,248
 _wb_SolverFiles_dir(1) = 'C:\Users\Marko\Documents\1 l Dokumenti\1 l Fakulteta\5 l 5. semester\3 l Dinamika togih teles\1 l Seminar\metamaterials\Ansys\BaseCell_v4_files\dp0\SYS\MECH\'
 *DIM,_wb_userfiles_dir,string,248
@@ -10813,8 +10813,8 @@ tref,22.
 /wb,mat,start              !  starting to send materials
 /com,*********** Send Materials ***********
 Temperature = 'TEMP' ! Temperature
-MP,DENS,1,1339,	! kg m^-3
-MP,EX,1,2898000000,	! Pa
+MP,DENS,1,1290,	! kg m^-3
+MP,EX,1,2980000000,	! Pa
 MP,NUXY,1,0.3887,
 MP,ALPX,1,0.000117,	! C^-1
 MP,KXX,1,0.1702,	! W m^-1 C^-1
