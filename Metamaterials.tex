@@ -9,16 +9,21 @@
 \usepackage{float}
 \usepackage[twoside]{fancyhdr}
 \usepackage{etoolbox}
-\usepackage{nomencl}
 \usepackage{longtable}
 \usepackage{tocloft}
-%\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
-\makenomenclature
+
 \RequirePackage[backend=biber,style=numeric]{biblatex}
 
 \addbibresource{sources.bib}
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
+
+\setlength{\headheight}{15pt}
+
+% set tablename to Preglednica
+\AtBeginDocument{%
+	\renewcommand\tablename{Preglednica}
+}
 
 %Višina celice v tabeli
 \renewcommand{\arraystretch}{1.1}
@@ -52,39 +57,6 @@
   long= Fused Filament Fabrication,
 }
 
-% =========================== Simboli ==============================
-\nomenclature[A]{$\mathbf{M}$}{globalna masna matrika}
-\nomenclature[A]{$\mathbf{C}$}{globalna dušilna matrika}
-\nomenclature[A]{$\mathbf{K}$}{globalna togostna matrika}
-\nomenclature[A]{$\mathbf{q}$}{vektor generaliziranih vozliščnih pomikov}
-\nomenclature[A]{$\mathbf{f}$}{vektor generaliziranih vozliščnih sil}
-\nomenclature[G]{$\omega$}{krožna kotna frekvenca}
-\nomenclature[A]{$t$}{čas}
-\nomenclature[A]{$i$}{imaginarna komponenta}
-\nomenclature[G]{$\rho$}{gostota}
-\nomenclature[A]{$A$}{površina prereza}
-\nomenclature[A]{$l$}{dolžina končnega elementa}
-\nomenclature[A]{$E$}{elastični modul}
-\nomenclature[A]{$I$}{vztrajnostni moment prereza}
-\nomenclature[A]{$\mathbf{r}$}{krajevni vektor}
-\nomenclature[A]{$\mathbf{k}$}{valovni vektor}
-\nomenclature[A]{$L$}{dolžina bazne celice}
-\nomenclature[A]{$n$}{število baznih celic med točkama}
-\nomenclature[G]{$\mathbf{\mu}$}{vektor širjenja valovanja}
-\nomenclature[A]{$\mathbf{t}$}{bazni translacijski vektor recipročne bazne celice}
-\nomenclature[A]{$\mathbf{D}(\omega)$}{dinamska matrika sistema}
-\nomenclature[G]{$\mathbf{\Lambda}_R$}{desna reducirna matrika}
-\nomenclature[G]{$\mathbf{\Lambda}_L$}{leva reducirna matrika}
-\nomenclature[A]{$\mathbf{I}$}{identična matrika}
-\nomenclature[A]{$\mathbf{d}$}{bazni translacijski vektor bazne celice}
-
-\renewcommand{\nomname}{Seznam simbolov}
-\renewcommand\nomgroup[1]{%
-  \item[\bfseries
-  \ifstrequal{#1}{A}{Arabski simboli}{%
-  \ifstrequal{#1}{G}{Grški simboli}{}}%
-]}
-
 
 \begin{document}
 % ---- Oblikovanje strani
@@ -116,7 +88,7 @@
         \\Somentor: prof. dr. Janko Slavič, univ. dipl. inž.
 
         \vspace{1.5cm}
-        Ljubljana, december 2022
+        Ljubljana, januar 2023
 
 
     \end{center}
@@ -253,17 +225,17 @@ PZF & pasovno zavrnitveni filter\\
 
 Cilj naloge je izdelati numerični model in delujoč metamaterial, ki bo dušil vibracije
 v željenem frekvenčnem območju. Specifično smo v okrivu naloge iskali območje dušenja
-znotraj intervala 0 - 1000 Hz. Proces je bil razdeljen na 3 glavne podsklope.
+znotraj intervala 0--1000 Hz. Proces je bil razdeljen na 3 glavne podsklope.
 \\
 \\
 V poglavju 2 so predstavljene teoretične osnove, ki jih potrebujemo za fizikalno razumevanje
-problem in razvoj matematičnega modela, ki je osnova končnega numeričnega modela. Opisana je 
+problema in razvoj matematičnega modela, ki je osnova končnega numeričnega modela. Opisana je 
 teorija nihanja sistemov z večimi prostostnimi stopnjami in teorija periodičnih struktur.
 V poglavju 3 je predstavljen proces konstrukcije bazne celice in izdelave numeričnega modela. 
 Opisani so osnovni koraki izdelave numeričnega modela ter predstavljeni koraki konstrukcije
 osnovne celice.
-V poglavju 4 je predstavljen eksperimentalni del s komentarji dobljenih rezultatov in primerjavo
-z numeričnem modelom. Opisane so meritve in proces 3D tiska metamateriala.
+V poglavju 4 je predstavljen eksperimentalni del določanja elastičnega modula in gostote ter proces 3D tiska
+metamateriala.
 
 \chapter{Teoretično ozadje}
 
@@ -276,7 +248,7 @@ Znotraj takih področij lahko zato pričakujemo močno slabljenje vibracij.
 \\
 \\
 \ac{PZF} lahko kreiramo prek dveh različnih mehanizmov. Prvi uporablja fizikalni princip Braggovega sipanja
- (ang. Bragg Scattering). Značilnost tovrstnega principa je periodična struktura \ac{MM} iz osnovnih gradnikov,
+ \emph{(ang. Bragg Scattering)}. Značilnost tovrstnega principa je periodična struktura \ac{MM} iz osnovnih gradnikov,
  ki vsebujejo visoke impedančne spremembe. To povzroča sipanje valovnih dolžin, ki so primerljive karakterističi dolžini 
  osnovnega gradnika. Pri Braggovem sipanju prihaja do destruktivne interference prihajajočega in odbitega vala, kar povzroči
  delno ali popolno izničenje valov. Ta princip je primeren le za tvorbo \ac{PZF} pri višjih frekvencah, kar ne ustreza
@@ -285,7 +257,7 @@ Znotraj takih področij lahko zato pričakujemo močno slabljenje vibracij.
  \\
  Drugi mehanizem deluje na principu lokalnih resonanc \ac{MM}. V okviru tega mehanizma na strukturo periodično namestimo
  lokalne resonatorje. Resonančni \ac{PZF} v tem primeru ni odvisen od periodičnosti, temveč geometrijskih lastnosti resonatorja. 
- Pogoja za nastanek \ac{PZF} sta majhna medsebojna oddaljenost resonatorjem (nekaj velikostnih razredov nižje od valovnih dolžin frekvenc,
+ Pogoja za nastanek \ac{PZF} sta majhna medsebojna oddaljenost resonatorjev (nekaj velikostnih razredov nižje od valovnih dolžin frekvenc,
  ki bi jih radi dušili) in ne-ničelna inducirana rezultantna sila na osnovno strukturo. Prednost tovrstnega pristopa je zmožnost kreiranja
  \ac{PZF} tudi pri nižjih frekvencah, slabosta pa, da lahko izven tega področja tudi močno poslabšamo slabljenje vibracij. \cite{kosir}
  \\
@@ -293,18 +265,18 @@ V okrviru te naloge se bomo osredotičli na konstruiranje 1D \ac{MM} preko mehan
 
 \section{Osnove lastnih nihanj sistemov z več prostostnimi stopnjami}
 V okviru tega poglavja predpostavimo, da že poznamo enačbe opazovanega sistema z več prostostnimi stopnjami, kot je 
-prikazano na enačbi (2.1), kjer upoštevamo viskozni model dušenja, čeprav bomo tega v nadaljenaju zanemarili.
+prikazano na enačbi (2.1), kjer upoštevamo viskozni model dušenja, čeprav bomo tega v nadaljevanju zanemarili.
 
 \begin{equation}
   \mathbf{M} \mathbf{\ddot{q}}(t) + \mathbf{C} \mathbf{\dot{q}}(t) + \mathbf{K} \mathbf{q}(t) = \mathbf{f}(t)
 \end{equation}
 \\
-Kjer \textbf{M} predstavlja masno matriko sistema, \textbf{C} dušilno matriko sistema, \textbf{K} togostno matriko sistema, \textbf{x}(t) in \textbf{f}(t)
+Kjer \textbf{M} predstavlja masno matriko sistema, \textbf{C} dušilno matriko sistema, \textbf{K} togostno matriko sistema, \textbf{q}(t) in \textbf{f}(t)
 pa sta vektorja generaliziranih pomikov in vzbujevalnih sil.
 V nadaljevanju predpostavimo harmonski odziv, zato lahko vektor pomikov in vektor generaliziranih vzbujevalnih sil zapišemo po enačbi (2.2).
 
 \begin{equation}
-  \mathbf{q}(t)=\mathbf{q} \sin{(\omega t)} =\mathbf{q}e^{i\omega t} \\
+  \mathbf{q}(t)=\mathbf{q} \sin{(\omega t)} =\mathbf{q}e^{i\omega t}; \\ \quad
   \mathbf{f}(t)=\mathbf{f} \sin{(\omega t)} =\mathbf{f}e^{i\omega t}
 \end{equation}
 \\
@@ -324,7 +296,7 @@ Problem prevedemo na problem lastnih vrednosti, ki je numerično stabilnejši.
 
 \section{Metoda končnih elementov}
 Metoda končnih elementov je aproksimativna metoda za reševanje matematičnih modelov in je najbolj razširjena med vsemi aproksimativnimi metodami.
-Za naš primer bi lahko uporabili tudi metodo končnih elementov ali metodo robnih elementov, vendar je zaradi narave problema metoda končnih elementov najprimernejša.
+Za naš primer bi lahko uporabili tudi metodo končnih razlik ali metodo robnih elementov, vendar je zaradi narave problema metoda končnih elementov najprimernejša.
 S pomočjo te metode bomo pridobili globalno masno in togostno matriko \textbf{M} in \textbf{K}. 
 \\
 Osnovnih togostnih (2.5) in masnih (2.6) matrik za nosilec s štirimi prostostnimi stopnjami tu ne bomo izpeljevali, vendar jih pridobimo iz vira \cite{ville}.
@@ -348,7 +320,7 @@ Osnovnih togostnih (2.5) in masnih (2.6) matrik za nosilec s štirimi prostostni
   \end{bmatrix}
 \end{equation}
 \\
-Kjer je $\rho$ gostota, A površina preseka, l dolžina elementa, E elastični modul materiala in I vztrajnostni moment prereza.
+Kjer je $\rho$ gostota, $A$ površina preseka, $l$ dolžina elementa, $E$ elastični modul materiala in $I$ vztrajnostni moment prereza.
 
 \section{Osnove neskončnih periodičnih struktur}
 Metamateriali so zaradi njihove narave navadno periodične stukture, kjer se v intervalih ponavlja osnovna celica.
@@ -358,8 +330,8 @@ preučujemo le odziv ene osnovne celice in tega generaliziramo na celotno strukt
 \subsection{Bloch-Floquetov teorem}
 V okviru te točke bomo predstavili osnove Bloch-Floquetovega teorema, ki ga potrebujemo za obravnavo našega problema.
 Teorem nam pove, na kakšen način smemo obravnavati osnovno celico, da s tem popišemo celotno neskončno periodično strukturo \ac{MM}. \\
-Omejimo se na 1D translatorno periodično strukturo z dolžino osnovne celice L. Za takšno periodično strukturo definiramo referenčni vektor $\mathbf{r}_U$, 
-ki definira referenčno točko U, in referečno vektor $\mathbf{r}_P$, ki definira poljubno točko P na periodični strukturi. \cite{vanbelle, kosir}
+Omejimo se na 1D translatorno periodično strukturo z dolžino osnovne celice $L$. Za takšno periodično strukturo definiramo referenčni vektor $\mathbf{r}_U$, 
+ki definira referenčno točko U, in referečni vektor $\mathbf{r}_P$, ki definira poljubno točko P na periodični strukturi. \cite{vanbelle, kosir}
 \\Povezava je prikazana na sliki 2.1 in v enačbi (2.7).
 
 \begin{figure}[H]
@@ -370,14 +342,14 @@ ki definira referenčno točko U, in referečno vektor $\mathbf{r}_P$, ki defini
 \begin{equation}
   \mathbf{r}_P = \mathbf{r}_U + nL
 \end{equation}
-Kjer L ponazarja dolžino bazne celice, n pa celo število, ki pove število bazih celic med točkama U in P. Ponovno predpostavimo harmonsko
+Kjer $L$ ponazarja dolžino bazne celice, $n$ pa celo število, ki pove število bazih celic med točkama U in P. Ponovno predpostavimo harmonsko
 nihanje in tako lahko enačbo preuredimo kot:
 \begin{equation}
   \mathbf{q}(r, k, t)  = \widetilde{\mathbf{q}}(r, k)e^{ik r}e^{i\omega t}
 \end{equation}
-Kjer r predstavlja pozicijo na x poltraku, $\omega$ frekvenco valovanja, k valovno število v smeri širjenja valovanja i pa kompleksno število. Na podlagi odziva referenčne celice
+Kjer $r$ predstavlja pozicijo na x poltraku, $\omega$ frekvenco valovanja, $k$ valovno število v smeri širjenja valovanja $i$ pa kompleksno število. Na podlagi odziva referenčne celice
 v točki U lahko napovemo odziv v katerikoli točki. Prav tako definiramo še kompleksno število širjenja valovanja $\mu$, ki nam fizikalno predstavlja fazni zamik. Preoblikovano enačbo zapišemo
-kot:
+kot \cite{kosir}:
 \begin{equation}
   \mathbf{q}(r_P, \mu, t)  = \mathbf{q_{ref}}(r_U, \mu,t)e^{i\mu n}
 \end{equation} 
@@ -397,23 +369,23 @@ ki ga je potrebno obrvnavati, da popišemo celotni odziv osnovne celice in posle
 \\
 \\
 V sklopu te naloge bomo obravnavali 1D strukturo, zato se problem močno poenostavi. V ravninskem primeru bazni vektor celice \textbf{d} in bazni vektor recipročne celice \textbf{t} sovpadata s koordinatno osjo x. Poznamo tudi periodičnost, ki je enaka 2$\pi$. 
-Celico transformiramo na dimenzije $[-\pi, \pi]$ s koordinatnim sistemom $\mu$, kot je prikazano na sliki (2.3).
+Celico transformiramo na dimenzije $[-\pi, \pi]$ s koordinatnim sistemom $\mu$, kot je prikazano na sliki 2.3.
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.8]{Images/osnovna_celica.png}
-  \caption{Bazne celice, njena recipročna celica v prostoru in Brillouinova cona (BZ)}
+  \caption{Bazna celica, njena recipročna celica v prostoru in Brillouinova cona (BZ)}
 \end{figure}
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.8]{Images/transformacija.png}
-  \caption{Transformacija Brillouinove cone iz valovnega (k) v valovni ($\mu$) prostor}
+  \caption{Transformacija Brillouinove cone iz valovnega prostora (k) v prostor širjenja valovanja ($\mu$)}
 \end{figure}
 
 \subsubsection{Modeliranje osnovne celice}
 V poglavju 2.2 smo izpeljali vodilno enačbo problema (2.3), kjer smo dobili dinamsko matriko:
 \begin{equation}
-  \mathbf{\hat{D}}(\omega)= -{\omega}^2 \mathbf{M}+K
+  \mathbf{\hat{D}}(\omega)= -{\omega}^2 \mathbf{M}+\mathbf{K}
 \end{equation}
 Sledeča dinamska matrika zaenkrat še ne vključuje nobenih robnih pogojev. V nadaljevanju bomo z uporabo Blochovega teorema za našo
 dinamsko matriko določili periodične robne pogoje. Končna celica bo v numeričnem modelu imela več kot le dve vozlišči, zato v naslednjem koraku vektor pomikov $\mathbf{\hat{x}}$
@@ -470,7 +442,7 @@ V nadaljevanju vpeljemo še reducirana vektorja generaliziranih pomikov in vozli
   \begin{aligned}
     \mathbf{D}(\omega)\mathbf{q}=\mathbf{f} \\
     \mathbf{D}(\omega)\mathbf{\Lambda_R q_{red}} = \mathbf{f} \\
-    \mathbf{\Lambda_L} \mathbf{D}(\omega)\mathbf{\Lambda_R q_{red}} = \mathbf{\Lambda_L} \mathbf{f}
+    \mathbf{\Lambda_L} \mathbf{D}(\omega)\mathbf{\Lambda_R q_{red}} = \mathbf{\Lambda_L} \mathbf{f} \\
     \mathbf{\Lambda_L} \mathbf{D}(\omega)\mathbf{\Lambda_R q_{red}} = \mathbf{f_{red}}
   \end{aligned}
 \end{equation*}
@@ -493,8 +465,8 @@ Valovni vektor $\mu$ izberemo glede na Brillouinove cone, določene v poglavju 2
 Kadar pristop uporabljamo za določanje \ac{PZF} nedušenih struktur, pričakujemo tudi realne $\omega$. \cite{kosir}
 
 \subsection{Direktni pristop}
-Direktni oz. $\mu(\omega)$ pristop pa privzame realne $\omega$, torej privzamemo časovno harmonsko širejenje valovanja. Rezultat \ac{EVP} dinamske matrike je krivulja odvisnosti valovnega vektorja $\mu$o
-od $\omega$. Izračunamo valovne vektorje pri različnih $\omega$. Rezultat so valovni vektorji $\mu = \mu_{re} + i\mu_{im}$, ki so lahko realni, imaginarni ali kompleksni. Realni del predstavlja relativno spremembo amplitude, imaaginarni del pa
+Direktni oz. $\mu(\omega)$ pristop pa privzame realne $\omega$, torej privzamemo časovno harmonsko širjenje valovanja. Rezultat \ac{EVP} dinamske matrike je krivulja odvisnosti valovnega vektorja $\mu$
+od $\omega$. Izračunamo valovne vektorje pri različnih $\omega$. Rezultat so valovni vektorji $\mu = \mu_{re} + i\mu_{im}$, ki so lahko realni, imaginarni ali kompleksni. Realni del predstavlja relativno spremembo amplitude, imaginarni del pa
 spremembo faze. \cite{vanbelle, kosir} Kadar je $\mu$ odvisen od večih dimenzij (2D ali 3D problem), moramo vpeljati dodatno spremenljivko, ki jo v izračunih privzamemo.
 \\
 \\
@@ -505,13 +477,13 @@ V našem primeru direktnega pristopa ne bomo uporabili, vendar bomo preračun iz
 največ uporablja na področjih inženiringa, znanosti, hitrega prototipiranja, medicine in industrije. \cite{fff_article}
 \\
 Velika prednost \ac{FFF} metode je njena vsestranskost in cenovna dostopnost. V zadnjih letih so se na trgu pojavili \ac{FFF} 3D tiskalniki, ki so dostopni tudi 
-navadnim potrošnikom. 
+širši javnosti. 
 
 \subsection{Delovanje \ac{FFF} 3D tiskalnika}
 \ac{FFF} 3D tiskalniki obstajajo v najrazličnejših velikostih in izvedbah, vendar si vsi delijo skupne dele, ki opravljajo proces 3D tiskanja. Tiskalnik ima običajno 3 osi (x, y in z), pri čemer x- in y-os skrbita za premikanje glave po
-območju tiskanja, z-os pa skrbi za pomikanje plošče, kamor se nanašajo plasti. V ta namen se uporabljajo koračni motorji, ki preko jermenov ali navojnih palic premikajo sestavne dele tiskalnika. Plošča na katero se nanašajo plasti je običajno segreta iz spodnje strani na določeeno temperaturo, s čemer zagotavljamo
+območju tiskanja, z-os pa skrbi za pomikanje plošče, na katero se nanašajo plasti. V ta namen se uporabljajo koračni motorji, ki preko jermenov ali navojnih palic premikajo sestavne dele tiskalnika. Plošča na katero se nanašajo plasti je običajno segreta iz spodnje strani na določeeno temperaturo, s čemer zagotavljamo
 adhezijo ekstrudirane plasti na ploščo. \\
-Najpomembnejši del tiskalnika predstavlja glava. Kot je razvidno na sliki (2.4), glavo sestavlja 5 sestavnih delov. Skozi dovodno cev dovajamo filament v trdni obliki, ki ga koračni motor s preciznim in nadzorovanim gibanjem poriva skozi podajač. Na koncu glave se nahaja šoba z grelnim elementom \textit{ang. hot-end}, ki filament tali s prednastavljeno temperaturo
+Najpomembnejši del tiskalnika predstavlja glava. Kot je razvidno na sliki (2.4), glavo sestavlja 5 sestavnih delov. Skozi dovodno cev dovajamo filament v trdni obliki, ki ga koračni motor s preciznim in nadzorovanim gibanjem poriva skozi podajač. Na koncu glave se nahaja šoba z grelnim elementom \emph{(ang. hot-end)}, ki filament tali s prednastavljeno temperaturo
 in ga ekstrudira skozi šobo. Nad šobo z grelnim elementom se nahajajo hladilna rebra, ki preprečujejo taljenje elementa višje po dovodni cevi. S tem preprečimo ohlajanje in ekspanzijo materiala višje v cevi, kar bi zmanjšalo ali povsem ustavilo tok filamenta.
 \begin{figure}[H]
   \centering
@@ -528,39 +500,39 @@ Izbira pravilnih parametrov 3D tiska močno vpliva na uspešnost tiska in kvalit
 Ločljivost končnega izdelka določimo z izbiro premera šobe in višino ekstrudirane plasti. Kljub temu, da lahko na dimenzijsko natančnost končnega izdelka vplivamo z veliko ostalimi parametri, sta debelina plasti in premer šobe ponavadi prva parametra, s katerima nadzorujemo
 omenjeno lastnost. Z zmanjšanjem premera šobe in tanjšanjem debeline plasti, izboljšamo kvaliteto površin in detajlov. \cite{redwood20173d}
 \\
-Zelo pomembna je predvsem pravilna izbira temperature šobe in plošče. Ti temperaturi se močno razlikujeta od filamenta do filementa in sta ponavadi v območjih podani od proizvajalna filamenta. Končna določitev temperature je nato vedno rezultat 
+Zelo pomembna je predvsem pravilna izbira temperature šobe in plošče. Ti temperaturi se močno razlikujeta od filamenta do filementa in sta ponavadi v območjih podani od proizvajalca filamenta. Končna določitev temperature je nato vedno rezultat 
 izvedenih testnih izdelkov. Temperatura šobe je odvisna od temperature steklenja $T_g$ polimernega materiala, ki ga uporabljamo kot filament. Pri tej temperaturi pride do razpada šibkih Van der Waalsovih vezi, ki med seboj držijo povezane polimerne verige. Takrat filament začne izkazovati
 manjšo viskoznost skupaj z ostalimi spremenjenimi visko-elastičnimi lastnostmi.
 
 \subsubsection{Adhezija}
-Med premikanjem plošče in glave je pomembno, da iztiskan material ostanee na prvotnem mestu, drugače dobimo zamike med plastmi. To dosežemo s pravilno adhezijo prve plasti na ploščo. Dobro adhezijo lahko dosežemo na več načinov, ki pa so vsi povezani z lastnostmi podlage.
+Med premikanjem plošče in glave je pomembno, da iztiskan material ostane na prvotnem mestu, drugače dobimo zamike med plastmi. To dosežemo s pravilno adhezijo prve plasti na ploščo. Dobro adhezijo lahko dosežemo na več načinov, ki pa so vsi povezani z lastnostmi podlage.
 Prvi parameter, ki vpliva na adhezijo prve plasti je temperatura plošče. S pravilno segreto podlago, zagotovimo dobro povezavo molekul, ki zagotovijo močno adhezijo. Pomagamo tudi s predpripravo plošče --- v ta namen obstajajo
-različna sredstva in spreji, vendar zadostuje tudi lak za lase, kadar imamo stekleno ploščo, ali pa trdo ''UHU`` lepilo za druge podlage. \\
+različna sredstva in spreji, vendar zadostuje tudi lak za lase, kadar imamo stekleno ploščo, ali pa trdo ``UHU'' lepilo za druge podlage. \\
 Tako kot adhezija prve plasti je pomembna tudi adhezija medsebojnih plasti. To dosežemo s pritiskom nove plasti na prejšnjo, pri čemer pomaga tudi delno ponovno taljenje predhodne plasti. Zaradi pritiska zgornje plasti se nalaganje dogaja v ovalni obliki, če bi opazovali presek. Stiki med dvema ovaloma predstavljajo mesta koncentracije napetosti, kjer najhitreje prihaja do loma. \cite{redwood20173d} Zaradi tega v smeri nalaganja plasti pričakujemo 
 nizke mehanske lastnosti končnega izdelka.
 
 \subsubsection{Podpore}
-Čeprav je metoda \ac{FFF} 3D tiska zelo vsestranska ima svoje omejitve. Velik problem predstavljajo geometrije, kjer je naklon stene manjši od 45$^{\circ}$ glede na podlago. Nad to mejo se plasti ne sprimeta več dobro med seboj. Temu se lahko izognemo z uporabo podpornih stuktur. Te strukrue imajo majhno gostoto tiska in posebno geometrijo, ki porabi malo filamenta a zagotavlja veliko podporno površino in lahko odstranjevanje. 
+Čeprav je metoda \ac{FFF} 3D tiska zelo vsestranska, ima svoje omejitve. Velik problem predstavljajo geometrije, kjer je naklon stene manjši od 45$^{\circ}$ glede na podlago. Nad to mejo se plasti ne sprimeta več dobro med seboj. Temu se lahko izognemo z uporabo podpornih stuktur. Te strukrue imajo majhno gostoto tiska in posebno geometrijo, ki porabi malo filamenta, a zagotavlja veliko podporno površino in lahko odstranjevanje. 
 S tem dodamo podlago, na katero se naslednja plast lahko odloži. Podporne strukture po končanem tisku nato odstranimo. Zaradi stika s podpornim materialom je kvaliteta površine slabša, zato
-odstranjevanju podpornih struktur ponavadi sledi naknadna obelava izdelka.\cite{redwood20173d}
+odstranjevanju podpornih struktur ponavadi sledi naknadna obdelava izdelka.\cite{redwood20173d}
 
 \subsubsection{Stopnja zapolnjenosti (ang. \emph{Infill})}
 Z metodo \ac{FFF} ponavadi ne tiskamo popolnoma polnih izdelkov. Da se izognemo dolgim časom tiska in večji porabi materiala ponavadi izdelek zapolnimo le deloma. \cite{redwood20173d}
 Med pripravo modela določimo debelino sten izdelka, ki so natisnjene polno in pa delež in geometrijo notranje zapolnitve. Geometrija je lahko heksagonalna, kvadratna, trikotna, itd. Z zmanjšanjem stopnje
-zapolnitve močno skrajšamo čas tiska a hkrati tudi vplivamo na nižje mehanske lastnosti končnega izdelka.
+zapolnitve močno skrajšamo čas tiska, a hkrati tudi vplivamo na nižje mehanske lastnosti končnega izdelka.
 
 \subsection{Dimenzijska natačnost}
 3D natisnjeni izdelki so vedno izpostavljeni dimenzijskim napakam. Med procesom tiska pri posameznih nanesenih plasteh prihaja najprej do raztezanja in nato krčenja materiala zaradi temperaturnih
 razlik. Pri tem se ustvarjajo notranje napetosti, ki vodijo do krčenja in krivljenja materiala. \cite{redwood20173d} Stopnja krčenja je neposredno odvisna od uporabljenega materiala. PLA filamenti so veliko bolj izpostavljeni krčenju kot PETG filamenti, slednji pa 
-so veliko bolj dovzetni za krivljenje kot pa PLA filamenti. V kolikor je pomembno ujemanje med izdelki je potrebno prilagajanje dimenzij pred tiskom. 
+so veliko bolj dovzetni za krivljenje kot pa PLA filamenti. V kolikor je pomembno ujemanje med izdelki, je potrebno prilagajanje dimenzij pred tiskom. 
 
 \chapter{Zasnova in preračun metamateriala}
-V tem poglavju je najprej predstavljena zasnovana \ac{OC} \ac{MM}. Sledi predstavitev izdelave programa za numerično simulacijo odziva \ac{MM} in izris disperzijskih krivulj po direktni
+V tem poglavju je najprej predstavljena zasnovana \ac{OC} \ac{MM}. Sledi predstavitev izdelave programa za numerično simulacijo odziva \ac{MM} in izris disperzijskih krivulj po inverzni
 metodi.
 
 \section{Zasnova oblike metamateriala}
 Cilj zasnove je bila konstrukcija \ac{OC} \ac{MM}, ki omogoča 1D periodičnost. Zaradi lažjega prilagajanja tekom preizkusov je \ac{OC} zasnovana parametrično, kar omogoča hitre popravke
-tako na nivoju CAD modela, kot tudi numeričnega izračuna. Po veliko iteracijah smo se odločili za obliko \ac{OC}, ki je prikazana na sliki (3.1). Zaradi parametričnosti lahko hitro spreminjamo 1. lastno frekvenco preko 
+tako na nivoju CAD modela, kot tudi numeričnega izračuna. Po veliko iteracijah smo se odločili za obliko \ac{OC}, ki je prikazana na sliki 3.1. Zaradi parametričnosti lahko hitro spreminjamo 1. lastno frekvenco preko 
 spreminjanja mase in togosti vzmeti resonatorja. Resonator se nahaja znotraj osnove strukture, saj tako ob nihanju strukture ne povzroča torzijskih obremenitev, prav tako pa se s tem
 ognemo gibanju resonatorja v drugih smereh razen navzgor in navzdol.
 \begin{figure}[H]
@@ -570,10 +542,10 @@ ognemo gibanju resonatorja v drugih smereh razen navzgor in navzdol.
 \end{figure}
 \noindent Pri zasnovi so bile že upoštevane tudi omejitve izdelave \ac{OC} s pomočjo FFF tehnike 3D tiska. Načrtovane vzmeti na omogočajo visoko uspešnost dobrega tiska
 na dnu strukture in se zanašajo na pravilno izbrane parametre tiska pri zgornjih vzmeteh. Slednje namreč uporabljajo posebno tehniko 3D tiska imenovano ``mostiščenje'' (ang. bridging). Takrat tiskalnik nanaša material čez
-večje vrzeli brez podpore. Na sliki (3.2) so prikazane končne mere \ac{OC}, ki smo jih prilagajali dokler lastna frekvenca strukture ni bila med 0 in 1000 Hz.
+večje vrzeli brez podpore. Na sliki 3.2 so prikazane končne mere \ac{OC}, ki smo jih prilagajali dokler lastna frekvenca strukture ni bila med 0 in 1000 Hz.
 \\
 Dvojne vzmeti na straneh so načrtovane zaradi preprečevanja nihanja notranje mase okoli z osi. Pri debelinah vzmeti smo omejeni z zmožnostjo izdelave s tehnologijo 3D tiska --- če bi
-vzmeti naredili preozke ali pretanke bi prehitro prišlo do njihove porušitve.
+vzmeti naredili preozke ali pretanke, bi prehitro prišlo do njihove porušitve.
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.8]{Images/drawing.png}
@@ -586,7 +558,7 @@ Znotraj programskega paketa za CAD modeliranje Solidworks so za \ac{OC} parametr
 \end{itemize}
 
 \section{Izdelava numeričnega modela}
-Dandanes imamo za numerične simulacije na voljo različne programske pakete, ki nam predvsem močno pomagajo pri analizi komopliciranih 2D ali 3D struktur. Ponavadi bi osnovne preračune naredili
+Dandanes imamo za numerične simulacije na voljo različne programske pakete, ki nam predvsem močno pomagajo pri analizi kompliciranih 2D ali 3D struktur. Ponavadi bi osnovne preračune naredili
 v omenjenih paketih in bi potem s pridobljenimi podatki znotraj ločenega programa izračunali še disperzijske krivulje.
 V našem primeru imamo relativno preprosto strukturo, zato je mogoče za vse narediti enoten program in se povsem ogniti uporabi programov drugih proizvajalcev.
 \\
@@ -595,7 +567,7 @@ V tem poglavju bo obrazložen postopek izdelave numeričnega modela v programske
 \subsection{Izračun lastnih frekvenc}
 Program za analizo \ac{MM} je spisan v obliki razreda, ki mu podamo naslednje vhodne podatke:
 \begin{itemize}
-  \item Elastični modul;
+  \item elastični modul;
   \item širina, višina in dolžina \ac{OC};
   \item gostota;
   \item nadomestna togost vzmeti;
@@ -603,26 +575,26 @@ Program za analizo \ac{MM} je spisan v obliki razreda, ki mu podamo naslednje vh
   \item število končnih elementov.
 \end{itemize}
 Nadomestno togost vzmeti pridobimo s pomočjo strukturne analize \ac{OC} v programskem paketu Ansys \cite{ansys}, maso resonatroja pa iz CAD modela iz programskega paketa Solidworks \cite{solidworks}. Program v naslednjih korakih tvori globalno masno in togostno matriko
-sistema, pri čemer upošteva spremenljiv prerez, ki vpliva na površino prereza in vztrajnostni moment prereza. Nato globalni matriki recudira v reducirano globalno masno in reducirano globalno
-togostno matriko. Vse te matrike so funkcije vektorja širjenja valovanja $\mu$. Ko rešimo \ac{EVP} dobimo seznam lastnih frekvenc in lastnih oblik, katerega dolžina je enaka številu končnih elementov. Seznam prav tako pripada točno določenemu vektorju širjenja valovanja.
+sistema, pri čemer upošteva spremenljiv prerez, ki vpliva na površino prereza in vztrajnostni moment prereza. Nato globalni matriki reducira v reducirano globalno masno in reducirano globalno
+togostno matriko. Vse te matrike so funkcije vektorja širjenja valovanja $\mu$. Ko rešimo \ac{EVP}, dobimo seznam lastnih frekvenc in lastnih oblik, katerega dolžina je enaka številu končnih elementov. Seznam prav tako pripada točno določenemu vektorju širjenja valovanja.
 
 \subsection{Izračun disperzijskih krivulj}
 V naslednjem koraku po inverznem pristopu izračunamo disperzijske krivulje za pripadajoči \ac{MM}. Program to naredi tako, da za končno število vektorjev širjenja valovanja $\mu$ s postopkom iz poglavja 3.2.1 izračuna
 lastne frekvence in jih nariše na graf $\omega(\mu)$. Zaradi preglednosti v programu lahko izberemo koliko lastnih frekvenc prikažemo na grafu in omejimo njegovo območje frekvenc, da lažje določimo \ac{PZF}.
-Program nato izračuna razliko med najmanjšo vrednostjo druge lastne frekvence in največjo vrednostjo prve lastne frekvence in izriše območje \ac{PZF}. Disperzijka krivulja je razvidna iz slike (3.3).
+Program nato izračuna razliko med najmanjšo vrednostjo druge lastne frekvence in največjo vrednostjo prve lastne frekvence in izriše območje \ac{PZF}. Disperzijka krivulja je razvidna iz slike 3.3.
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.6]{Images/dispersion.png}
   \caption{Disperzijske krivulje za \ac{MM}}
 \end{figure}
-Iz diagrama je razvidno, da naj bi \ac{PZF} bil med 800 in 950 Hz. Po analizah v programskem paketu Ansys \cite{ansys}, se v tem območju nahaja tudi prva lastna frekvenca
+Iz diagrama je razvidno, da naj bi \ac{PZF} bil med 625 in 740 Hz. Po analizah v programskem paketu Ansys \cite{ansys}, se v tem območju nahaja tudi prva lastna frekvenca
 \ac{OC}, kjer resonator intenzivno niha navzgor in navzdol.
 
 \subsection{Simulacija odziva \ac{MM}}
 Da si je lažje predstavljati različno obnašanje strukture pri različnih vektorjih širjenja valovanja, program vsebuje tudi tudi metodo za vizualizacijo relativnega gibanja osnovne strukture
 in resonatorja. Oblike lahko izrišemo s pomočjo vektorja lastnih oblik, ki ga dobimo poleg vektorja lastnih frekvenc kot rezultat rešive \ac{EVP}. Preden pa obliko lahko izrišemo, moramo dodati manjkajoča
 vozlišča, saj smo matriko pred tem reducirali. Prav tako v tej stopnji v simulacijo dodamo več osnovnih celic, da dobimo obliko nosilca. V ta namen uporabimo Bloch-Floquetov teorem, ki povezuje skrajne točke \ac{OC}.
-Vektor pomikov je kompleksen --- realne komponente predstavljajo razmerje pomikov, imaginarne komponente pa fazni zamik, ki ga moramo prav tako upoštevati. Na slikah (3.4) - (3.10) so predstavljene zamrznjene slike iz simulacije pri 
+Vektor pomikov je kompleksen --- realne komponente predstavljajo razmerje pomikov, imaginarne komponente pa fazni zamik, ki ga moramo prav tako upoštevati. Na slikah 3.4--3.10 so predstavljene zamrznjene slike iz simulacije pri 
 različnih vektorjih širjenja valovanja. 
 \begin{figure}[H]
   \centering
@@ -664,21 +636,20 @@ različnih vektorjih širjenja valovanja.
 
 
 \chapter{Eksperimentalni del}
-V tem poglavju bomo predstavili postopek določanja materialnih lastnosti filamenta in 3D tiska \ac{MM}. Temu bo sledila predstavitev eksperimenta in primerjava rezultatov z numeričnimi 
-napovedmi iz poglavja 3.
+V tem poglavju bomo predstavili postopek določanja materialnih lastnosti filamenta in 3D tiska \ac{MM}.
 
 \section{Proces 3D tiska}
-Po končani konstrukciji \ac{OC} \ac{MM}, smo iz programskega paketa Solidworks \cite{solidworks} v formatu STL. STL zapis model razdeli na trikotnike, s katerimi popiše površine izdelka. Naslednji korak je bil priprava G-kode za 3D tiskalnik. V ta namen obstaja več namenskih programskih paketov, ki model za dane parametri razreže na plasti (ang. \emph{slicing}) in tvori
-G-kodo. Mi smo uporbili prosto dostopni program UltiMaker Cura \cite{cura}. \\
-Za izdelavo \ac{MM} smo uporabili PETG filament. V primerjavi z bolj razširjeno uporaljenim PLA filamentom ima PETG boljšo fleksibilnost, kar potrebujemo za vzmetni del \ac{OC}.
+Po končani konstrukciji \ac{OC} \ac{MM}, smo iz programskega paketa Solidworks \cite{solidworks} izvozili model v formatu STL. STL zapis model razdeli na trikotnike, s katerimi popiše površine izdelka. Naslednji korak je bil priprava G-kode za 3D tiskalnik. V ta namen obstaja več namenskih programskih paketov, ki model za dane parametre razreže na plasti (ang. \emph{slicing}) in tvori
+G-kodo. Mi smo uporabili prosto dostopni program UltiMaker Cura \cite{cura}. \\
+Za izdelavo \ac{MM} smo uporabili PETG filament. V primerjavi z bolj razširjeno uporaljenim PLA filamentom ima PETG boljšo voljnost, kar potrebujemo za vzmetni del \ac{OC}.
 
 \begin{table}[H]
   \caption{Osnovni parametri za tisk}
   \centering
   \begin{tabular}{ | l | c | r | }
     \hline
-    Temperatura šobe & 240 $^{\circ}$ \\ \hline
-    Temperatura podloge & 82 $^{\circ}$ \\ \hline
+    Temperatura šobe & 240 $^{\circ}$C \\ \hline
+    Temperatura podloge & 82 $^{\circ}$C \\ \hline
     Delež zapolnitve & 100 \% \\ \hline
     Hitrost tiska & 50 mm s$^{-1}$ \\ \hline
     Debelina plasti & 0.15 mm \\ \hline
@@ -688,8 +659,8 @@ Za izdelavo \ac{MM} smo uporabili PETG filament. V primerjavi z bolj razširjeno
 \end{table}
 
 \noindent Posebej pozorni smo bili na vzmeti \ac{OC} \ac{MM}, saj so ključnega pomena za pravilno območje \ac{PZF}. Vzmeti so izjemno majhnih dimenzij (0.6 mm x 0.6 mm) in se nahajajo na zgornjem
-in spodnjem delu \ac{OC}. Na spodnjem delu vzmeti ležijo neposredno na plošči, kar ne predstavlja nobenega problema, medtem ko na zgornjem delu nimajo nobenega podpornega materiala. Praviloma bi v takem
-primeru uporabili podporne strukture, vendar je razdalja majhna, prav tako pa bi bilo po tisku podpore nemogoče odstraniti zaradi nedostopnosti. V takem primeru se poslužimo posebne tehnike ''mostiščenja`` (ang. \emph{bridging}), kjer lahko
+in spodnjem delu \ac{OC}. Na spodnjem delu \ac{OC} vzmeti ležijo neposredno na plošči, kar ne predstavlja problema, medtem ko na zgornjem delu nimajo nobenega podpornega materiala. Praviloma bi v takem
+primeru uporabili podporne strukture, vendar je razdalja majhna, prav tako pa bi bilo po tisku podpore nemogoče odstraniti zaradi nedostopnosti. V takem primeru se poslužimo posebne tehnike ``mostiščenja'' (ang. \emph{bridging}), kjer lahko
 material nanašamo med dvema stenama brez podpor. Da je to izvedljivo je potrebno na tem mestu prilagoditi parametre tiskanja --- močno upočasniti hitrost tiska in povečati hlajenje na maksimalno raven, da se material v trenutku strdi. S tem močno izboljšamo
 uspešnost tiska brez podpor.
 
@@ -698,9 +669,83 @@ uspešnost tiska brez podpor.
   \includegraphics[scale=0.4]{Images/mostiscenje_small.jpg}
   \caption{Primer slabega mostiščenja}
 \end{figure}
-\noindent Tisk ene enote nosilca, ki je zaradi velikosti plošče tiskalnika omejena na 25 cm, je trajala 7 ur.
+\noindent Tisk ene enote nosilca, ki je zaradi velikosti plošče tiskalnika omejen na 25 cm, je trajal 7 ur.
 
 \section{Meritve}
+V tem podpoglavju sta opisani meritvi gostote in Youngovega modula PETG filamenta. Ti vrednosti smo nato kot parametra uporabljali v numeričnem modelu, ki
+je opisan v 3. poglavju. 
+
+\subsection{Meritev gostote}
+Gostota PETG je bila izmerjena preko treh kock, nastisnjenih iz PETG filamenta s 100\% polnitvijo dimenzij 15x15x15 mm. Maso smo pomerili s tehtnico Kern EMB 200-3, dimenzije posameznih
+kock pa s kljunastim merilom. Za vsako kocko je bilo izvedenih 5 ponovitev meritev. Iz izmerjenih vrednosti je bila izračunana gostota PETG plastike, ki je podana v preglednici 4.2.
+
+\begin{table}[H]
+  \caption{Izmerjena gostota PETG plastike}
+  \centering
+  \begin{tabular}{ | l | c | r | }
+    \hline
+    \textbf{Parameter} & $\rho$ [kg/m$^3$] \\ \hline
+    \textbf{Vrednost} & 1124 $\pm$ 8 \\
+    \hline  
+  \end{tabular}
+\end{table}
+
+
+\subsection{Meritev elastičnega modula}
+Za popis disperzijsih krivulj smo uporabljali izotropni Hookov elastični zakon. Pri končnem \ac{MM} pa so razmere anizotropne zaradi tehnologije 3D tiska. Zato je bil cilj določiti ekvivalenten 
+elastični modul. Za določitev modula smo uporabili pristop z iskanjem lastne frekvence vzorca. Meritve smo izvajali na stresalniku, na katerega smo vpeli vzorce izdelane po načrtu na sliki 4.2. Vzorce smo na 
+ploščo stresalnika vpeli na mestu V z uporabo sekundnega lepila in zaščitnega sloja lepilnega traku. Na sredini vzorca smo nato nalepili antirefleksivno nalepko in vanjo usmerili laserski snop iz laserja PDV 100, proizvajalca
+Polytec s katerim smo merili hitrost točke. Merilno mesto je na sliki 4.2 označeno s črko M. Stresalnik LDS V555 smo vezali na krmilnik Dactron, ki smo mu ukaze pošiljali iz nadzornega programa na računalniku. Na ploščo smo poleg vzorcev namestili tudi 
+referenčni pospeškomer T333B30 proizvajalca PCB Piezotronics. Pospeškomer nam je služil kot povratna funkcija v krmilni program ter za pridobitev frekvenčne prenosne funkcije. Oba signala smo zajemali na merilni kartici NI-9232, ki je bila povezana
+na osebni računalnik s programom LabView \cite{labview}.
+\\
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.9]{Images/tester.png}
+  \caption{Dimenzije vzorca za določitev elastičega modula}
+\end{figure}
+Vsakega izmed treh vzorcev smo obremenili s sinusnim preletom (navzgor in navzdol) od 50 Hz do 1000 Hz, s hitrostjo 5 oktav na minuto. Vsak test smo ponovili pri amplitudah pospeška 0.5g, 1g in 2g. Rezultate smo izračunali preko frekvenčne
+prenosne funkcije. Iz rezultatov na sliki 4.3 elahko vidimo manjši raztros natisnjenih vzorcev. Določena lastna frekvenca je predstavljena v preglednici 4.3.
+\begin{table}[H]
+  \caption{Izmerjena lastna frekvenca vzorcev}
+  \centering
+  \begin{tabular}{ | l | c | r | }
+    \hline
+    \textbf{Parameter} & $f_0$ [Hz] \\ \hline
+    \textbf{Vrednost} & 313 $\pm$ 4 \\
+    \hline  
+  \end{tabular}
+\end{table}
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.6]{Images/frf.png}
+  \caption{Rezultati meritev elastičnega modula v obliki frekvenčne prenosne funkcije}
+\end{figure}
+\noindent Iskanje modula smo izvedli s pomočjo modalne analize v programskem okolju ANSYS. Na mestih V, označenih na sliki 4.2 smo nastavili fiksno vpetje. Za materialne lastnosti smo uporabili PET izotropen material, ki smo mu
+vrednost gostote spremenili na prej izmerjeno vrednost in uporabili teoretično Poissonovo število $\nu=0.33$. Nato smo s pomočjo funkcije optimizacije \emph{(ang. Direct optimization)} nastavili iskano lastno frekvenco ter označili prilagajanje modula E. Skozi več iteracij je nato
+ANSYS izračunal elastični modul PETG plastike, ki je podan v preglednici 4.4.
+\begin{table}[H]
+  \caption{Izmerjen modul elastičnosti PETG plastike}
+  \centering
+  \begin{tabular}{ | l | c | r | }
+    \hline
+    \textbf{Parameter} & E [MPa] \\ \hline
+    \textbf{Vrednost} & 1904 \\
+    \hline  
+  \end{tabular}
+\end{table}
+
+\chapter{Zaključki}
+V okviru seminarske naloge smo preučevali možnost uporabe \ac{MM} kot eno izmed možnosti dušenja vibracij v strukturni dinamiki. 
+Zasnovali smo obliko metamaterila in izračunali disperzijske krivulje po inverzni metodi. Iz disperzijskih krivulj smo prepoznali \ac{PZF} frekvenčno
+območje \ac{MM}. V okviru meritev smo določili materialne lastnosti PETG filamenta, ki jih potrebujemo za numerično določitev \ac{PZF} \ac{MM}.
+\\
+\\
+\textbf{Predlogi za nadaljnje delo}
+\\
+Zaradi časovih omejitev tekom projekta nismo uspeli pripraviti eksperimenta, v okviru katerega bi preverili ujemanje z numeričnim modelom. Želja je v okviru diplomskega dela 
+pripraviti primeren eksperimentalni postopek za brezkontaktno določitev odziva strukture pri vzbujanju z različnimi frekvencami. Prav tako bi lahko problem razširili na spominski efekt ali temperaturno odvisno obnašanje strukture, pri čemer priporočamo slednjo
+možnost.
 
 
 \printbibliography[heading=bibnumbered]

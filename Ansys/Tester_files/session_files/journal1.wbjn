@@ -1,0 +1,66 @@
+# encoding: utf-8
+# 2022 R2
+SetScriptVersion(Version="22.2.192")
+template1 = GetTemplate(
+    TemplateName="Modal",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+library1 = EngData.OpenLibrary(
+    Name="ANSYS GRANTA Materials Data for Simulation (Sample)",
+    Source="Granta_Design_Typical_Materials.xml")
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.ImportMaterial(
+    Name="Plastic, PET (amorphous)",
+    Source="Granta_Design_Typical_Materials.xml")
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+material1.Delete()
+matlProp1 = matl1.GetProperty(Name="Elasticity")
+materialPropertyData1 = matlProp1.GetPropertyData(
+    Name="Elasticity",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic", "Derive from": "Young's Modulus and Poisson's Ratio"})
+materialVariable1 = materialPropertyData1.GetVariable(Name="Young's Modulus")
+parameter1 = Parameters.CreateParameter(
+    Entity=materialVariable1,
+    PropertyName="ParameterValue",
+    DisplayText="Young's Modulus")
+parameter1.ValueQuantityName = "Pressure"
+matlProp2 = matl1.GetProperty(Name="Density")
+matlProp2.SetData(
+    Variables=["Density"],
+    Values=[["1290 [kg m^-3]"]])
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("1 l Dokumenti/1 l Fakulteta/5 l 5. semester/3 l Dinamika togih teles/1 l Seminar/metamaterials/Ansys/Models/Tester.STEP"))
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+template2 = GetTemplate(TemplateName="Direct Optimization")
+system2 = template2.CreateSystem()
+optimization1 = system2.GetContainer(ComponentName="Optimization")
+optimizationModel1 = optimization1.GetModel()
+outputParameter1 = optimizationModel1.GetParameter(Name="P2")
+optimizationCriterion1 = outputParameter1.CreateOptimizationCriterion()
+optimizationCriterion1.ObjectiveType = "GT_SeekTarget"
+optimizationCriterion1.ObjectiveTargetValue = 360
+optimizationCriterion1.TargetTolerance = 0.1
+optimizationComponent1 = system2.GetComponent(Name="Optimization")
+optimizationComponent1.Update(AllDependencies=True)
+candidatePoint1 = optimizationModel1.GetCandidatePoint(Name="CandidatePoint 1")
+optimizationModel1.SetVariationReferencePoint(Point=candidatePoint1)
+candidatePoint2 = optimizationModel1.GetCandidatePoint(Name="CandidatePoint 2")
+optimizationModel1.SetVariationReferencePoint(Point=candidatePoint2)
+candidatePoint3 = optimizationModel1.GetCandidatePoint(Name="CandidatePoint")
+optimizationModel1.SetVariationReferencePoint(Point=candidatePoint3)
+inputParameter1 = optimizationModel1.GetParameter(Name="P1")
+optimizationCriterion2 = inputParameter1.GetOptimizationCriterion()
+optimizationCriterion2.LowerBound = 2708200000
+optimizationCriterion2.UpperBound = 3087800000
+optimizationComponent1.Update(AllDependencies=True)
+optimizationCriterion1.ObjectiveTargetValue = 3372.36
+optimizationComponent1.Update(AllDependencies=True)
+optimizationCriterion2.UpperBound = 3187800000
+optimizationCriterion1.ObjectiveTargetValue = 372.36
+optimizationComponent1.Update(AllDependencies=True)
+candidatePoint4 = optimizationModel1.GetCandidatePoint(Name="CandidatePoint")
+optimizationModel1.SetVariationReferencePoint(Point=candidatePoint4)
+Save(Overwrite=True)

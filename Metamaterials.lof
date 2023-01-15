@@ -3,8 +3,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Prikaz 1D periodične strukture in njene bazne celice}}{5}{}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Bazne celice, njena recipročna celica v prostoru in Brillouinova cona (BZ)}}{6}{}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Transformacija Brillouinove cone iz valovnega (k) v valovni ($\mu $) prostor}}{6}{}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Bazna celica, njena recipročna celica v prostoru in Brillouinova cona (BZ)}}{6}{}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Transformacija Brillouinove cone iz valovnega prostora (k) v prostor širjenja valovanja ($\mu $)}}{6}{}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Glava FFF 3D tiskalnika in njeni sestavni deli \blx@tocontentsinit {0}\cite {leapfrog}}}{10}{}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Končni koncept \ac {OC} \ac {MM}}}{14}{}%
@@ -19,4 +19,7 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Simulacija za $\mu = \pi $}}{19}{}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Primer slabega mostiščenja}}{21}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Dimenzije vzorca za določitev elastičega modula}}{23}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Rezultati meritev elastičnega modula v obliki frekvenčne prenosne funkcije}}{24}{}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }

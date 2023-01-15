@@ -73,6 +73,37 @@
       \field{type}{phdthesis}
       \field{year}{2019}
     \endentry
+    \entry{labview}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e07a8a16139f25a4c05b0e1e9aedfa3a}{%
+           family={Instruments},
+           familyi={I\bibinitperiod},
+           given={National},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{fullhash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{bibnamehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{authorbibnamehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{authornamehash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \strng{authorfullhash}{e07a8a16139f25a4c05b0e1e9aedfa3a}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{LabView Community}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ni.com/sl-si/support/downloads/software-products/download.labview-community.html#460309
+      \endverb
+      \verb{url}
+      \verb https://www.ni.com/sl-si/support/downloads/software-products/download.labview-community.html#460309
+      \endverb
+    \endentry
     \entry{ville}{thesis}{}
       \name{author}{1}{}{%
         {{hash=75e9addac7a4c31fd660691bbf547876}{%

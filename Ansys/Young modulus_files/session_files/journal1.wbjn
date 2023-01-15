@@ -1,0 +1,259 @@
+# encoding: utf-8
+# 2022 R2
+SetScriptVersion(Version="22.2.192")
+template1 = GetTemplate(
+    TemplateName="Modal",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+library1 = EngData.OpenLibrary(
+    Name="ANSYS GRANTA Materials Data for Simulation (Sample)",
+    Source="Granta_Design_Typical_Materials.xml")
+EngData.EnableFilter(Enable=False)
+EngData.EnableFilter()
+library2 = EngData.OpenLibrary(
+    Name="Explicit Materials",
+    Source="Explicit_Materials.xml")
+library3 = EngData.OpenLibrary(
+    Name="Hyperelastic Materials",
+    Source="Hyperelastic_Materials.xml")
+library4 = EngData.OpenLibrary(
+    Name="General Non-linear Materials",
+    Source="General Materials Non-linear.xml")
+library5 = EngData.OpenLibrary(
+    Name="Composite Materials",
+    Source="Composite_Materials.xml")
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("1 l Dokumenti/1 l Fakulteta/5 l 5. semester/3 l Dinamika togih teles/1 l Seminar/metamaterials/Solidworks/Tester.STL"))
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("1 l Dokumenti/1 l Fakulteta/5 l 5. semester/3 l Dinamika togih teles/1 l Seminar/metamaterials/Ansys/Models/Tester.STEP"))
+modelComponent1.Refresh()
+model1.Edit()
+template2 = GetTemplate(TemplateName="Response Surface")
+system2 = template2.CreateSystem()
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.Edit()
+template3 = GetTemplate(TemplateName="Direct Optimization")
+system3 = template3.CreateSystem(
+    Position="Above",
+    RelativeTo=system2)
+system2.Delete()
+system3.Delete()
+chart1 = Parameters.CreateParameterSummaryChart(Parameters=[])
+chart2 = Parameters.CreateParameterVsParameterChart()
+chart2.Delete()
+chart1.Delete()
+engineeringDataComponent1 = system1.GetComponent(Name="Engineering Data")
+componentTemplate1 = GetComponentTemplate(Name="SimulationModelCellTemplate")
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+system4 = template1.CreateSystem(
+    ComponentsToShare=[engineeringDataComponent1],
+    DataTransferTo=[Set(FromComponentTemplate=componentTemplate1, TransferName=None, ToComponent=geometryComponent1)],
+    Position="Left",
+    RelativeTo=system1)
+system4.Delete()
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("1 l Dokumenti/1 l Fakulteta/5 l 5. semester/3 l Dinamika togih teles/1 l Seminar/metamaterials/Ansys/Models/Tester.STEP"))
+geometryComponent1.Update(AllDependencies=True)
+modelComponent1.Refresh()
+model1.Edit()
+designPointUpdateSettings1 = GetDesignPointUpdateSettings()
+designPointUpdateSettings1.UpdateOrder = "UpdateDesignPointsInOrder"
+designPointUpdateSettings1.UpdateOrder = "UpdateFromCurrentDesignPoint"
+designPointUpdateSettings1.UpdateMethod = "RSM HPC"
+designPointUpdateSettings1.UpdateMethod = "Dps"
+designPointUpdateSettings1.UpdateMethod = "Foreground"
+designPointUpdateSettings1.PartialUpdate = "Geometry"
+template4 = GetTemplate(TemplateName="Mechanical APDL")
+system5 = template4.CreateSystem(
+    Position="Below",
+    RelativeTo=system1)
+system5.Delete()
+template5 = GetTemplate(TemplateName="Results")
+system6 = template5.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+system6.Delete()
+template6 = GetTemplate(TemplateName="Microsoft Office Excel")
+system7 = template6.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+system7.Delete()
+template7 = GetTemplate(TemplateName="External Data")
+system8 = template7.CreateSystem(
+    Position="Left",
+    RelativeTo=system1)
+template8 = GetTemplate(TemplateName="External Model")
+system9 = template8.CreateSystem(
+    Position="Below",
+    RelativeTo=system8)
+template9 = GetTemplate(TemplateName="Geometry")
+system10 = template9.CreateSystem(
+    Position="Above",
+    RelativeTo=system9)
+geometryComponent2 = system10.GetComponent(Name="Geometry")
+geometryComponent1.ReplaceWithShare(
+    TargetSystem=system1,
+    ComponentToShare=geometryComponent2,
+    SourceSystem=system10)
+geometry2 = system1.GetContainer(ComponentName="Geometry")
+geometry2.SetFile(FilePath=GetAbsoluteUserPathName("1 l Dokumenti/1 l Fakulteta/5 l 5. semester/3 l Dinamika togih teles/1 l Seminar/metamaterials/Ansys/Models/Tester.STEP"))
+system9.Delete()
+template10 = GetTemplate(TemplateName="EngData")
+system11 = template10.CreateSystem(
+    Position="Above",
+    RelativeTo=system10)
+system8.Delete()
+template11 = GetTemplate(TemplateName="3D ROM")
+system12 = template11.CreateSystem()
+system12.Delete()
+system11.Delete()
+system13 = template3.CreateSystem()
+optimization1 = system13.GetContainer(ComponentName="Optimization")
+optimizationModel1 = optimization1.GetModel()
+outputParameter1 = optimizationModel1.GetParameter(Name="P1")
+optimizationCriterion1 = outputParameter1.CreateOptimizationCriterion()
+optimizationCriterion1.ObjectiveType = "GT_SeekTarget"
+optimizationCriterion1.ObjectiveTargetValue = 360
+optimizationCriterion1.TargetTolerance = 0.1
+parameterRelationship1 = optimizationModel1.CreateParameterRelationship()
+parameterRelationship1 = optimizationModel1.GetParameterRelationship(Name="ParameterRelationship")
+optimizationModel1.DeleteParameterRelationships(ParameterRelationships=[parameterRelationship1])
+parameterRelationship2 = optimizationModel1.CreateParameterRelationship()
+optimizationCriterion1.ConstraintType = "CT_InsideBounds"
+parameterRelationship2 = optimizationModel1.GetParameterRelationship(Name="ParameterRelationship")
+optimizationModel1.DeleteParameterRelationships(ParameterRelationships=[parameterRelationship2])
+optimizationCriterion1.ConstraintSecondValue = 360
+optimizationCriterion1.ConstraintFirstValue = 350
+optimizationModel1.PreserveDesignPoints = True
+optimizationModel1.PreserveDesignPoints = False
+optimizationModel1.MethodSelection = "OMS_Manual"
+optimizationModel1.MethodSelection = "OMS_Auto"
+optimizationComponent1 = system13.GetComponent(Name="Optimization")
+optimizationComponent1.Update(AllDependencies=True)
+optimizationCriterion1.ConstraintSecondValue = 370
+optimizationComponent1.Update(AllDependencies=True)
+system13.Update(AllDependencies=True)
+optimizationModel1.NumberOfRetries = 5
+system14 = template10.CreateSystem(
+    Position="Below",
+    RelativeTo=system10)
+library6 = EngData.CreateLibrary(
+    Name="Custom",
+    FilePath=GetAbsoluteUserPathName("Custom.xml"))
+library7 = EngData.OpenLibrary(
+    Name="Custom",
+    Source=GetAbsoluteUserPathName("Custom.xml"))
+EngData.EnableFilter(Enable=False)
+EngData.EnableFilter()
+EngData.EnableFilter(Enable=False)
+EngData.EnableFilter()
+library8 = EngData.OpenLibrary(
+    Name="General Materials",
+    Source="General_Materials.xml")
+system14.Delete()
+Save(Overwrite=True)
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="Plastic, PET (amorphous)")
+matlProp1 = material1.GetProperty(Name="Elasticity")
+materialPropertyData1 = matlProp1.GetPropertyData(
+    Name="Elasticity",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic", "Derive from": "Young's Modulus and Poisson's Ratio"})
+materialVariable1 = materialPropertyData1.GetVariable(Name="Young's Modulus")
+parameter1 = Parameters.CreateParameter(
+    Entity=materialVariable1,
+    PropertyName="ParameterValue",
+    DisplayText="Young's Modulus")
+parameter1.ValueQuantityName = "Pressure"
+Save(Overwrite=True)
+optimizationComponent1.Update(AllDependencies=True)
+modelComponent1.Update(AllDependencies=True)
+inputParameter1 = optimizationModel1.GetParameter(Name="P2")
+optimizationCriterion2 = inputParameter1.GetOptimizationCriterion()
+optimizationCriterion2.LowerBound = 2208200000
+Save(Overwrite=True)
+optimizationModel1.PreserveDesignPoints = True
+optimizationModel1.PreserveDesignPoints = False
+optimizationModel1.PreserveDesignPoints = True
+optimizationModel1.RetainDesignPoints = True
+Save(Overwrite=True)
+system15 = template2.CreateSystem(
+    Position="Below",
+    RelativeTo=system13)
+designofExperiment1 = system15.GetContainer(ComponentName="Design of Experiment")
+dOEModel1 = designofExperiment1.GetModel()
+inputParameter2 = dOEModel1.GetParameter(Name="P2")
+inputParameter2.LowerBound = 2208200000
+Save(Overwrite=True)
+designofExperimentComponent1 = system15.GetComponent(Name="Design of Experiment")
+designofExperimentComponent1.Update(AllDependencies=True)
+chart3 = Parameters.CreateParameterVsParameterChart()
+chart3.XAxisBottom = parameter1
+chart3.YAxisLeft = parameter1
+parameter2 = Parameters.GetParameter(Name="P1")
+chart3.YAxisLeft = parameter2
+Update()
+responseSurfaceComponent1 = system15.GetComponent(Name="Response Surface")
+responseSurfaceComponent1.Update(AllDependencies=True)
+optimizationModel1.PreserveDesignPoints = False
+optimizationModel1.NumberOfRetries = 0
+optimizationModel1.MethodSelection = "OMS_Manual"
+optimizationModel1.MethodSelection = "OMS_Auto"
+optimizationModel1.PreserveDesignPoints = True
+optimizationModel1.PreserveDesignPoints = False
+optimizationCriterion3 = inputParameter1.CreateOptimizationCriterion()
+optimizationCriterion3.ObjectiveType = "GT_MaximumPossible"
+optimizationCriterion3.ObjectiveTargetValue = 3100000000
+Save(Overwrite=True)
+system13.Delete()
+system15.Delete()
+template12 = GetTemplate(TemplateName="Response Surface Optimization")
+system16 = template12.CreateSystem()
+responseSurface1 = system16.GetContainer(ComponentName="Response Surface")
+responseSurfaceModel1 = responseSurface1.GetModel()
+outputParameter2 = responseSurfaceModel1.GetParameter(Name="P1")
+outputParameter2.EnableAutoRefinement = True
+outputParameter2.EnableAutoRefinement = False
+outputParameter2.EnableAutoRefinement = True
+outputParameter2.Tolerance = 0.1
+optimizationComponent2 = system16.GetComponent(Name="Optimization")
+optimizationComponent2.Update(AllDependencies=True)
+Refresh()
+Update()
+system16.Delete()
+system17 = template3.CreateSystem()
+optimization2 = system17.GetContainer(ComponentName="Optimization")
+optimizationModel2 = optimization2.GetModel()
+outputParameter3 = optimizationModel2.GetParameter(Name="P1")
+optimizationCriterion4 = outputParameter3.CreateOptimizationCriterion()
+optimizationCriterion4.ObjectiveType = "GT_SeekTarget"
+optimizationCriterion4.ObjectiveTargetValue = 360
+optimizationCriterion4.TargetTolerance = 0.1
+inputParameter3 = optimizationModel2.GetParameter(Name="P2")
+optimizationCriterion5 = inputParameter3.GetOptimizationCriterion()
+optimizationCriterion5.LowerBound = 2408200000
+optimizationComponent3 = system17.GetComponent(Name="Optimization")
+optimizationComponent3.Update(AllDependencies=True)
+optimizationModel2.MethodSelection = "OMS_Manual"
+optimizationModel2.MethodName = "ANSYS_SCREENING"
+optimizationCriterion6 = inputParameter3.CreateOptimizationCriterion()
+optimizationModel2.DeleteOptimizationCriteria(OptimizationCriteria=[optimizationCriterion6])
+Save(Overwrite=True)
+Reset()
+Extensions.UnloadExtension(
+    Id="5e7e01a6-8601-11e8-9f8c-28f10e13ffe6",
+    Version="2022.2",
+    Format="Binary")
+Extensions.UnloadExtension(
+    Id="5f463412-bd3e-484b-87e7-cbc0a665e474",
+    Version="2022.2",
+    Format="Binary")
+Extensions.UnloadExtension(
+    Id="20180725-3f81-49eb-9f31-41364844c769",
+    Version="2022.2",
+    Format="Binary")
+Extensions.UnloadExtension(
+    Id="f3e3da52-fb02-4910-8cc9-980efd047bc6",
+    Version="2022.2",
+    Format="Binary")

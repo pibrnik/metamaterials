@@ -1,0 +1,12 @@
+﻿# 
+# This file contains the parameter values of the Design Points successfully updated by Ansys Workbench.
+# Project name: Young modulus
+# Creation date: 01/10/2023 17:05:27
+# 
+# 01/10/2023 17:05:27
+# The parameters defined in the project are:
+# ,P1 - Total Deformation Reported Frequency [Hz],P2 - Young's Modulus [Pa]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1,P2
+DP 0,355.84825886064635,2898000000

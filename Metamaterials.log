@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.24)  30 DEC 2022 14:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.24)  13 JAN 2023 22:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -574,103 +574,64 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip61
 \f@nch@O@olf=\skip62
 \f@nch@O@orf=\skip63
-) (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/nomencl\nomencl.sty
-Package: nomencl 2021/11/10 v5.6 Nomenclature package
- (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
-Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
- (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks27
-\XKV@tempa@toks=\toks28
-)
-\XKV@depth=\count287
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-) (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.sty
-Package: tocbasic 2022/10/12 v3.38 KOMA-Script package (handling toc-files)
- (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
-Package: scrbase 2022/10/12 v3.38 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
- (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.sty
-Package: scrlfile 2022/10/12 v3.38 KOMA-Script package (file load hooks)
- (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-hook.sty
-Package: scrlfile-hook 2022/10/12 v3.38 KOMA-Script package (using LaTeX hooks)
- (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
-Package: scrlogo 2022/10/12 v3.38 KOMA-Script package (logo)
-)))
-Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
-Already applied: [0000/00/00] Usage of raw or classic option list on input line 368.
-)
-\scr@dte@tocline@numberwidth=\skip64
-\scr@dte@tocline@numbox=\box57
-)
-Package tocbasic Info: setting babel extension for `nlo' on input line 187.
-Package tocbasic Info: setting babel extension for `nls' on input line 188.
-\nomlabelwidth=\dimen158
-\nom@tempdim=\dimen159
-\nomitemsep=\skip65
 ) (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
-\LTleft=\skip66
-\LTright=\skip67
-\LTpre=\skip68
-\LTpost=\skip69
-\LTchunksize=\count288
-\LTcapwidth=\dimen160
-\LT@head=\box58
-\LT@firsthead=\box59
-\LT@foot=\box60
-\LT@lastfoot=\box61
-\LT@gbox=\box62
-\LT@cols=\count289
-\LT@rows=\count290
-\c@LT@tables=\count291
-\c@LT@chunks=\count292
-\LT@p@ftn=\toks29
+\LTleft=\skip64
+\LTright=\skip65
+\LTpre=\skip66
+\LTpost=\skip67
+\LTchunksize=\count287
+\LTcapwidth=\dimen158
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count288
+\LT@rows=\count289
+\c@LT@tables=\count290
+\c@LT@chunks=\count291
+\LT@p@ftn=\toks27
 ) (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
-\cftparskip=\skip70
-\cftbeforetoctitleskip=\skip71
-\cftaftertoctitleskip=\skip72
-\cftbeforepartskip=\skip73
-\cftpartnumwidth=\skip74
-\cftpartindent=\skip75
-\cftbeforechapskip=\skip76
-\cftchapindent=\skip77
-\cftchapnumwidth=\skip78
-\cftbeforesecskip=\skip79
-\cftsecindent=\skip80
-\cftsecnumwidth=\skip81
-\cftbeforesubsecskip=\skip82
-\cftsubsecindent=\skip83
-\cftsubsecnumwidth=\skip84
-\cftbeforesubsubsecskip=\skip85
-\cftsubsubsecindent=\skip86
-\cftsubsubsecnumwidth=\skip87
-\cftbeforeparaskip=\skip88
-\cftparaindent=\skip89
-\cftparanumwidth=\skip90
-\cftbeforesubparaskip=\skip91
-\cftsubparaindent=\skip92
-\cftsubparanumwidth=\skip93
-\cftbeforeloftitleskip=\skip94
-\cftafterloftitleskip=\skip95
-\cftbeforefigskip=\skip96
-\cftfigindent=\skip97
-\cftfignumwidth=\skip98
-\c@lofdepth=\count293
-\c@lotdepth=\count294
-\cftbeforelottitleskip=\skip99
-\cftafterlottitleskip=\skip100
-\cftbeforetabskip=\skip101
-\cfttabindent=\skip102
-\cfttabnumwidth=\skip103
-)
-\@nomenclaturefile=\write3
-\openout3 = `Metamaterials.nlo'.
-
-Package nomencl Info: Writing nomenclature file Metamaterials.nlo on input line 16.
- (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+\cftparskip=\skip68
+\cftbeforetoctitleskip=\skip69
+\cftaftertoctitleskip=\skip70
+\cftbeforepartskip=\skip71
+\cftpartnumwidth=\skip72
+\cftpartindent=\skip73
+\cftbeforechapskip=\skip74
+\cftchapindent=\skip75
+\cftchapnumwidth=\skip76
+\cftbeforesecskip=\skip77
+\cftsecindent=\skip78
+\cftsecnumwidth=\skip79
+\cftbeforesubsecskip=\skip80
+\cftsubsecindent=\skip81
+\cftsubsecnumwidth=\skip82
+\cftbeforesubsubsecskip=\skip83
+\cftsubsubsecindent=\skip84
+\cftsubsubsecnumwidth=\skip85
+\cftbeforeparaskip=\skip86
+\cftparaindent=\skip87
+\cftparanumwidth=\skip88
+\cftbeforesubparaskip=\skip89
+\cftsubparaindent=\skip90
+\cftsubparanumwidth=\skip91
+\cftbeforeloftitleskip=\skip92
+\cftafterloftitleskip=\skip93
+\cftbeforefigskip=\skip94
+\cftfigindent=\skip95
+\cftfignumwidth=\skip96
+\c@lofdepth=\count292
+\c@lotdepth=\count293
+\cftbeforelottitleskip=\skip97
+\cftafterlottitleskip=\skip98
+\cftbeforetabskip=\skip99
+\cfttabindent=\skip100
+\cfttabnumwidth=\skip101
+) (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2022/07/12 v3.18b programmable bibliographies (PK/MW)
  (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
@@ -678,70 +639,72 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )) (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count295
+\lrq@indent=\count294
  (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+)) (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count296
-\c@listtotal=\count297
-\c@listcount=\count298
-\c@liststart=\count299
-\c@liststop=\count300
-\c@citecount=\count301
-\c@citetotal=\count302
-\c@multicitecount=\count303
-\c@multicitetotal=\count304
-\c@instcount=\count305
-\c@maxnames=\count306
-\c@minnames=\count307
-\c@maxitems=\count308
-\c@minitems=\count309
-\c@citecounter=\count310
-\c@maxcitecounter=\count311
-\c@savedcitecounter=\count312
-\c@uniquelist=\count313
-\c@uniquename=\count314
-\c@refsection=\count315
-\c@refsegment=\count316
-\c@maxextratitle=\count317
-\c@maxextratitleyear=\count318
-\c@maxextraname=\count319
-\c@maxextradate=\count320
-\c@maxextraalpha=\count321
-\c@abbrvpenalty=\count322
-\c@highnamepenalty=\count323
-\c@lownamepenalty=\count324
-\c@maxparens=\count325
-\c@parenlevel=\count326
-\blx@tempcnta=\count327
-\blx@tempcntb=\count328
-\blx@tempcntc=\count329
-\c@blx@maxsection=\count330
-\blx@maxsegment@0=\count331
-\blx@notetype=\count332
-\blx@parenlevel@text=\count333
-\blx@parenlevel@foot=\count334
-\blx@sectionciteorder@0=\count335
-\blx@sectionciteorderinternal@0=\count336
-\blx@entrysetcounter=\count337
-\blx@biblioinstance=\count338
-\labelnumberwidth=\skip104
-\labelalphawidth=\skip105
-\biblabelsep=\skip106
-\bibitemsep=\skip107
-\bibnamesep=\skip108
-\bibinitsep=\skip109
-\bibparsep=\skip110
-\bibhang=\skip111
+\c@tabx@nest=\count295
+\c@listtotal=\count296
+\c@listcount=\count297
+\c@liststart=\count298
+\c@liststop=\count299
+\c@citecount=\count300
+\c@citetotal=\count301
+\c@multicitecount=\count302
+\c@multicitetotal=\count303
+\c@instcount=\count304
+\c@maxnames=\count305
+\c@minnames=\count306
+\c@maxitems=\count307
+\c@minitems=\count308
+\c@citecounter=\count309
+\c@maxcitecounter=\count310
+\c@savedcitecounter=\count311
+\c@uniquelist=\count312
+\c@uniquename=\count313
+\c@refsection=\count314
+\c@refsegment=\count315
+\c@maxextratitle=\count316
+\c@maxextratitleyear=\count317
+\c@maxextraname=\count318
+\c@maxextradate=\count319
+\c@maxextraalpha=\count320
+\c@abbrvpenalty=\count321
+\c@highnamepenalty=\count322
+\c@lownamepenalty=\count323
+\c@maxparens=\count324
+\c@parenlevel=\count325
+\blx@tempcnta=\count326
+\blx@tempcntb=\count327
+\blx@tempcntc=\count328
+\c@blx@maxsection=\count329
+\blx@maxsegment@0=\count330
+\blx@notetype=\count331
+\blx@parenlevel@text=\count332
+\blx@parenlevel@foot=\count333
+\blx@sectionciteorder@0=\count334
+\blx@sectionciteorderinternal@0=\count335
+\blx@entrysetcounter=\count336
+\blx@biblioinstance=\count337
+\labelnumberwidth=\skip102
+\labelalphawidth=\skip103
+\biblabelsep=\skip104
+\bibitemsep=\skip105
+\bibnamesep=\skip106
+\bibinitsep=\skip107
+\bibparsep=\skip108
+\bibhang=\skip109
 \blx@bcfin=\read3
-\blx@bcfout=\write4
+\blx@bcfout=\write3
 \blx@langwohyphens=\language80
-\c@mincomprange=\count339
-\c@maxcomprange=\count340
-\c@mincompwidth=\count341
+\c@mincomprange=\count338
+\c@maxcomprange=\count339
+\c@mincompwidth=\count340
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
@@ -751,88 +714,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count342
-\c@savedafterword=\count343
-\c@annotator=\count344
-\c@savedannotator=\count345
-\c@author=\count346
-\c@savedauthor=\count347
-\c@bookauthor=\count348
-\c@savedbookauthor=\count349
-\c@commentator=\count350
-\c@savedcommentator=\count351
-\c@editor=\count352
-\c@savededitor=\count353
-\c@editora=\count354
-\c@savededitora=\count355
-\c@editorb=\count356
-\c@savededitorb=\count357
-\c@editorc=\count358
-\c@savededitorc=\count359
-\c@foreword=\count360
-\c@savedforeword=\count361
-\c@holder=\count362
-\c@savedholder=\count363
-\c@introduction=\count364
-\c@savedintroduction=\count365
-\c@namea=\count366
-\c@savednamea=\count367
-\c@nameb=\count368
-\c@savednameb=\count369
-\c@namec=\count370
-\c@savednamec=\count371
-\c@translator=\count372
-\c@savedtranslator=\count373
-\c@shortauthor=\count374
-\c@savedshortauthor=\count375
-\c@shorteditor=\count376
-\c@savedshorteditor=\count377
-\c@labelname=\count378
-\c@savedlabelname=\count379
-\c@institution=\count380
-\c@savedinstitution=\count381
-\c@lista=\count382
-\c@savedlista=\count383
-\c@listb=\count384
-\c@savedlistb=\count385
-\c@listc=\count386
-\c@savedlistc=\count387
-\c@listd=\count388
-\c@savedlistd=\count389
-\c@liste=\count390
-\c@savedliste=\count391
-\c@listf=\count392
-\c@savedlistf=\count393
-\c@location=\count394
-\c@savedlocation=\count395
-\c@organization=\count396
-\c@savedorganization=\count397
-\c@origlocation=\count398
-\c@savedoriglocation=\count399
-\c@origpublisher=\count400
-\c@savedorigpublisher=\count401
-\c@publisher=\count402
-\c@savedpublisher=\count403
-\c@language=\count404
-\c@savedlanguage=\count405
-\c@origlanguage=\count406
-\c@savedoriglanguage=\count407
-\c@pageref=\count408
-\c@savedpageref=\count409
-\shorthandwidth=\skip112
-\shortjournalwidth=\skip113
-\shortserieswidth=\skip114
-\shorttitlewidth=\skip115
-\shortauthorwidth=\skip116
-\shorteditorwidth=\skip117
-\locallabelnumberwidth=\skip118
-\locallabelalphawidth=\skip119
-\localshorthandwidth=\skip120
-\localshortjournalwidth=\skip121
-\localshortserieswidth=\skip122
-\localshorttitlewidth=\skip123
-\localshortauthorwidth=\skip124
-\localshorteditorwidth=\skip125
+\c@afterword=\count341
+\c@savedafterword=\count342
+\c@annotator=\count343
+\c@savedannotator=\count344
+\c@author=\count345
+\c@savedauthor=\count346
+\c@bookauthor=\count347
+\c@savedbookauthor=\count348
+\c@commentator=\count349
+\c@savedcommentator=\count350
+\c@editor=\count351
+\c@savededitor=\count352
+\c@editora=\count353
+\c@savededitora=\count354
+\c@editorb=\count355
+\c@savededitorb=\count356
+\c@editorc=\count357
+\c@savededitorc=\count358
+\c@foreword=\count359
+\c@savedforeword=\count360
+\c@holder=\count361
+\c@savedholder=\count362
+\c@introduction=\count363
+\c@savedintroduction=\count364
+\c@namea=\count365
+\c@savednamea=\count366
+\c@nameb=\count367
+\c@savednameb=\count368
+\c@namec=\count369
+\c@savednamec=\count370
+\c@translator=\count371
+\c@savedtranslator=\count372
+\c@shortauthor=\count373
+\c@savedshortauthor=\count374
+\c@shorteditor=\count375
+\c@savedshorteditor=\count376
+\c@labelname=\count377
+\c@savedlabelname=\count378
+\c@institution=\count379
+\c@savedinstitution=\count380
+\c@lista=\count381
+\c@savedlista=\count382
+\c@listb=\count383
+\c@savedlistb=\count384
+\c@listc=\count385
+\c@savedlistc=\count386
+\c@listd=\count387
+\c@savedlistd=\count388
+\c@liste=\count389
+\c@savedliste=\count390
+\c@listf=\count391
+\c@savedlistf=\count392
+\c@location=\count393
+\c@savedlocation=\count394
+\c@organization=\count395
+\c@savedorganization=\count396
+\c@origlocation=\count397
+\c@savedoriglocation=\count398
+\c@origpublisher=\count399
+\c@savedorigpublisher=\count400
+\c@publisher=\count401
+\c@savedpublisher=\count402
+\c@language=\count403
+\c@savedlanguage=\count404
+\c@origlanguage=\count405
+\c@savedoriglanguage=\count406
+\c@pageref=\count407
+\c@savedpageref=\count408
+\shorthandwidth=\skip110
+\shortjournalwidth=\skip111
+\shortserieswidth=\skip112
+\shorttitlewidth=\skip113
+\shortauthorwidth=\skip114
+\shorteditorwidth=\skip115
+\locallabelnumberwidth=\skip116
+\locallabelalphawidth=\skip117
+\localshorthandwidth=\skip118
+\localshortjournalwidth=\skip119
+\localshortserieswidth=\skip120
+\localshorttitlewidth=\skip121
+\localshortauthorwidth=\skip122
+\localshorteditorwidth=\skip123
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
@@ -842,19 +805,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
-\c@textcitecount=\count410
-\c@textcitetotal=\count411
-\c@textcitemaxnames=\count412
-\c@biburlbigbreakpenalty=\count413
-\c@biburlbreakpenalty=\count414
-\c@biburlnumpenalty=\count415
-\c@biburlucpenalty=\count416
-\c@biburllcpenalty=\count417
+\c@textcitecount=\count409
+\c@textcitetotal=\count410
+\c@textcitemaxnames=\count411
+\c@biburlbigbreakpenalty=\count412
+\c@biburlbreakpenalty=\count413
+\c@biburlnumpenalty=\count414
+\c@biburlucpenalty=\count415
+\c@biburllcpenalty=\count416
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count418
+\c@smartand=\count417
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -864,8 +827,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count419
-\c@bbx:relatedtotal=\count420
+\c@bbx:relatedcount=\count418
+\c@bbx:relatedtotal=\count419
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -899,55 +862,55 @@ Package: xparse 2022-12-17 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2022/07/12 v3.18b expl3 case changing code for biblatex
 ))
-\c@g@acro@PZF@int=\count421
-\c@g@acro@MM@int=\count422
-\c@g@acro@EVP@int=\count423
-\c@g@acro@OC@int=\count424
-\c@g@acro@FFF@int=\count425
+\c@g@acro@PZF@int=\count420
+\c@g@acro@MM@int=\count421
+\c@g@acro@EVP@int=\count422
+\c@g@acro@OC@int=\count423
+\c@g@acro@FFF@int=\count424
 
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count426
-\@quotereset=\count427
+\@quotelevel=\count425
+\@quotereset=\count426
 (Metamaterials.aux)
 \openout1 = `Metamaterials.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 89.
-LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 89.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 61.
+LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 61.
  (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/cbfonts-fd\lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 89.
-Package translations Info: no dictionary file `translations-basic-dictionary-slovenian.trsl' found. on input line 89.
+LaTeX Font Info:    ... okay on input line 61.
+Package translations Info: no dictionary file `translations-basic-dictionary-slovenian.trsl' found. on input line 61.
  (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count428
-\scratchdimen=\dimen161
-\scratchbox=\box63
-\nofMPsegments=\count429
-\nofMParguments=\count430
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count431
-\MPscratchDim=\dimen162
-\MPnumerator=\count432
-\makeMPintoPDFobject=\count433
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count427
+\scratchdimen=\dimen159
+\scratchbox=\box62
+\nofMPsegments=\count428
+\nofMParguments=\count429
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count430
+\MPscratchDim=\dimen160
+\MPnumerator=\count431
+\makeMPintoPDFobject=\count432
+\everyMPtoPDFconversion=\toks29
 ) (C:\Users\Marko\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -962,33 +925,33 @@ File: slovene.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `Metamaterials.bcf'.
+\openout3 = `Metamaterials.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Metamaterials.bbl' found.
  (Metamaterials.bbl)
-Package biblatex Info: Reference section=0 on input line 89.
-Package biblatex Info: Reference segment=0 on input line 89.
+Package biblatex Info: Reference section=0 on input line 61.
+Package biblatex Info: Reference segment=0 on input line 61.
  [1
 
 {C:/Users/Marko/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Metamaterials.toc [1])
-\tf@toc=\write5
-\openout5 = `Metamaterials.toc'.
+\tf@toc=\write4
+\openout4 = `Metamaterials.toc'.
 
  [2]
-\mylen=\skip126
+\mylen=\skip124
  (Metamaterials.lof)
-\tf@lof=\write6
-\openout6 = `Metamaterials.lof'.
+\tf@lof=\write5
+\openout5 = `Metamaterials.lof'.
 
  [3] (Metamaterials.lot)
-\tf@lot=\write7
-\openout7 = `Metamaterials.lot'.
+\tf@lot=\write6
+\openout6 = `Metamaterials.lot'.
 
  [4] [5] [6]
 Poglavje 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--267
+Underfull \hbox (badness 10000) in paragraph at lines 226--239
 
  []
 
@@ -997,153 +960,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--267
 ]
 Poglavje 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--293
+Underfull \hbox (badness 10000) in paragraph at lines 243--265
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--293
+Underfull \hbox (badness 10000) in paragraph at lines 243--265
 
  []
 
 [2
 
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[3]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4]
+] [3] [4]
 <Images/bloch.png, id=45, 272.9397pt x 55.6479pt>
 File: Images/bloch.png Graphic file (type png)
 <use Images/bloch.png>
-Package pdftex.def Info: Images/bloch.png  used on input line 367.
+Package pdftex.def Info: Images/bloch.png  used on input line 339.
 (pdftex.def)             Requested size: 272.93901pt x 55.64775pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--401
+Underfull \hbox (badness 10000) in paragraph at lines 364--373
 
  []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5 <./Images/bloch.png>]
 <Images/osnovna_celica.png, id=52, 480.1137pt x 26.0172pt>
 File: Images/osnovna_celica.png Graphic file (type png)
 <use Images/osnovna_celica.png>
-Package pdftex.def Info: Images/osnovna_celica.png  used on input line 404.
+Package pdftex.def Info: Images/osnovna_celica.png  used on input line 376.
 (pdftex.def)             Requested size: 384.09148pt x 20.81377pt.
 <Images/transformacija.png, id=53, 487.8225pt x 46.0119pt>
 File: Images/transformacija.png Graphic file (type png)
 <use Images/transformacija.png>
-Package pdftex.def Info: Images/transformacija.png  used on input line 409.
+Package pdftex.def Info: Images/transformacija.png  used on input line 381.
 (pdftex.def)             Requested size: 390.25853pt x 36.80956pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[6 <./Images/osnovna_celica.png> <./Images/transformacija.png>]
-Overfull \hbox (4.56535pt too wide) in paragraph at lines 446--449
+ [6 <./Images/osnovna_celica.png> <./Images/transformacija.png>]
+Overfull \hbox (4.56535pt too wide) in paragraph at lines 418--421
 \OT1/cmr/m/n/12 Podobno na-re-dimo tudi za vek-tor ge-ne-ra-li-zir-nih vo-zli^^Ts^^Tcnih sil, kjer upo^^Tstevamo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--469
+Underfull \hbox (badness 10000) in paragraph at lines 435--441
 
  []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 496--502
+Underfull \hbox (badness 10000) in paragraph at lines 468--474
 
  []
 
 
-Overfull \hbox (10.8612pt too wide) in paragraph at lines 496--502
+Overfull \hbox (10.8612pt too wide) in paragraph at lines 468--474
 \OT1/cmr/m/n/12 V na^^Tsem pri-meru di-rek-tnega pri-stopa ne bomo upo-ra-bili, ven-dar bomo prera^^Tcun
  []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [8]
 <Images/extruder.png, id=66, 635.4942pt x 647.7801pt>
 File: Images/extruder.png Graphic file (type png)
 <use Images/extruder.png>
-Package pdftex.def Info: Images/extruder.png  used on input line 518.
+Package pdftex.def Info: Images/extruder.png  used on input line 490.
 (pdftex.def)             Requested size: 317.74632pt x 323.88925pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[9]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[10 <./Images/extruder.png (PNG copy)>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[11]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12]
+ [9] [10 <./Images/extruder.png (PNG copy)>] [11] [12]
 Poglavje 3.
 
-Overfull \hbox (6.49335pt too wide) in paragraph at lines 557--557
+Overfull \hbox (6.49335pt too wide) in paragraph at lines 529--529
 |\OT1/cmr/bx/n/24.88 3 Za-snova in prera^^Tcun me-ta-ma-
  []
 
 <Images/BaseCell_v4.JPG, id=81, 461.92575pt x 250.536pt>
 File: Images/BaseCell_v4.JPG Graphic file (type jpg)
 <use Images/BaseCell_v4.JPG>
-Package pdftex.def Info: Images/BaseCell_v4.JPG  used on input line 568.
+Package pdftex.def Info: Images/BaseCell_v4.JPG  used on input line 540.
 (pdftex.def)             Requested size: 277.15758pt x 150.32274pt.
 [13
 
@@ -1151,140 +1037,96 @@ Package pdftex.def Info: Images/BaseCell_v4.JPG  used on input line 568.
 <Images/drawing.png, id=85, 507.69675pt x 477.58424pt>
 File: Images/drawing.png Graphic file (type png)
 <use Images/drawing.png>
-Package pdftex.def Info: Images/drawing.png  used on input line 579.
+Package pdftex.def Info: Images/drawing.png  used on input line 551.
 (pdftex.def)             Requested size: 406.15794pt x 382.0679pt.
 
-Overfull \hbox (16.15794pt too wide) in paragraph at lines 579--580
+Overfull \hbox (16.15794pt too wide) in paragraph at lines 551--552
  [][] 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14 <./Images/BaseCell_v4.JPG>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[15 <./Images/drawing.png>]
+[14 <./Images/BaseCell_v4.JPG>] [15 <./Images/drawing.png>]
 <Images/dispersion.png, id=94, 627.34375pt x 436.63126pt>
 File: Images/dispersion.png Graphic file (type png)
 <use Images/dispersion.png>
-Package pdftex.def Info: Images/dispersion.png  used on input line 615.
+Package pdftex.def Info: Images/dispersion.png  used on input line 587.
 (pdftex.def)             Requested size: 376.40915pt x 261.98077pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16]
+ [16]
 <Images/mu0.png, id=98, 1417.295pt x 451.6875pt>
 File: Images/mu0.png Graphic file (type png)
 <use Images/mu0.png>
-Package pdftex.def Info: Images/mu0.png  used on input line 629.
+Package pdftex.def Info: Images/mu0.png  used on input line 601.
 (pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 629--630
+Overfull \hbox (35.19179pt too wide) in paragraph at lines 601--602
  [][] 
  []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17 <./Images/dispersion.png>]
 <Images/mupi_6.png, id=104, 1417.295pt x 451.6875pt>
 File: Images/mupi_6.png Graphic file (type png)
 <use Images/mupi_6.png>
-Package pdftex.def Info: Images/mupi_6.png  used on input line 634.
+Package pdftex.def Info: Images/mupi_6.png  used on input line 606.
 (pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 634--635
+Overfull \hbox (35.19179pt too wide) in paragraph at lines 606--607
  [][] 
  []
 
 <Images/mupi_3.png, id=106, 1417.295pt x 451.6875pt>
 File: Images/mupi_3.png Graphic file (type png)
 <use Images/mupi_3.png>
-Package pdftex.def Info: Images/mupi_3.png  used on input line 639.
+Package pdftex.def Info: Images/mupi_3.png  used on input line 611.
 (pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 639--640
+Overfull \hbox (35.19179pt too wide) in paragraph at lines 611--612
  [][] 
  []
 
 <Images/mupi_2.png, id=108, 1417.295pt x 451.6875pt>
 File: Images/mupi_2.png Graphic file (type png)
 <use Images/mupi_2.png>
-Package pdftex.def Info: Images/mupi_2.png  used on input line 644.
+Package pdftex.def Info: Images/mupi_2.png  used on input line 616.
 (pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 644--645
+Overfull \hbox (35.19179pt too wide) in paragraph at lines 616--617
  [][] 
  []
 
 <Images/mu2pi_3.png, id=110, 1417.295pt x 451.6875pt>
 File: Images/mu2pi_3.png Graphic file (type png)
 <use Images/mu2pi_3.png>
-Package pdftex.def Info: Images/mu2pi_3.png  used on input line 649.
+Package pdftex.def Info: Images/mu2pi_3.png  used on input line 621.
 (pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 649--650
+Overfull \hbox (35.19179pt too wide) in paragraph at lines 621--622
  [][] 
  []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18 <./Images/mu0.png> <./Images/mupi_6.png> <./Images/mupi_3.png>]
 <Images/mu5pi_6.png, id=122, 1417.295pt x 451.6875pt>
 File: Images/mu5pi_6.png Graphic file (type png)
 <use Images/mu5pi_6.png>
-Package pdftex.def Info: Images/mu5pi_6.png  used on input line 654.
+Package pdftex.def Info: Images/mu5pi_6.png  used on input line 626.
 (pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 654--655
+Overfull \hbox (35.19179pt too wide) in paragraph at lines 626--627
  [][] 
  []
 
 <Images/mupi.png, id=124, 1417.295pt x 451.6875pt>
 File: Images/mupi.png Graphic file (type png)
 <use Images/mupi.png>
-Package pdftex.def Info: Images/mupi.png  used on input line 659.
+Package pdftex.def Info: Images/mupi.png  used on input line 631.
 (pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 659--660
+Overfull \hbox (35.19179pt too wide) in paragraph at lines 631--632
  [][] 
  []
 
 
-Overfull \hbox (2.37648pt too wide) in paragraph at lines 662--663
+Overfull \hbox (2.37648pt too wide) in paragraph at lines 634--635
 \OT1/cmr/m/n/12 Na sli-kah manj^^Tsa pike pred-sta-vljajo vo-zli^^Ts^^Tca kon^^Tcnih ele-men-tov osnovne struk-
  []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [19 <./Images/mupi_2.png> <./Images/mu2pi_3.png> <./Images/mu5pi_6.png> <./Images/mupi.png>]
 Poglavje 4.
@@ -1294,58 +1136,65 @@ Poglavje 4.
 <Images/mostiscenje_small.jpg, id=140, 836.12375pt x 627.34375pt>
 File: Images/mostiscenje_small.jpg Graphic file (type jpg)
 <use Images/mostiscenje_small.jpg>
-Package pdftex.def Info: Images/mostiscenje_small.jpg  used on input line 698.
+Package pdftex.def Info: Images/mostiscenje_small.jpg  used on input line 669.
 (pdftex.def)             Requested size: 334.44357pt x 250.93304pt.
+ [21 <./Images/mostiscenje_small.jpg>]
+<Images/tester.png, id=144, 464.937pt x 141.52875pt>
+File: Images/tester.png Graphic file (type png)
+<use Images/tester.png>
+Package pdftex.def Info: Images/tester.png  used on input line 704.
+(pdftex.def)             Requested size: 418.43942pt x 127.37468pt.
+
+Overfull \hbox (28.43942pt too wide) in paragraph at lines 704--705
+ [][] 
+ []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+Underfull \hbox (badness 10000) in paragraph at lines 695--706
 
-[21 <./Images/mostiscenje_small.jpg>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+ []
 
 [22]
+<Images/frf.png, id=148, 634.37pt x 321.2pt>
+File: Images/frf.png Graphic file (type png)
+<use Images/frf.png>
+Package pdftex.def Info: Images/frf.png  used on input line 721.
+(pdftex.def)             Requested size: 380.62492pt x 192.72148pt.
+ [23 <./Images/tester.png>] [24 <./Images/frf.png>]
 Poglavje 5.
 
-Overfull \hbox (2.63582pt too wide) in paragraph at lines 706--706
+Underfull \hbox (badness 10000) in paragraph at lines 739--749
+
+ []
+
+[25
+
+]
+Poglavje 6.
+
+Overfull \hbox (2.63582pt too wide) in paragraph at lines 751--751
 \OT1/cmr/m/it/12 The In-ter-na-ti-o-nal Jo-ur-nal of Ad-van-ced Ma-nu-fac-tu-ring Te-ch-no-logy \OT1/cmr/m/n/12 114.5
  []
 
-[23
+[26
 
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24] (Metamaterials.aux)
+] [27] (Metamaterials.aux)
 Package logreq Info: Writing requests to 'Metamaterials.run.xml'.
 \openout1 = `Metamaterials.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18590 strings out of 476406
- 383576 string characters out of 2789566
+ 17493 strings out of 476406
+ 361536 string characters out of 2789566
  1866787 words of memory out of 3000000
- 38738 multiletter control sequences out of 15000+600000
- 521485 words of font info for 63 fonts, out of 8000000 for 9000
+ 37669 multiletter control sequences out of 15000+600000
+ 521488 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,13n,106p,948b,2784s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,13n,77p,948b,2593s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Metamaterials.pdf (31 pages, 844293 bytes).
+Output written on Metamaterials.pdf (34 pages, 921199 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
+ 228 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 128 words of extra memory for PDF output out of 10000 (max. 10000000)
 

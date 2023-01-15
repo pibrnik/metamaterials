@@ -2353,28 +2353,30 @@
     <bcf:citekey order="3" intorder="1">ville</bcf:citekey>
     <bcf:citekey order="4" intorder="1">vanbelle</bcf:citekey>
     <bcf:citekey order="4" intorder="2">kosir</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">vanbelle</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">kosir</bcf:citekey>
     <bcf:citekey order="6" intorder="1">vanbelle</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">abhipod</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">kosir</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">vanbelle</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">abhipod</bcf:citekey>
     <bcf:citekey order="9" intorder="1">kosir</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">vanbelle</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">kosir</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">vanbelle</bcf:citekey>
-    <bcf:citekey order="12" intorder="2">kosir</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">fff_article</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">leapfrog</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">fff_article</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">redwood20173d</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">kosir</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">vanbelle</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">kosir</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">vanbelle</bcf:citekey>
+    <bcf:citekey order="13" intorder="2">kosir</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">fff_article</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">leapfrog</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">fff_article</bcf:citekey>
     <bcf:citekey order="17" intorder="1">redwood20173d</bcf:citekey>
     <bcf:citekey order="18" intorder="1">redwood20173d</bcf:citekey>
     <bcf:citekey order="19" intorder="1">redwood20173d</bcf:citekey>
     <bcf:citekey order="20" intorder="1">redwood20173d</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">ansys</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">solidworks</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">ansys</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">solidworks</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">cura</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">redwood20173d</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">ansys</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">solidworks</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">ansys</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">solidworks</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">cura</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">labview</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

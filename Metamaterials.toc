@@ -17,7 +17,7 @@
 \contentsline {subsubsection}{\numberline {2.4.2.2}Modeliranje osnovne celice}{6}{}%
 \contentsline {section}{\numberline {2.5}Izračun periodičnih struktur}{8}{}%
 \contentsline {subsection}{\numberline {2.5.1}Inverzni pristop}{8}{}%
-\contentsline {subsection}{\numberline {2.5.2}Direktni pristop}{8}{}%
+\contentsline {subsection}{\numberline {2.5.2}Direktni pristop}{9}{}%
 \contentsline {section}{\numberline {2.6}FFF tehnologija 3D tiska}{9}{}%
 \contentsline {subsection}{\numberline {2.6.1}Delovanje \ac {FFF} 3D tiskalnika}{9}{}%
 \contentsline {subsection}{\numberline {2.6.2}Karakterisike 3D tiskalnika}{11}{}%
@@ -35,4 +35,7 @@
 \contentsline {chapter}{\numberline {4}Eksperimentalni del}{20}{}%
 \contentsline {section}{\numberline {4.1}Proces 3D tiska}{20}{}%
 \contentsline {section}{\numberline {4.2}Meritve}{22}{}%
-\contentsline {chapter}{\numberline {5}Literatura}{23}{}%
+\contentsline {subsection}{\numberline {4.2.1}Meritev gostote}{22}{}%
+\contentsline {subsection}{\numberline {4.2.2}Meritev elastičnega modula}{22}{}%
+\contentsline {chapter}{\numberline {5}Zaključki}{25}{}%
+\contentsline {chapter}{\numberline {6}Literatura}{26}{}%
