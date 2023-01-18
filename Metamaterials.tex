@@ -171,8 +171,10 @@ $\mathbf{D}(\omega)$ & N & dinamska matrika sistema \\
 $\mathbf{f}$ & N & vektor generaliziranih vozliščnih sil \\
 $\mathbf{I}$ & / & identična matrika\\
 $\mathbf{K}$ & N m$^{-1}$ & globalna togostna matrika \\
+$\mathbf{K_{red}}$ & N m$^{-1}$ & reducirana globalna togostna matrika \\
 $\mathbf{k}$ & m$^{-1}$ & valovni vektor \\
 $\mathbf{M}$ & kg & globalna masna matrika\\
+$\mathbf{M_{red}}$ & kg & reducirana globalna masna matrika\\
 $\mathbf{q}$ & m & vektor generaliziranih vozliščnih pomikov \\
 $\mathbf{r}$ & m & krajevni vektor \\
 $\mathbf{t}$ & m & bazni translacijski vektor recipročne osnovne celice \\
@@ -259,7 +261,7 @@ Znotraj takih področij lahko zato pričakujemo močno slabljenje vibracij.
  lokalne resonatorje. Resonančni \ac{PZF} v tem primeru ni odvisen od periodičnosti, temveč geometrijskih lastnosti resonatorja. 
  Pogoja za nastanek \ac{PZF} sta majhna medsebojna oddaljenost resonatorjev (nekaj velikostnih razredov nižje od valovnih dolžin frekvenc,
  ki bi jih radi dušili) in ne-ničelna inducirana rezultantna sila na osnovno strukturo. Prednost tovrstnega pristopa je zmožnost kreiranja
- \ac{PZF} tudi pri nižjih frekvencah, slabosta pa, da lahko izven tega področja tudi močno poslabšamo slabljenje vibracij. \cite{kosir}
+ \ac{PZF} tudi pri nižjih frekvencah, slabost pa, da lahko izven tega področja tudi močno poslabšamo slabljenje vibracij. \cite{kosir}
  \\
 V okrviru te naloge se bomo osredotičli na konstruiranje 1D \ac{MM} preko mehanizma lokalnih resonatorjev.
 
@@ -296,7 +298,6 @@ Problem prevedemo na problem lastnih vrednosti, ki je numerično stabilnejši.
 
 \section{Metoda končnih elementov}
 Metoda končnih elementov je aproksimativna metoda za reševanje matematičnih modelov in je najbolj razširjena med vsemi aproksimativnimi metodami.
-Za naš primer bi lahko uporabili tudi metodo končnih razlik ali metodo robnih elementov, vendar je zaradi narave problema metoda končnih elementov najprimernejša.
 S pomočjo te metode bomo pridobili globalno masno in togostno matriko \textbf{M} in \textbf{K}. 
 \\
 Osnovnih togostnih (2.5) in masnih (2.6) matrik za nosilec s štirimi prostostnimi stopnjami tu ne bomo izpeljevali, vendar jih pridobimo iz vira \cite{ville}.
@@ -337,7 +338,7 @@ ki definira referenčno točko U, in referečni vektor $\mathbf{r}_P$, ki defini
 \begin{figure}[H]
   \centering
   \includegraphics{Images/bloch.png}
-  \caption{Prikaz 1D periodične strukture in njene bazne celice}
+  \caption{Prikaz 1D periodične strukture in njene bazne celice.}
 \end{figure}
 \begin{equation}
   \mathbf{r}_P = \mathbf{r}_U + nL
@@ -345,9 +346,9 @@ ki definira referenčno točko U, in referečni vektor $\mathbf{r}_P$, ki defini
 Kjer $L$ ponazarja dolžino bazne celice, $n$ pa celo število, ki pove število bazih celic med točkama U in P. Ponovno predpostavimo harmonsko
 nihanje in tako lahko enačbo preuredimo kot:
 \begin{equation}
-  \mathbf{q}(r, k, t)  = \widetilde{\mathbf{q}}(r, k)e^{ik r}e^{i\omega t}
+  \mathbf{q}(r, k, t)  = \widetilde{\mathbf{q}}(r)e^{ik r}e^{i\omega t}
 \end{equation}
-Kjer $r$ predstavlja pozicijo na x poltraku, $\omega$ frekvenco valovanja, $k$ valovno število v smeri širjenja valovanja $i$ pa kompleksno število. Na podlagi odziva referenčne celice
+Kjer $r$ predstavlja pozicijo na x poltraku, $\omega$ frekvenco valovanja, $k$ valovno število v smeri širjenja valovanja, $i$ kompleksno število, $\widetilde{\mathbf{q}}(r)$ pa poljubna periodična funkcija. Na podlagi odziva referenčne celice
 v točki U lahko napovemo odziv v katerikoli točki. Prav tako definiramo še kompleksno število širjenja valovanja $\mu$, ki nam fizikalno predstavlja fazni zamik. Preoblikovano enačbo zapišemo
 kot \cite{kosir}:
 \begin{equation}
@@ -365,7 +366,7 @@ Da lahko iz ravnin preidemo v krivulje, izkoriščamo periodičnost in simetrijo
 Problem razdelimo v tako imenovane Brillouinove cone. \cite{vanbelle}
 \\Brillouinova cona je definirana kot Wigner-Seitzova celica v recipročnem prostoru. Najmanjši prostor, ki ga definira Wigner-Seitzova celica imenujemo prva Brillouinova cona.\cite{abhipod} Prva Brillouinova cona
 je najmanjši osnovni gradnik, na podlagi katerega lahko popišemo celotno periodično strukturo. Če upoštevamo še simetrijo osnovne celice je možno slednjo cono še dodatno reducirati na nereducirno Brillouinovo cono. Ta predstavlja najmanjši prostor,
-ki ga je potrebno obrvnavati, da popišemo celotni odziv osnovne celice in posledično celotnega \ac{MM}. \cite{kosir}
+ki ga je potrebno obravnavati, da popišemo celotni odziv osnovne celice in posledično celotnega \ac{MM}. \cite{kosir}
 \\
 \\
 V sklopu te naloge bomo obravnavali 1D strukturo, zato se problem močno poenostavi. V ravninskem primeru bazni vektor celice \textbf{d} in bazni vektor recipročne celice \textbf{t} sovpadata s koordinatno osjo x. Poznamo tudi periodičnost, ki je enaka 2$\pi$. 
@@ -374,12 +375,12 @@ Celico transformiramo na dimenzije $[-\pi, \pi]$ s koordinatnim sistemom $\mu$, 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.8]{Images/osnovna_celica.png}
-  \caption{Bazna celica, njena recipročna celica v prostoru in Brillouinova cona (BZ)}
+  \caption{Bazna celica, njena recipročna celica v prostoru in Brillouinova cona (BZ).}
 \end{figure}
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.8]{Images/transformacija.png}
-  \caption{Transformacija Brillouinove cone iz valovnega prostora (k) v prostor širjenja valovanja ($\mu$)}
+  \caption{Transformacija Brillouinove cone iz valovnega prostora (k) v prostor širjenja valovanja ($\mu$).}
 \end{figure}
 
 \subsubsection{Modeliranje osnovne celice}
@@ -388,7 +389,7 @@ V poglavju 2.2 smo izpeljali vodilno enačbo problema (2.3), kjer smo dobili din
   \mathbf{\hat{D}}(\omega)= -{\omega}^2 \mathbf{M}+\mathbf{K}
 \end{equation}
 Sledeča dinamska matrika zaenkrat še ne vključuje nobenih robnih pogojev. V nadaljevanju bomo z uporabo Blochovega teorema za našo
-dinamsko matriko določili periodične robne pogoje. Končna celica bo v numeričnem modelu imela več kot le dve vozlišči, zato v naslednjem koraku vektor pomikov $\mathbf{\hat{x}}$
+dinamsko matriko določili periodične robne pogoje. Končna celica bo v numeričnem modelu imela več kot le dve vozlišči, zato v naslednjem koraku vektor pomikov $\mathbf{q}$
 razdelimo na pomike v levem vozlišču $\mathbf{q}_L$, pomike v sredini celice $\mathbf{q}_I$ in pomike v skrajnem desnem vozlišču $\mathbf{q}_R$. Vektor generaliziranih vozliščnih pomikov $\mathbf{q}$
 je tako enak:
 \begin{equation}
@@ -419,6 +420,15 @@ Desno vozlišče lahko izrazimo z levim, torej se lahko znebimo ene neznanke z u
 Kjer \textbf{I} predstavlja identično matriko \textbf{0} pa matriko ničel.\\
 Podobno naredimo tudi za vektor generalizirnih vozliščnih sil, kjer upoštevamo konsistentnost notranjih veličin:
 \begin{equation}
+  \mathbf{f}=
+    \begin{Bmatrix}
+      \mathbf{f}_L \\
+      \mathbf{f}_I \\
+      \mathbf{f}_R
+    \end{Bmatrix}
+\end{equation}
+Ponovno uporabimo Bloch-Floquetov teorem in zapišemo:
+\begin{equation}
   \mathbf{f}_R = -\mathbf{f}_L e^{i\mu}
 \end{equation}
 Desno vozlišče lahko izrazimo z levim, torej se lahko znebimo ene neznanke z uporabo leve reducirne matrike $\mathbf{\Lambda_L}$:
@@ -446,13 +456,28 @@ V nadaljevanju vpeljemo še reducirana vektorja generaliziranih pomikov in vozli
     \mathbf{\Lambda_L} \mathbf{D}(\omega)\mathbf{\Lambda_R q_{red}} = \mathbf{f_{red}}
   \end{aligned}
 \end{equation*}
-Zanimala nas bodo le lastna nihanja bazne celice, zato v nadaljevanju predpostavimo, da velja $\mathbf{f_{red}}=0$
+Zanimala nas bodo le lastna nihanja bazne celice, zato v nadaljevanju predpostavimo, da velja $\mathbf{f_{red}}=0$.
 Končna enačba je torej:
 \begin{equation}
   \mathbf{\Lambda_L} \mathbf{D}(\omega)\mathbf{\Lambda_R q_{red}} = \mathbf{\widetilde{D}}(\omega, \mu) \mathbf{q_{red}} = 0
 \end{equation}
-V enačbi (2.16) imamo zajete tudi periodične robne pogoje strukture. Kot omenjeno v poglavju 2.2 sledi reševanje problema z uporabo problema
+V enačbi (2.17) imamo zajete tudi periodične robne pogoje strukture. Kot omenjeno v poglavju 2.2 sledi reševanje problema z uporabo problema
 lastnih vrednosti.
+\\
+Ker bomo v numeričnem izračunu uporabljali masno in togostno globalno matriko, definiramo reducirano masno in togostno globalno matriko:
+\begin{equation*}
+  \begin{aligned}
+    \mathbf{\Lambda_L} (-\omega^2 \mathbf{M} + \mathbf{K})\mathbf{\Lambda_R q_{red}} = 0 \\
+    (-\omega^2 \mathbf{\Lambda_L} \mathbf{M} \mathbf{\Lambda_R}  + \mathbf{\Lambda_L} \mathbf{K} \mathbf{\Lambda_R}) \mathbf{q_{red}} = 0 \\
+  \end{aligned}
+\end{equation*}
+\begin{equation}
+  \begin{aligned}
+    \mathbf{\Lambda_L} \mathbf{M} \mathbf{\Lambda_R} = \mathbf{M_{red}}; \quad 
+    \mathbf{\Lambda_L} \mathbf{K} \mathbf{\Lambda_R} = \mathbf{K_{red}}
+  \end{aligned}
+\end{equation}
+\noindent Pri čemer je $\mathbf{M_{red}}$ reducirana globalna masna matrika in  $\mathbf{K_{red}}$ reducirana globalna togostna matrika.
 
 \section{Izračun periodičnih struktur}
 V tem poglavju bomo spoznali dva pristopa, ki jih uporabljamo za določitev \ac{PZF} za naš \ac{MM}. Rezultat obeh pristopov so disperzijske krivulje, ki popisujejo odvisnost lastne frekvence od valovnega števila 
@@ -466,8 +491,8 @@ Kadar pristop uporabljamo za določanje \ac{PZF} nedušenih struktur, pričakuje
 
 \subsection{Direktni pristop}
 Direktni oz. $\mu(\omega)$ pristop pa privzame realne $\omega$, torej privzamemo časovno harmonsko širjenje valovanja. Rezultat \ac{EVP} dinamske matrike je krivulja odvisnosti valovnega vektorja $\mu$
-od $\omega$. Izračunamo valovne vektorje pri različnih $\omega$. Rezultat so valovni vektorji $\mu = \mu_{re} + i\mu_{im}$, ki so lahko realni, imaginarni ali kompleksni. Realni del predstavlja relativno spremembo amplitude, imaginarni del pa
-spremembo faze. \cite{vanbelle, kosir} Kadar je $\mu$ odvisen od večih dimenzij (2D ali 3D problem), moramo vpeljati dodatno spremenljivko, ki jo v izračunih privzamemo.
+od $\omega$. Izračunamo valovne vektorje pri različnih $\omega$. Rezultat so valovni vektorji $\mu = \mu_{re} + i\mu_{im}$, ki so lahko realni, imaginarni ali kompleksni. Imaginarni del predstavlja relativno spremembo amplitude, realni del pa
+spremembo faze. \cite{vanbelle, kosir} Kadar je $\mu$ odvisen od večih dimenzij (2D ali 3D problem), moramo vpeljati smer širjenja valovanja, ki jo privzamemo.
 \\
 \\
 V našem primeru direktnega pristopa ne bomo uporabili, vendar bomo preračun izvedli le z inverznim pristopom.
@@ -481,14 +506,14 @@ Velika prednost \ac{FFF} metode je njena vsestranskost in cenovna dostopnost. V 
 
 \subsection{Delovanje \ac{FFF} 3D tiskalnika}
 \ac{FFF} 3D tiskalniki obstajajo v najrazličnejših velikostih in izvedbah, vendar si vsi delijo skupne dele, ki opravljajo proces 3D tiskanja. Tiskalnik ima običajno 3 osi (x, y in z), pri čemer x- in y-os skrbita za premikanje glave po
-območju tiskanja, z-os pa skrbi za pomikanje plošče, na katero se nanašajo plasti. V ta namen se uporabljajo koračni motorji, ki preko jermenov ali navojnih palic premikajo sestavne dele tiskalnika. Plošča na katero se nanašajo plasti je običajno segreta iz spodnje strani na določeeno temperaturo, s čemer zagotavljamo
+območju tiskanja, z-os pa skrbi za pomikanje plošče, na katero se nanašajo plasti. V ta namen se uporabljajo koračni motorji, ki preko jermenov ali navojnih palic premikajo sestavne dele tiskalnika. Plošča na katero se nanašajo plasti je običajno segreta iz spodnje strani na določeno temperaturo, s čemer zagotavljamo
 adhezijo ekstrudirane plasti na ploščo. \\
 Najpomembnejši del tiskalnika predstavlja glava. Kot je razvidno na sliki (2.4), glavo sestavlja 5 sestavnih delov. Skozi dovodno cev dovajamo filament v trdni obliki, ki ga koračni motor s preciznim in nadzorovanim gibanjem poriva skozi podajač. Na koncu glave se nahaja šoba z grelnim elementom \emph{(ang. hot-end)}, ki filament tali s prednastavljeno temperaturo
 in ga ekstrudira skozi šobo. Nad šobo z grelnim elementom se nahajajo hladilna rebra, ki preprečujejo taljenje elementa višje po dovodni cevi. S tem preprečimo ohlajanje in ekspanzijo materiala višje v cevi, kar bi zmanjšalo ali povsem ustavilo tok filamenta.
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.5]{Images/extruder.png}
-  \caption{Glava FFF 3D tiskalnika in njeni sestavni deli \cite{leapfrog}}
+  \caption{Glava FFF 3D tiskalnika in njeni sestavni deli. \cite{leapfrog}}
 \end{figure}
 \noindent Za zagotavljanje najboljše kvalitete končnega izdelka, je pomemben konstanten in kontinuiran tok taljenega materiala. Za to skrbi koračni motor, ki filament potiska preko
 podajača (zobnik). Ta mora imeti pravilno nastavljeno silo pritiska, da filament ne zdrsuje ali se lomi med podajanjem. \cite{fff_article}
@@ -533,23 +558,23 @@ metodi.
 \section{Zasnova oblike metamateriala}
 Cilj zasnove je bila konstrukcija \ac{OC} \ac{MM}, ki omogoča 1D periodičnost. Zaradi lažjega prilagajanja tekom preizkusov je \ac{OC} zasnovana parametrično, kar omogoča hitre popravke
 tako na nivoju CAD modela, kot tudi numeričnega izračuna. Po veliko iteracijah smo se odločili za obliko \ac{OC}, ki je prikazana na sliki 3.1. Zaradi parametričnosti lahko hitro spreminjamo 1. lastno frekvenco preko 
-spreminjanja mase in togosti vzmeti resonatorja. Resonator se nahaja znotraj osnove strukture, saj tako ob nihanju strukture ne povzroča torzijskih obremenitev, prav tako pa se s tem
-ognemo gibanju resonatorja v drugih smereh razen navzgor in navzdol.
+spreminjanja mase in togosti vzmeti resonatorja. Resonator se nahaja znotraj osnove strukture, saj tako ob nihanju strukture ne povzroča torzijskih obremenitev in resonator prisilimo, da v 
+željenem frekvenčnem področju niha le prečno na strukturo, predvsem s 1. nihajno obliko.
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.6]{Images/BaseCell_v4.JPG}
-  \caption{Končni koncept \ac{OC} \ac{MM}}
+  \caption{Končni koncept \ac{OC} \ac{MM}.}
 \end{figure}
-\noindent Pri zasnovi so bile že upoštevane tudi omejitve izdelave \ac{OC} s pomočjo FFF tehnike 3D tiska. Načrtovane vzmeti na omogočajo visoko uspešnost dobrega tiska
+\noindent Pri zasnovi so bile že upoštevane tudi omejitve izdelave \ac{OC} s pomočjo FFF tehnike 3D tiska. Načrtovane vzmeti ne omogočajo visoko uspešnost dobrega tiska
 na dnu strukture in se zanašajo na pravilno izbrane parametre tiska pri zgornjih vzmeteh. Slednje namreč uporabljajo posebno tehniko 3D tiska imenovano ``mostiščenje'' (ang. bridging). Takrat tiskalnik nanaša material čez
 večje vrzeli brez podpore. Na sliki 3.2 so prikazane končne mere \ac{OC}, ki smo jih prilagajali dokler lastna frekvenca strukture ni bila med 0 in 1000 Hz.
 \\
-Dvojne vzmeti na straneh so načrtovane zaradi preprečevanja nihanja notranje mase okoli z osi. Pri debelinah vzmeti smo omejeni z zmožnostjo izdelave s tehnologijo 3D tiska --- če bi
+Dvojne vzmeti na straneh so načrtovane zaradi preprečevanja nihanja notranje mase okoli z osi. Pri debelinah vzmeti smo omejeni z zmožnostjo izdelave s tehnologijo 3D tiska -- če bi
 vzmeti naredili preozke ali pretanke, bi prehitro prišlo do njihove porušitve.
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.8]{Images/drawing.png}
-  \caption{Dimenzije \ac{OC} \ac{MM}}
+  \caption{Dimenzije \ac{OC} \ac{MM}.}
 \end{figure}
 Znotraj programskega paketa za CAD modeliranje Solidworks so za \ac{OC} parametrizirane naslednje veličine:
 \begin{itemize}
@@ -560,7 +585,7 @@ Znotraj programskega paketa za CAD modeliranje Solidworks so za \ac{OC} parametr
 \section{Izdelava numeričnega modela}
 Dandanes imamo za numerične simulacije na voljo različne programske pakete, ki nam predvsem močno pomagajo pri analizi kompliciranih 2D ali 3D struktur. Ponavadi bi osnovne preračune naredili
 v omenjenih paketih in bi potem s pridobljenimi podatki znotraj ločenega programa izračunali še disperzijske krivulje.
-V našem primeru imamo relativno preprosto strukturo, zato je mogoče za vse narediti enoten program in se povsem ogniti uporabi programov drugih proizvajalcev.
+V našem primeru imamo relativno preprosto strukturo, zato je mogoče za vse narediti enoten program in se povsem izogniti uporabi programov drugih proizvajalcev.
 \\
 V tem poglavju bo obrazložen postopek izdelave numeričnega modela v programskem jeziku Python.
 
@@ -575,7 +600,7 @@ Program za analizo \ac{MM} je spisan v obliki razreda, ki mu podamo naslednje vh
   \item število končnih elementov.
 \end{itemize}
 Nadomestno togost vzmeti pridobimo s pomočjo strukturne analize \ac{OC} v programskem paketu Ansys \cite{ansys}, maso resonatroja pa iz CAD modela iz programskega paketa Solidworks \cite{solidworks}. Program v naslednjih korakih tvori globalno masno in togostno matriko
-sistema, pri čemer upošteva spremenljiv prerez, ki vpliva na površino prereza in vztrajnostni moment prereza. Nato globalni matriki reducira v reducirano globalno masno in reducirano globalno
+sistema, pri čemer upošteva spremenljiv prerez, ki vpliva na površino prereza, vztrajnostni moment prereza in maso. Nato globalni matriki reducira v reducirano globalno masno in reducirano globalno
 togostno matriko. Vse te matrike so funkcije vektorja širjenja valovanja $\mu$. Ko rešimo \ac{EVP}, dobimo seznam lastnih frekvenc in lastnih oblik, katerega dolžina je enaka številu končnih elementov. Seznam prav tako pripada točno določenemu vektorju širjenja valovanja.
 
 \subsection{Izračun disperzijskih krivulj}
@@ -584,8 +609,8 @@ lastne frekvence in jih nariše na graf $\omega(\mu)$. Zaradi preglednosti v pro
 Program nato izračuna razliko med najmanjšo vrednostjo druge lastne frekvence in največjo vrednostjo prve lastne frekvence in izriše območje \ac{PZF}. Disperzijka krivulja je razvidna iz slike 3.3.
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.6]{Images/dispersion.png}
-  \caption{Disperzijske krivulje za \ac{MM}}
+  \includegraphics[scale=0.8]{Images/dispersion.png}
+  \caption{Disperzijske krivulje za \ac{MM}.}
 \end{figure}
 Iz diagrama je razvidno, da naj bi \ac{PZF} bil med 625 in 740 Hz. Po analizah v programskem paketu Ansys \cite{ansys}, se v tem območju nahaja tudi prva lastna frekvenca
 \ac{OC}, kjer resonator intenzivno niha navzgor in navzdol.
@@ -594,45 +619,53 @@ Iz diagrama je razvidno, da naj bi \ac{PZF} bil med 625 in 740 Hz. Po analizah v
 Da si je lažje predstavljati različno obnašanje strukture pri različnih vektorjih širjenja valovanja, program vsebuje tudi tudi metodo za vizualizacijo relativnega gibanja osnovne strukture
 in resonatorja. Oblike lahko izrišemo s pomočjo vektorja lastnih oblik, ki ga dobimo poleg vektorja lastnih frekvenc kot rezultat rešive \ac{EVP}. Preden pa obliko lahko izrišemo, moramo dodati manjkajoča
 vozlišča, saj smo matriko pred tem reducirali. Prav tako v tej stopnji v simulacijo dodamo več osnovnih celic, da dobimo obliko nosilca. V ta namen uporabimo Bloch-Floquetov teorem, ki povezuje skrajne točke \ac{OC}.
-Vektor pomikov je kompleksen --- realne komponente predstavljajo razmerje pomikov, imaginarne komponente pa fazni zamik, ki ga moramo prav tako upoštevati. Na slikah 3.4--3.10 so predstavljene zamrznjene slike iz simulacije pri 
-različnih vektorjih širjenja valovanja. 
+Vektor pomikov je kompleksen -- realne komponente predstavljajo razmerje pomikov, imaginarne komponente pa fazni zamik, ki ga moramo prav tako upoštevati. 
 \begin{figure}[H]
   \centering
-  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mu0.png}
-  \caption{Simulacija za $\mu = 0$}
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/Metamaterial_oblika_1_mu_0.000.png}
+  \caption{Prva lastna oblika za $\mu = 0$.}
 \end{figure}
 \begin{figure}[H]
   \centering
-  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mupi_6.png}
-  \caption{Simulacija za $\mu = \frac{\pi}{6}$}
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/Metamaterial_oblika_1_mu_0.524.png}
+  \caption{Prva lastna oblika za $\mu = \frac{\pi}{6}$.}
 \end{figure}
 \begin{figure}[H]
   \centering
-  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mupi_3.png}
-  \caption{Simulacija za $\mu = \frac{\pi}{3}$}
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/Metamaterial_oblika_1_mu_1.571.png}
+  \caption{Prva lastna oblika za $\mu = \frac{\pi}{2}$.}
 \end{figure}
 \begin{figure}[H]
   \centering
-  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mupi_2.png}
-  \caption{Simulacija za $\mu = \frac{\pi}{2}$}
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/Metamaterial_oblika_1_mu_3.142.png}
+  \caption{Prva lastna oblika za $\mu = \pi$.}
+\end{figure}
+\noindent Na slikah 3.4---3.7 opazujemo lastne oblike med nihanjem s prvo lastno frekvenco. Velike pike ponazarjajo resonatorje, manjše pike pa vozlišča končnih elemntov.
+Na sliki 3.4 lahko opazimo, da imamo pri vektorju širjenja valovanja $\mu = 0$ le toge premike, kar je povsem pričakovano, saj se nam vektor širnjenja valovanja neposredno izkazuje v faznem zamiku levega in desnega
+vozlišča \ac{OC}. V nadaljnih stukruah se stanje nato spreminja, dokler ne dosežemo $\mu = \frac{\pi}{2}$ na sliki 3.6, ko sta sosednja resonatorja zamaknjena ravno toliko, da eden doseže skrajno lego, medtem ko je drugi v ravnovesni legi.
+Na sliki 3.7 lahko opazujemo stanje, ko se vsi resonatorji srečujejo v ravnovesnih legah, ker je fazni zamik takrat enak $\mu = \pi$. Opazimo, da imajo pri prvi lastni frekvenci večjo amplitudo nihanja resonatorji, medtem ko osnovna stuktura večinoma miruje.
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/Metamaterial_oblika_2_mu_0.000.png}
+  \caption{Druga lastna oblika za $\mu = 0$.}
 \end{figure}
 \begin{figure}[H]
   \centering
-  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mu2pi_3.png}
-  \caption{Simulacija za $\mu = \frac{2\pi}{3}$}
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/Metamaterial_oblika_2_mu_0.524.png}
+  \caption{Druga lastna oblika za $\mu = \frac{\pi}{6}$.}
 \end{figure}
 \begin{figure}[H]
   \centering
-  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mu5pi_6.png}
-  \caption{Simulacija za $\mu = \frac{5\pi}{6}$}
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/Metamaterial_oblika_2_mu_1.571.png}
+  \caption{Druga lastna oblika za $\mu = \frac{\pi}{2}$.}
 \end{figure}
 \begin{figure}[H]
   \centering
-  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/mupi.png}
-  \caption{Simulacija za $\mu = \pi$}
+  \includegraphics[trim={0 4cm 0 3.5cm},clip, scale=0.3]{Images/Metamaterial_oblika_2_mu_3.142.png}
+  \caption{Druga lastna oblika za $\mu = \pi$.}
 \end{figure}
-\noindent Na slikah manjša pike predstavljajo vozlišča končnih elementov osnovne strukture, večje pike pa resonatorje.
-
+\noindent Na slikah 3.8---3.12 pri istih vrednostih vektorja širjenja valovanja kot prej opazujemo še druge lastne oblike. Lastna oblika za $\mu = 0$ ni presenetljiva, saj gre ponovno za toge premike. Pri stanju na sliki 3.9 pa opazimo večje amplitude nihanja osnovne stukture in manjše amplitude resonatorjev.
+Pri vektorju širjenja valovanja $\mu = \frac{\pi}{2}$ se resonatorji gibljejo skupaj z osnovno strukturo in pri vektorju širjenja valovanja $\mu = \pi$ resonatorji večinoma le stojijo na miru in se skoraj v celoti giblje osnovna struktura.
 
 
 \chapter{Eksperimentalni del}
@@ -644,7 +677,7 @@ G-kodo. Mi smo uporabili prosto dostopni program UltiMaker Cura \cite{cura}. \\
 Za izdelavo \ac{MM} smo uporabili PETG filament. V primerjavi z bolj razširjeno uporaljenim PLA filamentom ima PETG boljšo voljnost, kar potrebujemo za vzmetni del \ac{OC}.
 
 \begin{table}[H]
-  \caption{Osnovni parametri za tisk}
+  \caption{Osnovni parametri za tisk.}
   \centering
   \begin{tabular}{ | l | c | r | }
     \hline
@@ -662,12 +695,12 @@ Za izdelavo \ac{MM} smo uporabili PETG filament. V primerjavi z bolj razširjeno
 in spodnjem delu \ac{OC}. Na spodnjem delu \ac{OC} vzmeti ležijo neposredno na plošči, kar ne predstavlja problema, medtem ko na zgornjem delu nimajo nobenega podpornega materiala. Praviloma bi v takem
 primeru uporabili podporne strukture, vendar je razdalja majhna, prav tako pa bi bilo po tisku podpore nemogoče odstraniti zaradi nedostopnosti. V takem primeru se poslužimo posebne tehnike ``mostiščenja'' (ang. \emph{bridging}), kjer lahko
 material nanašamo med dvema stenama brez podpor. Da je to izvedljivo je potrebno na tem mestu prilagoditi parametre tiskanja --- močno upočasniti hitrost tiska in povečati hlajenje na maksimalno raven, da se material v trenutku strdi. S tem močno izboljšamo
-uspešnost tiska brez podpor.
+uspešnost tiska brez podpor. Še vedno lahko pride do napak pri tisku, kot razvidno iz slike 4.1.
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.4]{Images/mostiscenje_small.jpg}
-  \caption{Primer slabega mostiščenja}
+  \caption{Primer slabega mostiščenja.}
 \end{figure}
 \noindent Tisk ene enote nosilca, ki je zaradi velikosti plošče tiskalnika omejen na 25 cm, je trajal 7 ur.
 
@@ -680,7 +713,7 @@ Gostota PETG je bila izmerjena preko treh kock, nastisnjenih iz PETG filamenta s
 kock pa s kljunastim merilom. Za vsako kocko je bilo izvedenih 5 ponovitev meritev. Iz izmerjenih vrednosti je bila izračunana gostota PETG plastike, ki je podana v preglednici 4.2.
 
 \begin{table}[H]
-  \caption{Izmerjena gostota PETG plastike}
+  \caption{Izmerjena gostota PETG plastike.}
   \centering
   \begin{tabular}{ | l | c | r | }
     \hline
@@ -696,18 +729,18 @@ Za popis disperzijsih krivulj smo uporabljali izotropni Hookov elastični zakon.
 elastični modul. Za določitev modula smo uporabili pristop z iskanjem lastne frekvence vzorca. Meritve smo izvajali na stresalniku, na katerega smo vpeli vzorce izdelane po načrtu na sliki 4.2. Vzorce smo na 
 ploščo stresalnika vpeli na mestu V z uporabo sekundnega lepila in zaščitnega sloja lepilnega traku. Na sredini vzorca smo nato nalepili antirefleksivno nalepko in vanjo usmerili laserski snop iz laserja PDV 100, proizvajalca
 Polytec s katerim smo merili hitrost točke. Merilno mesto je na sliki 4.2 označeno s črko M. Stresalnik LDS V555 smo vezali na krmilnik Dactron, ki smo mu ukaze pošiljali iz nadzornega programa na računalniku. Na ploščo smo poleg vzorcev namestili tudi 
-referenčni pospeškomer T333B30 proizvajalca PCB Piezotronics. Pospeškomer nam je služil kot povratna funkcija v krmilni program ter za pridobitev frekvenčne prenosne funkcije. Oba signala smo zajemali na merilni kartici NI-9232, ki je bila povezana
+referenčni pospeškomer T333B30 proizvajalca PCB Piezotronics. Pospeškomer nam je služil kot povratni signal v krmilni program ter za pridobitev frekvenčne prenosne funkcije. Oba signala smo zajemali na merilni kartici NI-9232, ki je bila povezana
 na osebni računalnik s programom LabView \cite{labview}.
 \\
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.9]{Images/tester.png}
-  \caption{Dimenzije vzorca za določitev elastičega modula}
+  \caption{Dimenzije vzorca za določitev elastičega modula.}
 \end{figure}
-Vsakega izmed treh vzorcev smo obremenili s sinusnim preletom (navzgor in navzdol) od 50 Hz do 1000 Hz, s hitrostjo 5 oktav na minuto. Vsak test smo ponovili pri amplitudah pospeška 0.5g, 1g in 2g. Rezultate smo izračunali preko frekvenčne
-prenosne funkcije. Iz rezultatov na sliki 4.3 elahko vidimo manjši raztros natisnjenih vzorcev. Določena lastna frekvenca je predstavljena v preglednici 4.3.
+\noindent Vsakega izmed treh vzorcev smo obremenili s sinusnim preletom (navzgor in navzdol) od 50 Hz do 1000 Hz, s hitrostjo 5 oktav na minuto. Vsak test smo ponovili pri amplitudah pospeška 0.5g, 1g in 2g. Rezultate smo izračunali preko frekvenčne
+prenosne funkcije. Iz rezultatov na sliki 4.3 lahko vidimo manjši raztros natisnjenih vzorcev. Določena lastna frekvenca je predstavljena v preglednici 4.3.
 \begin{table}[H]
-  \caption{Izmerjena lastna frekvenca vzorcev}
+  \caption{Izmerjena lastna frekvenca vzorcev.}
   \centering
   \begin{tabular}{ | l | c | r | }
     \hline
@@ -719,13 +752,13 @@ prenosne funkcije. Iz rezultatov na sliki 4.3 elahko vidimo manjši raztros nati
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.6]{Images/frf.png}
-  \caption{Rezultati meritev elastičnega modula v obliki frekvenčne prenosne funkcije}
+  \caption{Rezultati meritev frekvenčne prenosne funkcije hitrosti in pospeška.}
 \end{figure}
-\noindent Iskanje modula smo izvedli s pomočjo modalne analize v programskem okolju ANSYS. Na mestih V, označenih na sliki 4.2 smo nastavili fiksno vpetje. Za materialne lastnosti smo uporabili PET izotropen material, ki smo mu
+\noindent Iskanje modula smo izvedli s pomočjo modalne analize v programskem okolju ANSYS. Na mestih V, označenih na sliki 4.2 smo nastavili fiksno vpetje. Za materialne lastnosti smo uporabili PET izotropen in idealno elastičen material, ki smo mu
 vrednost gostote spremenili na prej izmerjeno vrednost in uporabili teoretično Poissonovo število $\nu=0.33$. Nato smo s pomočjo funkcije optimizacije \emph{(ang. Direct optimization)} nastavili iskano lastno frekvenco ter označili prilagajanje modula E. Skozi več iteracij je nato
 ANSYS izračunal elastični modul PETG plastike, ki je podan v preglednici 4.4.
 \begin{table}[H]
-  \caption{Izmerjen modul elastičnosti PETG plastike}
+  \caption{Izmerjen modul elastičnosti PETG plastike.}
   \centering
   \begin{tabular}{ | l | c | r | }
     \hline

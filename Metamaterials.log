@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.24)  13 JAN 2023 22:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.24)  17 JAN 2023 00:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -951,7 +951,7 @@ Package biblatex Info: Reference segment=0 on input line 61.
  [4] [5] [6]
 Poglavje 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--239
+Underfull \hbox (badness 10000) in paragraph at lines 228--241
 
  []
 
@@ -960,25 +960,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--239
 ]
 Poglavje 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--265
+Underfull \hbox (badness 10000) in paragraph at lines 245--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--265
+Underfull \hbox (badness 10000) in paragraph at lines 245--267
 
  []
 
 [2
 
 ] [3] [4]
-<Images/bloch.png, id=45, 272.9397pt x 55.6479pt>
+<Images/bloch.png, id=46, 272.9397pt x 55.6479pt>
 File: Images/bloch.png Graphic file (type png)
 <use Images/bloch.png>
-Package pdftex.def Info: Images/bloch.png  used on input line 339.
+Package pdftex.def Info: Images/bloch.png  used on input line 340.
 (pdftex.def)             Requested size: 272.93901pt x 55.64775pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--373
+Underfull \hbox (badness 10000) in paragraph at lines 365--374
 
  []
 
@@ -986,215 +986,219 @@ Underfull \hbox (badness 10000) in paragraph at lines 364--373
 <Images/osnovna_celica.png, id=52, 480.1137pt x 26.0172pt>
 File: Images/osnovna_celica.png Graphic file (type png)
 <use Images/osnovna_celica.png>
-Package pdftex.def Info: Images/osnovna_celica.png  used on input line 376.
+Package pdftex.def Info: Images/osnovna_celica.png  used on input line 377.
 (pdftex.def)             Requested size: 384.09148pt x 20.81377pt.
 <Images/transformacija.png, id=53, 487.8225pt x 46.0119pt>
 File: Images/transformacija.png Graphic file (type png)
 <use Images/transformacija.png>
-Package pdftex.def Info: Images/transformacija.png  used on input line 381.
+Package pdftex.def Info: Images/transformacija.png  used on input line 382.
 (pdftex.def)             Requested size: 390.25853pt x 36.80956pt.
  [6 <./Images/osnovna_celica.png> <./Images/transformacija.png>]
-Overfull \hbox (4.56535pt too wide) in paragraph at lines 418--421
+Overfull \hbox (4.56535pt too wide) in paragraph at lines 419--422
 \OT1/cmr/m/n/12 Podobno na-re-dimo tudi za vek-tor ge-ne-ra-li-zir-nih vo-zli^^Ts^^Tcnih sil, kjer upo^^Tstevamo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--441
+Underfull \hbox (badness 10000) in paragraph at lines 445--451
 
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 468--474
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 493--499
 
  []
 
 
-Overfull \hbox (10.8612pt too wide) in paragraph at lines 468--474
+Overfull \hbox (10.8612pt too wide) in paragraph at lines 493--499
 \OT1/cmr/m/n/12 V na^^Tsem pri-meru di-rek-tnega pri-stopa ne bomo upo-ra-bili, ven-dar bomo prera^^Tcun
  []
 
-[8]
 <Images/extruder.png, id=66, 635.4942pt x 647.7801pt>
 File: Images/extruder.png Graphic file (type png)
 <use Images/extruder.png>
-Package pdftex.def Info: Images/extruder.png  used on input line 490.
+Package pdftex.def Info: Images/extruder.png  used on input line 515.
 (pdftex.def)             Requested size: 317.74632pt x 323.88925pt.
- [9] [10 <./Images/extruder.png (PNG copy)>] [11] [12]
+[9] [10] [11 <./Images/extruder.png (PNG copy)>] [12] [13]
 Poglavje 3.
 
-Overfull \hbox (6.49335pt too wide) in paragraph at lines 529--529
+Overfull \hbox (6.49335pt too wide) in paragraph at lines 554--554
 |\OT1/cmr/bx/n/24.88 3 Za-snova in prera^^Tcun me-ta-ma-
  []
 
-<Images/BaseCell_v4.JPG, id=81, 461.92575pt x 250.536pt>
+<Images/BaseCell_v4.JPG, id=84, 461.92575pt x 250.536pt>
 File: Images/BaseCell_v4.JPG Graphic file (type jpg)
 <use Images/BaseCell_v4.JPG>
-Package pdftex.def Info: Images/BaseCell_v4.JPG  used on input line 540.
+Package pdftex.def Info: Images/BaseCell_v4.JPG  used on input line 565.
 (pdftex.def)             Requested size: 277.15758pt x 150.32274pt.
-[13
+[14
 
 ]
-<Images/drawing.png, id=85, 507.69675pt x 477.58424pt>
+<Images/drawing.png, id=88, 507.69675pt x 477.58424pt>
 File: Images/drawing.png Graphic file (type png)
 <use Images/drawing.png>
-Package pdftex.def Info: Images/drawing.png  used on input line 551.
+Package pdftex.def Info: Images/drawing.png  used on input line 576.
 (pdftex.def)             Requested size: 406.15794pt x 382.0679pt.
 
-Overfull \hbox (16.15794pt too wide) in paragraph at lines 551--552
+Overfull \hbox (16.15794pt too wide) in paragraph at lines 576--577
  [][] 
  []
 
-[14 <./Images/BaseCell_v4.JPG>] [15 <./Images/drawing.png>]
-<Images/dispersion.png, id=94, 627.34375pt x 436.63126pt>
+[15 <./Images/BaseCell_v4.JPG>] [16 <./Images/drawing.png>]
+<Images/dispersion.png, id=97, 455.7828pt x 326.53995pt>
 File: Images/dispersion.png Graphic file (type png)
 <use Images/dispersion.png>
-Package pdftex.def Info: Images/dispersion.png  used on input line 587.
-(pdftex.def)             Requested size: 376.40915pt x 261.98077pt.
- [16]
-<Images/mu0.png, id=98, 1417.295pt x 451.6875pt>
-File: Images/mu0.png Graphic file (type png)
-<use Images/mu0.png>
-Package pdftex.def Info: Images/mu0.png  used on input line 601.
-(pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
+Package pdftex.def Info: Images/dispersion.png  used on input line 612.
+(pdftex.def)             Requested size: 364.62674pt x 261.2323pt.
+ [17]
+<Images/Metamaterial_oblika_1_mu_0.000.png, id=101, 1415.2875pt x 451.6875pt>
+File: Images/Metamaterial_oblika_1_mu_0.000.png Graphic file (type png)
+<use Images/Metamaterial_oblika_1_mu_0.000.png>
+Package pdftex.def Info: Images/Metamaterial_oblika_1_mu_0.000.png  used on input line 625.
+(pdftex.def)             Requested size: 424.58952pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 601--602
+Overfull \hbox (34.58952pt too wide) in paragraph at lines 625--626
  [][] 
  []
 
-[17 <./Images/dispersion.png>]
-<Images/mupi_6.png, id=104, 1417.295pt x 451.6875pt>
-File: Images/mupi_6.png Graphic file (type png)
-<use Images/mupi_6.png>
-Package pdftex.def Info: Images/mupi_6.png  used on input line 606.
-(pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
+[18 <./Images/dispersion.png>]
+<Images/Metamaterial_oblika_1_mu_0.524.png, id=108, 1415.2875pt x 451.6875pt>
+File: Images/Metamaterial_oblika_1_mu_0.524.png Graphic file (type png)
+<use Images/Metamaterial_oblika_1_mu_0.524.png>
+Package pdftex.def Info: Images/Metamaterial_oblika_1_mu_0.524.png  used on input line 630.
+(pdftex.def)             Requested size: 424.58952pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 606--607
+Overfull \hbox (34.58952pt too wide) in paragraph at lines 630--631
  [][] 
  []
 
-<Images/mupi_3.png, id=106, 1417.295pt x 451.6875pt>
-File: Images/mupi_3.png Graphic file (type png)
-<use Images/mupi_3.png>
-Package pdftex.def Info: Images/mupi_3.png  used on input line 611.
-(pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
+<Images/Metamaterial_oblika_1_mu_1.571.png, id=110, 1415.2875pt x 451.6875pt>
+File: Images/Metamaterial_oblika_1_mu_1.571.png Graphic file (type png)
+<use Images/Metamaterial_oblika_1_mu_1.571.png>
+Package pdftex.def Info: Images/Metamaterial_oblika_1_mu_1.571.png  used on input line 635.
+(pdftex.def)             Requested size: 424.58952pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 611--612
+Overfull \hbox (34.58952pt too wide) in paragraph at lines 635--636
  [][] 
  []
 
-<Images/mupi_2.png, id=108, 1417.295pt x 451.6875pt>
-File: Images/mupi_2.png Graphic file (type png)
-<use Images/mupi_2.png>
-Package pdftex.def Info: Images/mupi_2.png  used on input line 616.
-(pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
+<Images/Metamaterial_oblika_1_mu_3.142.png, id=112, 1415.2875pt x 451.6875pt>
+File: Images/Metamaterial_oblika_1_mu_3.142.png Graphic file (type png)
+<use Images/Metamaterial_oblika_1_mu_3.142.png>
+Package pdftex.def Info: Images/Metamaterial_oblika_1_mu_3.142.png  used on input line 640.
+(pdftex.def)             Requested size: 424.58952pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 616--617
+Overfull \hbox (34.58952pt too wide) in paragraph at lines 640--641
  [][] 
  []
 
-<Images/mu2pi_3.png, id=110, 1417.295pt x 451.6875pt>
-File: Images/mu2pi_3.png Graphic file (type png)
-<use Images/mu2pi_3.png>
-Package pdftex.def Info: Images/mu2pi_3.png  used on input line 621.
-(pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
+[19 <./Images/Metamaterial_oblika_1_mu_0.000.png> <./Images/Metamaterial_oblika_1_mu_0.524.png> <./Images/Metamaterial_oblika_1_mu_1.571.png>]
+<Images/Metamaterial_oblika_2_mu_0.000.png, id=123, 1415.2875pt x 451.6875pt>
+File: Images/Metamaterial_oblika_2_mu_0.000.png Graphic file (type png)
+<use Images/Metamaterial_oblika_2_mu_0.000.png>
+Package pdftex.def Info: Images/Metamaterial_oblika_2_mu_0.000.png  used on input line 649.
+(pdftex.def)             Requested size: 424.58952pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 621--622
+Overfull \hbox (34.58952pt too wide) in paragraph at lines 649--650
  [][] 
  []
 
-[18 <./Images/mu0.png> <./Images/mupi_6.png> <./Images/mupi_3.png>]
-<Images/mu5pi_6.png, id=122, 1417.295pt x 451.6875pt>
-File: Images/mu5pi_6.png Graphic file (type png)
-<use Images/mu5pi_6.png>
-Package pdftex.def Info: Images/mu5pi_6.png  used on input line 626.
-(pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
+<Images/Metamaterial_oblika_2_mu_0.524.png, id=125, 1415.2875pt x 451.6875pt>
+File: Images/Metamaterial_oblika_2_mu_0.524.png Graphic file (type png)
+<use Images/Metamaterial_oblika_2_mu_0.524.png>
+Package pdftex.def Info: Images/Metamaterial_oblika_2_mu_0.524.png  used on input line 654.
+(pdftex.def)             Requested size: 424.58952pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 626--627
+Overfull \hbox (34.58952pt too wide) in paragraph at lines 654--655
  [][] 
  []
 
-<Images/mupi.png, id=124, 1417.295pt x 451.6875pt>
-File: Images/mupi.png Graphic file (type png)
-<use Images/mupi.png>
-Package pdftex.def Info: Images/mupi.png  used on input line 631.
-(pdftex.def)             Requested size: 425.19179pt x 71.4881pt.
+<Images/Metamaterial_oblika_2_mu_1.571.png, id=127, 1415.2875pt x 451.6875pt>
+File: Images/Metamaterial_oblika_2_mu_1.571.png Graphic file (type png)
+<use Images/Metamaterial_oblika_2_mu_1.571.png>
+Package pdftex.def Info: Images/Metamaterial_oblika_2_mu_1.571.png  used on input line 659.
+(pdftex.def)             Requested size: 424.58952pt x 71.4881pt.
 
-Overfull \hbox (35.19179pt too wide) in paragraph at lines 631--632
+Overfull \hbox (34.58952pt too wide) in paragraph at lines 659--660
  [][] 
  []
 
+<Images/Metamaterial_oblika_2_mu_3.142.png, id=129, 1415.2875pt x 451.6875pt>
+File: Images/Metamaterial_oblika_2_mu_3.142.png Graphic file (type png)
+<use Images/Metamaterial_oblika_2_mu_3.142.png>
+Package pdftex.def Info: Images/Metamaterial_oblika_2_mu_3.142.png  used on input line 664.
+(pdftex.def)             Requested size: 424.58952pt x 71.4881pt.
 
-Overfull \hbox (2.37648pt too wide) in paragraph at lines 634--635
-\OT1/cmr/m/n/12 Na sli-kah manj^^Tsa pike pred-sta-vljajo vo-zli^^Ts^^Tca kon^^Tcnih ele-men-tov osnovne struk-
+Overfull \hbox (34.58952pt too wide) in paragraph at lines 664--665
+ [][] 
  []
 
-[19 <./Images/mupi_2.png> <./Images/mu2pi_3.png> <./Images/mu5pi_6.png> <./Images/mupi.png>]
+[20 <./Images/Metamaterial_oblika_1_mu_3.142.png> <./Images/Metamaterial_oblika_2_mu_0.000.png> <./Images/Metamaterial_oblika_2_mu_0.524.png>] [21 <./Images/Metamaterial_oblika_2_mu_1.571.png> <./Images/Metamaterial_oblika_2_mu_3.142.png>]
 Poglavje 4.
-[20
+[22
 
 ]
-<Images/mostiscenje_small.jpg, id=140, 836.12375pt x 627.34375pt>
+<Images/mostiscenje_small.jpg, id=150, 836.12375pt x 627.34375pt>
 File: Images/mostiscenje_small.jpg Graphic file (type jpg)
 <use Images/mostiscenje_small.jpg>
-Package pdftex.def Info: Images/mostiscenje_small.jpg  used on input line 669.
+Package pdftex.def Info: Images/mostiscenje_small.jpg  used on input line 702.
 (pdftex.def)             Requested size: 334.44357pt x 250.93304pt.
- [21 <./Images/mostiscenje_small.jpg>]
-<Images/tester.png, id=144, 464.937pt x 141.52875pt>
+ [23 <./Images/mostiscenje_small.jpg>]
+<Images/tester.png, id=154, 464.937pt x 141.52875pt>
 File: Images/tester.png Graphic file (type png)
 <use Images/tester.png>
-Package pdftex.def Info: Images/tester.png  used on input line 704.
+Package pdftex.def Info: Images/tester.png  used on input line 737.
 (pdftex.def)             Requested size: 418.43942pt x 127.37468pt.
 
-Overfull \hbox (28.43942pt too wide) in paragraph at lines 704--705
+Overfull \hbox (28.43942pt too wide) in paragraph at lines 737--738
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 695--706
+Underfull \hbox (badness 10000) in paragraph at lines 728--739
 
  []
 
-[22]
-<Images/frf.png, id=148, 634.37pt x 321.2pt>
+[24]
+<Images/frf.png, id=159, 631.51935pt x 321.96284pt>
 File: Images/frf.png Graphic file (type png)
 <use Images/frf.png>
-Package pdftex.def Info: Images/frf.png  used on input line 721.
-(pdftex.def)             Requested size: 380.62492pt x 192.72148pt.
- [23 <./Images/tester.png>] [24 <./Images/frf.png>]
+Package pdftex.def Info: Images/frf.png  used on input line 754.
+(pdftex.def)             Requested size: 378.91452pt x 193.17918pt.
+ [25 <./Images/tester.png>] [26 <./Images/frf.png>]
 Poglavje 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 739--749
+Underfull \hbox (badness 10000) in paragraph at lines 772--782
 
  []
 
-[25
+[27
 
 ]
 Poglavje 6.
 
-Overfull \hbox (2.63582pt too wide) in paragraph at lines 751--751
+Overfull \hbox (2.63582pt too wide) in paragraph at lines 784--784
 \OT1/cmr/m/it/12 The In-ter-na-ti-o-nal Jo-ur-nal of Ad-van-ced Ma-nu-fac-tu-ring Te-ch-no-logy \OT1/cmr/m/n/12 114.5
  []
 
-[26
+[28
 
-] [27] (Metamaterials.aux)
+] [29] (Metamaterials.aux)
 Package logreq Info: Writing requests to 'Metamaterials.run.xml'.
 \openout1 = `Metamaterials.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17493 strings out of 476406
- 361536 string characters out of 2789566
- 1866787 words of memory out of 3000000
- 37669 multiletter control sequences out of 15000+600000
- 521488 words of font info for 63 fonts, out of 8000000 for 9000
+ 17500 strings out of 476406
+ 363067 string characters out of 2789566
+ 1867787 words of memory out of 3000000
+ 37675 multiletter control sequences out of 15000+600000
+ 521490 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,13n,77p,948b,2593s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Metamaterials.pdf (34 pages, 921199 bytes).
+Output written on Metamaterials.pdf (36 pages, 2034075 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
+ 238 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 
