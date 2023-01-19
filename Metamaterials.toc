@@ -19,7 +19,7 @@
 \contentsline {subsection}{\numberline {2.5.1}Inverzni pristop}{9}{}%
 \contentsline {subsection}{\numberline {2.5.2}Direktni pristop}{9}{}%
 \contentsline {section}{\numberline {2.6}FFF tehnologija 3D tiska}{9}{}%
-\contentsline {subsection}{\numberline {2.6.1}Delovanje \ac {FFF} 3D tiskalnika}{10}{}%
+\contentsline {subsection}{\numberline {2.6.1}Delovanje \ac {FFF} 3D tiskalnika}{9}{}%
 \contentsline {subsection}{\numberline {2.6.2}Karakterisike 3D tiskalnika}{11}{}%
 \contentsline {subsubsection}{\numberline {2.6.2.1}Parametri 3D tiska}{11}{}%
 \contentsline {subsubsection}{\numberline {2.6.2.2}Adhezija}{12}{}%

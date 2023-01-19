@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber Metamaterials"] 1673895142 "Metamaterials.bcf" "Metamaterials.bbl" "Metamaterials" 1673911276 0
-  "Metamaterials.bcf" 1673911276 108968 3b4c328974da5ac6629eb0452df9f792 "pdflatex"
+["biber Metamaterials"] 1673895142 "Metamaterials.bcf" "Metamaterials.bbl" "Metamaterials" 1674124850 0
+  "Metamaterials.bcf" 1674124850 108968 3b4c328974da5ac6629eb0452df9f792 "pdflatex"
   "sources.bib" 1673642433 2603 12da73bc92c7fdbf552724f78103c8cf ""
   (generated)
   "Metamaterials.bbl"
   "Metamaterials.blg"
   (rewritten before read)
-["pdflatex"] 1673911270 "c:/Users/Marko/Documents/1 l Dokumenti/1 l Fakulteta/5 l 5. semester/3 l Dinamika togih teles/1 l Seminar/metamaterials/Metamaterials.tex" "Metamaterials.pdf" "Metamaterials" 1673911276 0
+["pdflatex"] 1674124845 "c:/Users/Marko/Documents/1 l Dokumenti/1 l Fakulteta/5 l 5. semester/3 l Dinamika togih teles/1 l Seminar/metamaterials/Metamaterials.tex" "Metamaterials.pdf" "Metamaterials" 1674124850 0
   "C:/Users/Marko/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1672419782 308421 9b53c9f4f762d070e3ae6b1933c21e7d ""
   "C:/Users/Marko/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1671888493 23168607 22d4d274c263f2e0d555af8c2d40a82e ""
   "C:/Users/Marko/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1001771820 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -124,14 +124,14 @@
   "Images/osnovna_celica.png" 1672051574 9879 640d5988f2374c7af176e5f000bfedfa ""
   "Images/tester.png" 1673540040 9506 3a07d1be02cfb200e504da7b830a9b3b ""
   "Images/transformacija.png" 1672051897 12253 218d0849a13991d1cfe8c88e71ab6883 ""
-  "Metamaterials.aux" 1673911275 13976 914cc7d57154231df501ac9be6440cb6 "pdflatex"
+  "Metamaterials.aux" 1674124850 13965 5aedd045859dbe1882e5c021294c23dd "pdflatex"
   "Metamaterials.bbl" 1673895144 14902 3e3ae4232662b0bd5c45f9bc15d3b842 "biber Metamaterials"
-  "Metamaterials.lof" 1673911276 2215 4d60f208753fb338526563bf6d1fb306 "pdflatex"
-  "Metamaterials.lot" 1673911276 556 a691e807c93f814476e499ca834eb6a2 "pdflatex"
-  "Metamaterials.run.xml" 1673911276 2365 df4819091dfda7f9c60191ddfb76d297 "pdflatex"
-  "Metamaterials.tex" 1673911269 46044 65514d49c59b2096671b3640aec5973a ""
-  "Metamaterials.toc" 1673911276 2896 daec8a4c3334a54bfd1a58996d7d1269 "pdflatex"
-  "c:/Users/Marko/Documents/1 l Dokumenti/1 l Fakulteta/5 l 5. semester/3 l Dinamika togih teles/1 l Seminar/metamaterials/Metamaterials.tex" 1673911269 46044 65514d49c59b2096671b3640aec5973a ""
+  "Metamaterials.lof" 1674124850 2215 4d60f208753fb338526563bf6d1fb306 "pdflatex"
+  "Metamaterials.lot" 1674124850 556 a691e807c93f814476e499ca834eb6a2 "pdflatex"
+  "Metamaterials.run.xml" 1674124850 2365 df4819091dfda7f9c60191ddfb76d297 "pdflatex"
+  "Metamaterials.tex" 1674124844 46053 531db2b1510e77828585ed99a08a785a ""
+  "Metamaterials.toc" 1674124850 2895 10766d71fb2bbea9231f88d15f781da9 "pdflatex"
+  "c:/Users/Marko/Documents/1 l Dokumenti/1 l Fakulteta/5 l 5. semester/3 l Dinamika togih teles/1 l Seminar/metamaterials/Metamaterials.tex" 1674124844 46053 531db2b1510e77828585ed99a08a785a ""
   (generated)
   "Metamaterials.aux"
   "Metamaterials.bcf"
